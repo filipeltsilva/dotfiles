@@ -1,0 +1,17 @@
+! Configurações do cursor
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+! Configurações do scroll
+URxvt*scrollStyle: rxvt
+URxvt*scrollBar: false
+
+! Configurações de fonte
+URxvt*font: xft:Terminus:size=9
+
+! Configurações da janela
+URxvt*geometry: 120x30
+
+! Configurações de cor
+URxvt*foreground: white
+URxvt*background: black
