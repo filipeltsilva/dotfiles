@@ -7,10 +7,10 @@ URxvt*scrollStyle: rxvt
 URxvt*scrollBar: false
 
 ! Configurações de fonte
-URxvt*font: xft:Terminus:size=9
+URxvt*font: xft:envypn:size=10
 
 ! Configurações da janela
-URxvt*geometry: 120x30
+URxvt*geometry: 100x30
 
 ! Configurações de cor
 URxvt*foreground: white
