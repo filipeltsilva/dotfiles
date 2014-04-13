@@ -9,9 +9,6 @@ URxvt*scrollBar: false
 ! Configurações de fonte
 URxvt*font: xft:envypn:size=10
 
-! Configurações da janela
-URxvt*geometry: 100x30
-
 ! Configurações de cor
 URxvt*foreground: white
 URxvt*background: black
