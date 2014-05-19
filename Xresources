@@ -7,8 +7,40 @@ URxvt*scrollStyle: rxvt
 URxvt*scrollBar: false
 
 ! Configurações de fonte
-URxvt*font: xft:envypn:size=10
+URxvt*font: xft:Monaco:size=9
 
-! Configurações de cor
-URxvt*foreground: white
-URxvt*background: black
+! Abaixo a relação de cores para fundos escuros e claros, respectivamente
+!
+*background: #111111
+*foreground: #babdb6
+
+! Preto
+*color0:  #000000
+*color8:  #555753
+
+! Vermelho
+*color1:  #ff6565
+*color9:  #ff8d8d
+
+! Verde
+*color2:  #93d44f
+*color10: #c8e7a8
+
+! Amarelo
+*color3:  #eab93d
+*color11: #ffc123
+! Azul
+*color4:  #204a87
+*color12: #3465a4
+
+! Magenta
+*color5:  #ce5c00
+*color13: #f57900
+
+!Ciano
+*color6:  #89b6e2
+*color14: #46a4ff
+
+! Branco
+*color7:  #cccccc
+*color15: #ffffff
