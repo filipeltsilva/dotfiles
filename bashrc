@@ -15,8 +15,7 @@ alias ls="ls --color=auto"
 
 PS1='[\u@\h \W]\$ '
 
-# PATH SETTINGS #
-NODE_ENV=development
-
 # DEFAULT EDITOR SETTINGS
 export EDITOR=/usr/bin/nano
+
+export PATH=$PATH:~/Scripts
