@@ -19,3 +19,4 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=/usr/bin/nano
 
 export PATH=$PATH:~/Scripts
+export PATH=$PATH:/usr/bin/node
