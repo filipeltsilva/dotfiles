@@ -78,3 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# PATH SETTINGS
+export PATH=$PATH:~/Scripts
+export PATH=$PATH:/usr/bin/node
