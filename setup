@@ -1,14 +1,48 @@
 #!/bin/bash
 
-echo
-echo 'Instalando o e ativando o oh-my-zsh'
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-echo
-sleep 3
 
-echo 'Configurando o zsh'
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
+printOptions() {
+	echo 'Escolha uma opção de acordo com a lista abaixo':
+	echo
+	echo '1) Vim'
+	echo
+	echo '0) Encerrar'
+	echo	
+}
 
-# rm $HOME/.bashrc
-# ln -s $HOME/.dotfiles/bashrc $HOME/.bashrc
+vimSetup(){
+	echo 'Configurando o Vim'
+	echo
+	sleep 2
+	if [ ! -d '$HOME/.vim/bundle' ]; then
+		echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
+		echo
+		sleep 2
+	mkdir -p $HOME/.vim/bundle
+	git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+	fi
+
+	echo
+	sleep 2
+	if [ -d '$HOME/.vim/bundle' ]; then
+		echo 'Configurando o .vimrc'
+		ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+	else
+		exit
+	fi
+}
+
+while true
+do
+	printOptions
+	echo 'Opção escolhida: '
+	read option
+	echo
+	sleep 2
+
+	case $option in
+		0) exit;;
+		
+		1) vimSetup;;
+	esac	
+done
