@@ -18,8 +18,11 @@ vimSetup(){
 		echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
 		echo
 		sleep 2
-	mkdir -p $HOME/.vim/bundle
-	git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+		mkdir -p $HOME/.vim/bundle
+		git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+	else
+		echo 'O plugin NeoBundle já está configurado. Encerrando o processo.'
+		exit
 	fi
 
 	echo
@@ -41,8 +44,14 @@ do
 	sleep 2
 
 	case $option in
-		0) exit;;
-		
-		1) vimSetup;;
+		0)
+			exit
+			;;
+		1) 
+			vimSetup
+			;;
+		*) 
+			echo 'Opção inválida!'
+			echo
 	esac	
 done
