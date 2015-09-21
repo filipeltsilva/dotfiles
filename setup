@@ -14,12 +14,12 @@ vimSetup(){
 	echo 'Configurando o Vim'
 	echo
 	sleep 2
-	if [ ! -d '$HOME/.vim/bundle' ]; then
+	if [ ! -d '~/.vim/bundle' ]; then
 		echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
 		echo
 		sleep 2
-		mkdir -p $HOME/.vim/bundle
-		git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+		mkdir -p ~/.vim/bundle
+		git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 	else
 		echo 'O plugin NeoBundle já está configurado. Encerrando o processo.'
 		exit
@@ -27,9 +27,9 @@ vimSetup(){
 
 	echo
 	sleep 2
-	if [ -d '$HOME/.vim/bundle' ]; then
+	if [ -d '~/.vim/bundle' ]; then
 		echo 'Configurando o .vimrc'
-		ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+		ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 	else
 		exit
 	fi

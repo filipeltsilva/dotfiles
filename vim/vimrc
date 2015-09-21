@@ -1,3 +1,3 @@
-for file in split(glob('$HOME/.dotfiles/vim/*.vim'), '\n')
+for file in split(glob('~/.dotfiles/vim/*.vim'), '\n')
 	exe 'source' file
 endfor
