@@ -1,4 +1,3 @@
-source $HOME/.dotfiles/vim/settings.vim
-source $HOME/.dotfiles/vim/keymaps.vim
-source $HOME/.dotfiles/vim/plugins.vim
-source $HOME/.dotfiles/vim/appearance.vim
+for file in split(glob('$HOME/.dotfiles/vim/*.vim'), '\n')
+	exe 'source' file
+endfor
