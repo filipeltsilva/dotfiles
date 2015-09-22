@@ -1,57 +1,54 @@
 #!/bin/bash
 
-
 printOptions() {
-	echo 'Escolha uma opção de acordo com a lista abaixo':
-	echo
-	echo '1) Vim'
-	echo
-	echo '0) Encerrar'
-	echo	
+    echo '1) Vim'
+    echo
+    echo '0) Encerrar'
+    echo	
 }
 
 vimSetup(){
-	echo 'Configurando o Vim'
-	echo
-	sleep 2
-	if [ ! -d '~/.vim/bundle' ]; then
-		echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
-		echo
-		sleep 2
-		mkdir -p ~/.vim/bundle
-		git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-	else
-		echo 'O plugin NeoBundle já está configurado. Encerrando o processo.'
-		exit
-	fi
+    echo 'Configurando o Vim'
+    echo
+    sleep 2
 
+    if [ ! -d '~/.vim/bundle' ]; then
+	echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
 	echo
 	sleep 2
-	if [ -d '~/.vim/bundle' ]; then
-		echo 'Configurando o .vimrc'
-		ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-	else
-		exit
-	fi
+	mkdir -p ~/.vim/bundle
+	git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+    else
+	echo 'O plugin NeoBundle já está configurado. Encerrando o processo.'
+    	exit
+    fi
+
+    echo
+    sleep 2
+
+    if [ -d '~/.vim/bundle' ]; then
+	echo 'Configurando o .vimrc'
+	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+    else
+    	exit
+    fi
 }
 
-while true
+while true;
 do
-	printOptions
-	echo 'Opção escolhida: '
-	read option
-	echo
-	sleep 2
+    printOptions
+    read -p 'Escolha uma das opções acima: ' option
+    echo
 
-	case $option in
-		0)
-			exit
-			;;
-		1) 
-			vimSetup
-			;;
-		*) 
-			echo 'Opção inválida!'
-			echo
-	esac	
+    case $option in
+	0)
+	    exit
+	    ;;
+	1) 
+	    vimSetup
+	    ;;
+	*) 
+	    echo 'Opção inválida!'
+	    echo
+    esac	
 done
