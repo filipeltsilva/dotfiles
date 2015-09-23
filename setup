@@ -7,48 +7,63 @@ printOptions() {
     echo	
 }
 
-vimSetup(){
-    echo 'Configurando o Vim'
+rest() {
     echo
     sleep 2
+}
 
-    if [ ! -d '~/.vim/bundle' ]; then
-	echo 'Instalando e configurando o NeoBundle para gerenciamento dos plugins'
-	echo
-	sleep 2
-	mkdir -p ~/.vim/bundle
-	git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-    else
-	echo 'O plugin NeoBundle já está configurado. Encerrando o processo.'
-    	exit
+chooseOption() {
+    printOptions
+
+    read -p 'Escolha uma das opções acima: ' OPTION
+    echo
+
+    case $OPTION in
+    0)
+        exit
+        ;;
+    1)
+        vimSetup
+        chooseOption
+        ;;
+    *)
+        echo 'Opção inválida! Selecione uma das opções da lista.'
+        rest
+        chooseOption
+        ;;
+    esac
+}
+
+vimSetup(){
+    echo 'SETUP DO VIM'
+    rest
+
+    if [ -f '~/.vimrc' ]; then
+        echo 'O arquivo .vimrc já está configurado nesse sistema.'
+        rest
+    else    
+        echo 'Configurando o arquivo vimrc'
+        ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+        rest
     fi
 
-    echo
-    sleep 2
+    if [ ! -d '~/.vim/bundle' ]; then
+        mkdir -p ~/.vim/bundle
+        rest
+    fi
 
-    if [ -d '~/.vim/bundle' ]; then
-	echo 'Configurando o .vimrc'
-	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+    echo 'Verificando se o plugin NeoBundle já está instalado.'
+    if [ ! -d '~/.vim/bundle/neobundle.vim' ]; then
+        echo 'Instalando o NeoBundle para gerenciar os demais plugins do Vim'
+        rest
+        git clone https://github.com/Shougo/neobundle.vim ~/.vim//bundle/neobundle.vim
     else
-    	exit
+        echo 'O plugin NeoBundle já está instalado e configurado nesse computador.'
+        rest
     fi
 }
 
 while true;
 do
-    printOptions
-    read -p 'Escolha uma das opções acima: ' option
-    echo
-
-    case $option in
-	0)
-	    exit
-	    ;;
-	1) 
-	    vimSetup
-	    ;;
-	*) 
-	    echo 'Opção inválida!'
-	    echo
-    esac	
+    chooseOption
 done
