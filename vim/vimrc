@@ -1,3 +1,65 @@
-for file in split(glob('~/.dotfiles/vim/*.vim'), '\n')
-    exe 'source' file
-endfor
+"----------------------------------------
+" GENERAL SETTINGS
+"----------------------------------------
+filetype plugin indent on
+
+set autoindent
+set backspace=eol,indent,start
+set copyindent
+set history=1000
+set hls
+set ignorecase
+set incsearch
+set mouse=a
+set nowrap
+set number
+set showcmd
+set showmatch
+set showmode
+set smartcase
+set title
+set ttyfast
+set ul=1000
+set visualbell
+set wildmenu
+set wildmode=longest,list
+
+"----------------------------------------
+" KEYMAP SETTINGS
+"----------------------------------------
+
+
+"----------------------------------------
+" PLUGIN SETTINGS
+"----------------------------------------
+if has('vim_starting')
+    if &compatible
+	set nocompatible
+    endif
+
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+    NeoBundleFetch 'Shougo/neobundle.vim'
+
+    NeoBundle 'tpope/vim-fugitive'
+call neobundle#end()
+
+NeoBundleCheck
+
+
+"----------------------------------------
+" APPEARANCE SETTINGS
+"----------------------------------------
+colorscheme desert
+set background=dark
+set expandtab
+set ruler
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set tabstop=4
+set t_Co=256
+set title
+syntax on
