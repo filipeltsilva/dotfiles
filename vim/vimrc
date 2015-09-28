@@ -37,6 +37,9 @@ call plug#begin()
     " Color Schemes
     Plug 'flazz/vim-colorschemes'
     
+    " CSS Plugins
+    Plug 'ap/vim-css-color'
+
     " Integration with Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
