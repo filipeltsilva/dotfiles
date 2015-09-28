@@ -11,6 +11,7 @@ set hls
 set ignorecase
 set incsearch
 set mouse=a
+set nocompatible
 set nowrap
 set number
 set showcmd
@@ -32,27 +33,19 @@ set wildmode=longest,list
 "----------------------------------------
 " PLUGIN SETTINGS
 "----------------------------------------
-if has('vim_starting')
-    if &compatible
-	set nocompatible
-    endif
-
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-
-    NeoBundle 'tpope/vim-fugitive'
-call neobundle#end()
-
-NeoBundleCheck
-
+call plug#begin()
+    " Color Schemes
+    Plug 'flazz/vim-colorschemes'
+    
+    " Integration with Git
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+call plug#end()
 
 "----------------------------------------
 " APPEARANCE SETTINGS
 "----------------------------------------
-colorscheme desert
+colorscheme obsidian2
 set background=dark
 set expandtab
 set ruler

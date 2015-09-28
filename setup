@@ -47,18 +47,14 @@ vimSetup(){
         rest
     fi
 
-    if [ ! -d ~/.vim/bundle ]; then
-        mkdir -p ~/.vim/bundle
-        rest
-    fi
-
-    echo 'Verificando se o plugin NeoBundle já está instalado.'
-    if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
-        echo 'Instalando o NeoBundle para gerenciar os demais plugins do Vim'
-        rest
-        git clone https://github.com/Shougo/neobundle.vim ~/.vim//bundle/neobundle.vim
+    echo 'Verificando se o plugin vim-plug já está instalado.'
+    rest
+    if [ ! -d ~/.vim/autoload ]; then
+        echo 'Instalando o plugin vim-plug para fazer o gerenciamento de plugins'
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     else
-        echo 'O plugin NeoBundle já está instalado e configurado nesse computador.'
+        echo 'O plugin vim-plug já está instalado e configurado nesse computador.'
         rest
     fi
 }
