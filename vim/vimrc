@@ -37,18 +37,26 @@ call plug#begin()
     " Color Schemes
     Plug 'flazz/vim-colorschemes'
     
-    " CSS Plugins
+    " CSS
     Plug 'ap/vim-css-color'
 
+    "Front-end
+    Plug 'mattn/emmet-vim'
+    
     " Integration with Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
+
+    " Snippets
+    Plug 'SirVer/ultisnips'
+    Plug 'Valloric/YouCompleteMe'
+    
 call plug#end()
 
 "----------------------------------------
 " APPEARANCE SETTINGS
 "----------------------------------------
-colorscheme obsidian2
+colorscheme obsidian
 set background=dark
 set expandtab
 set ruler
