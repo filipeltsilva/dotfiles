@@ -1,5 +1,5 @@
 "----------------------------------------
-" GENERAL SETTINGS
+" MAIN SETTINGS
 "----------------------------------------
 filetype plugin indent on
 
@@ -34,23 +34,23 @@ set wildmode=longest,list
 " PLUGIN SETTINGS
 "----------------------------------------
 call plug#begin()
-    " Color Schemes
+    " COLOR SCHEMES
     Plug 'flazz/vim-colorschemes'
+
+    " IMPROVEMENT SETTINGS
+    Plug 'ervandew/supertab'
     
     " CSS
     Plug 'ap/vim-css-color'
 
-    "Front-end
+    "FRONT-END
     Plug 'mattn/emmet-vim'
     
-    " Integration with Git
+    " INTEGRATION WITH GIT
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
-    " Snippets
-    Plug 'SirVer/ultisnips'
-    Plug 'Valloric/YouCompleteMe'
-    
+    " SNIPPETS
 call plug#end()
 
 "----------------------------------------
