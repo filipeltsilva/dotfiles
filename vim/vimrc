@@ -1,5 +1,5 @@
 "----------------------------------------
-" MAIN SETTINGS
+" GENERAL SETTINGS
 "----------------------------------------
 filetype plugin indent on
 
@@ -25,21 +25,31 @@ set visualbell
 set wildmenu
 set wildmode=longest,list
 
+" Autoloading .vimrc file
+if has("autocmd")
+    autocmd BufWritePost $HOME/.dotfiles/vim/vimrc source $MYVIMRC
+endif
+
+" Shortcut for edit the vimrc file in another tab
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
 "----------------------------------------
-" KEYMAP SETTINGS
+" KEYMAPS
 "----------------------------------------
 
 
 "----------------------------------------
-" PLUGIN SETTINGS
+" PLUGINS
 "----------------------------------------
 call plug#begin()
     " COLOR SCHEMES
     Plug 'flazz/vim-colorschemes'
 
-    " IMPROVEMENT SETTINGS
+    " IMPROVING THE VIM FUNCTIONALITY
     Plug 'ervandew/supertab'
-    
+    Plug 'Townk/vim-autoclose'
+    Plug 'Valloric/YouCompleteMe'
     " CSS
     Plug 'ap/vim-css-color'
 
@@ -50,13 +60,14 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
-    " SNIPPETS
-    Plug 'SirVer/ultisnips'
-    Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "----------------------------------------
-" APPEARANCE SETTINGS
+" PLUGINS SETTINGS
+"----------------------------------------
+
+"----------------------------------------
+" APPEARANCE
 "----------------------------------------
 colorscheme obsidian
 set background=dark
