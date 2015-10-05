@@ -7,17 +7,12 @@ set autoindent
 set backspace=eol,indent,start
 set copyindent
 set history=1000
-set hls
-set ignorecase
-set incsearch
 set mouse=a
 set nocompatible
 set nowrap
-set number
 set showcmd
 set showmatch
 set showmode
-set smartcase
 set title
 set ttyfast
 set ul=1000
@@ -30,13 +25,23 @@ if has("autocmd")
     autocmd BufWritePost $HOME/.dotfiles/vim/vimrc source $MYVIMRC
 endif
 
-" Shortcut for edit the vimrc file in another tab
-let mapleader = ","
-nmap <leader>v :tabedit $MYVIMRC<CR>
+" Encoding
+set encoding = utf-8
+set fileencoding = utf-8
+set fileencodings = utf-8
+
+" Search
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
 
 "----------------------------------------
 " KEYMAPS
 "----------------------------------------
+" Shortcut for edit the vimrc file in another tab
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
 
 
 "----------------------------------------
@@ -49,7 +54,7 @@ call plug#begin()
     " IMPROVING THE VIM FUNCTIONALITY
     Plug 'ervandew/supertab'
     Plug 'Townk/vim-autoclose'
-    Plug 'Valloric/YouCompleteMe'
+    
     " CSS
     Plug 'ap/vim-css-color'
 
@@ -67,11 +72,13 @@ call plug#end()
 "----------------------------------------
 
 "----------------------------------------
-" APPEARANCE
+" VISUAL
 "----------------------------------------
 colorscheme obsidian
 set background=dark
+set cursorline
 set expandtab
+set number
 set ruler
 set shiftwidth=4
 set smarttab
