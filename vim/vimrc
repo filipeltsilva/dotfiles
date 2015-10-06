@@ -22,13 +22,13 @@ set wildmode=longest,list
 
 " Autoloading .vimrc file
 if has("autocmd")
-    autocmd BufWritePost $HOME/.dotfiles/vim/vimrc source $MYVIMRC
+    autocmd BufWritePost ~/.vimrc source $MYVIMRC
 endif
 
 " Encoding
-set encoding = utf-8
-set fileencoding = utf-8
-set fileencodings = utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
 
 " Search
 set hlsearch
@@ -40,7 +40,7 @@ set smartcase
 " KEYMAPS
 "----------------------------------------
 " Shortcut for edit the vimrc file in another tab
-let mapleader = ","
+let mapleader=","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 
@@ -53,6 +53,7 @@ call plug#begin()
 
     " IMPROVING THE VIM FUNCTIONALITY
     Plug 'ervandew/supertab'
+    Plug 'scrooloose/nerdtree'
     Plug 'Townk/vim-autoclose'
     
     " CSS
@@ -71,10 +72,11 @@ call plug#end()
 " PLUGINS SETTINGS
 "----------------------------------------
 
+
 "----------------------------------------
 " VISUAL
 "----------------------------------------
-colorscheme obsidian
+colorscheme obsidian 
 set background=dark
 set cursorline
 set expandtab
