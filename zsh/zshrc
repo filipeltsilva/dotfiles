@@ -89,4 +89,5 @@ source $ZSH/oh-my-zsh.sh
 alias sshapikiprojeto="ssh root@apikiprojeto.com"
 
 #Terminal Aliases
+alias cl="clear"
 alias q="exit"
