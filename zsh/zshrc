@@ -84,4 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# ALIASES
+# SSH Aliases
 alias sshapikiprojeto="ssh root@apikiprojeto.com"
+
+#Terminal Aliases
+alias q="exit"

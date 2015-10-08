@@ -59,6 +59,20 @@ vimSetup(){
     fi
 }
 
+zshSetup() {
+    echo 'CONFIGURAÇÃO DO ZSH'
+    rest
+
+    if [ -f ~/.zshrc  ]; then
+        echo 'O arquivo .zshrc já está configurado nesse sistema.'
+        rest
+    else
+        echo 'Configurando o arquivo zshrc'
+        ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+        rest
+    fi
+}
+
 while true;
 do
     chooseOption
