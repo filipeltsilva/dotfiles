@@ -2,6 +2,7 @@
 
 printOptions() {
     echo '1) Vim'
+    echo '2) ZSH'
     echo
     echo '0) Encerrar'
     echo	
@@ -24,6 +25,10 @@ chooseOption() {
         ;;
     1)
         vimSetup
+        chooseOption
+        ;;
+    2)
+        zshSetup
         chooseOption
         ;;
     *)
@@ -63,11 +68,12 @@ zshSetup() {
     echo 'CONFIGURAÇÃO DO ZSH'
     rest
 
-    if [ -f ~/.zshrc  ]; then
+    if [ -f ~/.zshrc  ] && [ -L ~/.zshrc ]; then
         echo 'O arquivo .zshrc já está configurado nesse sistema.'
         rest
-    else
-        echo 'Configurando o arquivo zshrc'
+    elif [ -f ~/.zshrc ] && [ ! -L ~/.zshrc ]; then
+        echo 'Removendo o .zshrc padrão e configurando o novo arquivo .zshrc'
+        rm ~/.zshrc
         ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
         rest
     fi
