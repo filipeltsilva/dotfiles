@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ALIASES
+# Program Aliases
+alias wpscan="ruby ~/.wpscan/wpscan.rb"
+
 # SSH Aliases
 alias sshapikiprojeto="ssh root@apikiprojeto.com"
 
