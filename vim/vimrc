@@ -4,20 +4,38 @@
 filetype plugin indent on
 
 set autoindent
+
 set backspace=eol,indent,start
+
 set copyindent
+
 set history=1000
+
+" Enable mouse
 set mouse=a
+
 set nocompatible
+
 set nowrap
+
 set showcmd
+
 set showmatch
+
+" Show the current mode
 set showmode
+
 set title
+
 set ttyfast
+
 set ul=1000
+
 set visualbell
+
+" Improve the command line completion
 set wildmenu
+
 set wildmode=longest,list
 
 " Autoloading .vimrc file
@@ -54,38 +72,71 @@ call plug#begin()
     " IMPROVING THE VIM FUNCTIONALITY
     Plug 'ervandew/supertab'
     Plug 'scrooloose/nerdtree'
+    Plug 'Shougo/neocomplete.vim'
     Plug 'Townk/vim-autoclose'
     
     " CSS
     Plug 'ap/vim-css-color'
 
-    "FRONT-END
+    " FRONT-END
     Plug 'mattn/emmet-vim'
     
     " INTEGRATION WITH GIT
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
+    " SNIPPETS
+    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
 call plug#end()
 
 "----------------------------------------
 " PLUGINS SETTINGS
 "----------------------------------------
+" Neocomplete settings
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
+
+" Ultisnips settings
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+
+let g:UltiSnipsEditSplit="vertical"
 
 "----------------------------------------
 " VISUAL
 "----------------------------------------
 colorscheme obsidian 
+
 set background=dark
+
+" Highlight the current line
 set cursorline
+
 set expandtab
+
+" Show line numbers
 set number
+
+" Show the cursor position at the bottom-right corner
 set ruler
+
 set shiftwidth=4
+
 set smarttab
+
 set softtabstop=4
+
 set tabstop=4
+
 set t_Co=256
+
 set title
+
+" Enable syntax highlight
 syntax on
