@@ -55,10 +55,6 @@ export MYSQL_PATH="/usr/local/mysql"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PATH=$MYSQL_PATH/bin:$MYSQL_PATH/support-files:$PATH
 
-# NVM PATH
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
