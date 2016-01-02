@@ -111,7 +111,7 @@ let g:UltiSnipsEditSplit="vertical"
 "----------------------------------------
 " VISUAL
 "----------------------------------------
-colorscheme obsidian 
+colorscheme obsidian
 
 set background=dark
 
