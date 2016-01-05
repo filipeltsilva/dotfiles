@@ -11,6 +11,8 @@ set copyindent
 
 set history=1000
 
+set laststatus=2
+
 " Enable mouse
 set mouse=a
 
@@ -39,7 +41,7 @@ set wildmenu
 set wildmode=longest,list
 
 " Autoloading .vimrc file
-if has("autocmd")
+if has('autocmd')
     autocmd BufWritePost ~/.vimrc source $MYVIMRC
 endif
 
@@ -70,6 +72,7 @@ call plug#begin()
     Plug 'flazz/vim-colorschemes'
 
     " IMPROVING THE VIM FUNCTIONALITY
+    Plug 'bling/vim-airline'
     Plug 'ervandew/supertab'
     Plug 'scrooloose/nerdtree'
     Plug 'Shougo/neocomplete.vim'
@@ -93,19 +96,26 @@ call plug#end()
 "----------------------------------------
 " PLUGINS SETTINGS
 "----------------------------------------
+" Vim Airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols={}
+endif
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=1
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
+
 " Neocomplete settings
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:acp_enableAtStartup=0
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
+let g:neocomplete#sources#syntax#min_keyword_length=3
 
 
 " Ultisnips settings
-
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-
 let g:UltiSnipsEditSplit="vertical"
 
 "----------------------------------------
