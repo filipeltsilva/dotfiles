@@ -7,6 +7,8 @@ set autoindent
 
 set backspace=eol,indent,start
 
+set breakindent
+
 set copyindent
 
 set history=1000
