@@ -135,6 +135,9 @@ set expandtab
 " Show line numbers
 set number
 
+" Show relative line numbers
+set relativenumber
+
 " Show the cursor position at the bottom-right corner
 set ruler
 
