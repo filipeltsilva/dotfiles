@@ -65,7 +65,6 @@ set smartcase
 let mapleader=","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
-
 "----------------------------------------
 " PLUGINS
 "----------------------------------------
@@ -84,6 +83,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
 
     " FRONT-END
+    Plug 'cakebaker/scss-syntax'
     Plug 'mattn/emmet-vim'
     
     " INTEGRATION WITH GIT
@@ -113,12 +113,17 @@ let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
 let g:neocomplete#sources#syntax#min_keyword_length=3
 
+"NERDTree
+map <F2> :NERDTreeToggle<CR>
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:UltiSnipsEditSplit="vertical"
+
+"SCSS Syntax
+autocmd FileType scss set iskeyword+=-
 
 "----------------------------------------
 " VISUAL
