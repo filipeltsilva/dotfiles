@@ -83,7 +83,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
 
     " FRONT-END
-    Plug 'cakebaker/scss-syntax'
+    Plug 'cakebaker/scss-syntax.vim'
     Plug 'mattn/emmet-vim'
     
     " INTEGRATION WITH GIT
