@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printOptions() {
+function printOptions() {
     echo '1) Vim'
     echo '2) ZSH'
     echo
@@ -8,12 +8,16 @@ printOptions() {
     echo	
 }
 
-rest() {
+function rest() {
     echo
     sleep 2
 }
 
-chooseOption() {
+function goHome() {
+    cd ~
+}
+
+function chooseOption() {
     printOptions
 
     read -p 'Escolha uma das opções acima: ' OPTION
@@ -39,7 +43,7 @@ chooseOption() {
     esac
 }
 
-vimSetup(){
+function vimSetup(){
     echo 'SETUP DO VIM'
     rest
 
@@ -64,7 +68,7 @@ vimSetup(){
     fi
 }
 
-zshSetup() {
+function zshSetup() {
     echo 'CONFIGURAÇÃO DO ZSH'
     rest
 
