@@ -1,11 +1,7 @@
 #!/bin/bash
 
-function printOptions() {
-    echo '1) Vim'
-    echo '2) ZSH'
-    echo
-    echo '0) Encerrar'
-    echo	
+function goHome() {
+    cd ~
 }
 
 function rest() {
@@ -13,18 +9,15 @@ function rest() {
     sleep 2
 }
 
-function goHome() {
-    cd ~
-}
-
 function chooseOption() {
     printOptions
 
-    read -p 'Escolha uma das opções acima: ' OPTION
+    read -p 'ESCOLHA UMA DAS OPÇÕES ACIMA: ' OPTION
     echo
 
     case $OPTION in
     0)
+        clear
         exit
         ;;
     1)
@@ -35,51 +28,78 @@ function chooseOption() {
         zshSetup
         chooseOption
         ;;
+    3)
+        gitSetup
+        chooseOption
+        ;;
     *)
-        echo 'Opção inválida! Selecione uma das opções da lista.'
+        echo 'OPÇÃO INVÁLIDA! SELECIONE UMA DAS OPÇÕES LISTADAS.'
         rest
         chooseOption
         ;;
     esac
 }
 
+function printOptions() {
+    echo
+    echo '1) VIM'
+    echo '2) ZSH'
+    echo '3) GIT'
+    echo
+    echo '0) ENCERRAR'
+    echo	
+}
+
+function gitSetup() {
+    echo '#############################'
+    echo '#### CONFIGURAÇÃO DO GIT ####'
+    echo '#############################'
+    rest
+    
+    if [ -f ~/.gitconfig ]; then
+        echo 'O ARQUIVO .gitconfig JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
+    else
+        echo 'CONFIGURANDO O ARQUIVO .gitconfig'
+        ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+    fi
+}
+
 function vimSetup(){
-    echo 'SETUP DO VIM'
+    echo '################'
+    echo '# SETUP DO VIM #'
+    echo '################'
     rest
 
     if [ -f ~/.vimrc ]; then
-        echo 'O arquivo .vimrc já está configurado nesse sistema.'
-        rest
+        echo 'O ARQUIVO .vimrc JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
     else    
-        echo 'Configurando o arquivo vimrc'
+        echo 'CONFIGURANDO O ARQUIVO .vimrc'
         ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-        rest
     fi
 
-    echo 'Verificando se o plugin vim-plug já está instalado.'
+    echo 'VERIFICANDO SE O GERENCIADOR DE PLUGINS VIM-PLUG JÁ ESTÁ INSTALADO.'
     rest
     if [ ! -d ~/.vim/autoload ]; then
-        echo 'Instalando o plugin vim-plug para fazer o gerenciamento de plugins'
+        echo 'INSTALANDO O PLUGIN VIM-PLUG'
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     else
-        echo 'O plugin vim-plug já está instalado e configurado nesse computador.'
-        rest
+        echo 'O PLUGIN VIM-PLUG JÁ ESTÁ INSTALADO E CONFIGURADO NESSE SISTEMA.'
     fi
 }
 
 function zshSetup() {
-    echo 'CONFIGURAÇÃO DO ZSH'
+    echo '#######################'
+    echo '# CONFIGURAÇÃO DO ZSH #'
+    echo '#######################'
     rest
 
     if [ -f ~/.zshrc  ] && [ -L ~/.zshrc ]; then
-        echo 'O arquivo .zshrc já está configurado nesse sistema.'
-        rest
+        echo 'O ARQUIVO .zshrc JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
     elif [ -f ~/.zshrc ] && [ ! -L ~/.zshrc ]; then
-        echo 'Removendo o .zshrc padrão e configurando o novo arquivo .zshrc'
+        echo 'REMOVENDO O .zshrc PADRÃO E CONFIGURANDO O NOVO ARQUIVO .zshrc'
         rm ~/.zshrc
         ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-        rest
     fi
 }
 
