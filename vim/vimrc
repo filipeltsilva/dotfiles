@@ -75,6 +75,7 @@ call plug#begin()
     " IMPROVING THE VIM FUNCTIONALITY
     Plug 'bling/vim-airline'
     Plug 'ervandew/supertab'
+    Plug 'junegunn/vim-easy-align'
     Plug 'scrooloose/nerdtree'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Townk/vim-autoclose'
