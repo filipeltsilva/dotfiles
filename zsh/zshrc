@@ -88,10 +88,7 @@ source $ZSH/oh-my-zsh.sh
 alias wpscan="ruby ~/.wpscan/wpscan.rb"
 
 # SSH Aliases
-alias sshapikipme="ssh root@apikipme.com"
-alias sshapikiprojeto="ssh root@apikiprojeto.com"
 alias sshfilipelemos="ssh filipelemos@filipelemos-com.umbler.net -p 9922"
-alias sshgenoma="ssh genoma_ps@genoma.com.br"
 
 # RVM Settings
 source ~/.rvm/scripts/rvm
