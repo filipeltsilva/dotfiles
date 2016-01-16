@@ -45,14 +45,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases git git-extras gitfast sublime)
+plugins=(common-aliases git git-extras gitfast)
 
 # User configuration
 
 # MYSQL PATH
 export MYSQL_PATH="/usr/local/mysql"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/scripts"
 export PATH=$MYSQL_PATH/bin:$MYSQL_PATH/support-files:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -73,15 +73,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ALIASES
 # Program Aliases
