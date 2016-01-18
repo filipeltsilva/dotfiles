@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ALIASES
 # Program Aliases
+alias bower="noglob bower"
 alias wpscan="ruby ~/.wpscan/wpscan.rb"
 
 # SSH Aliases
