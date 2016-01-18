@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo
+echo '#######################'
+echo '# CONFIGURAÇÃO DO ZSH #'
+echo '#######################'
+sleep 2
+echo
+
+if [ -f ~/.zshrc  ] && [ -L ~/.zshrc ]; then
+    echo 'O ARQUIVO .zshrc JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
+elif [ -f ~/.zshrc ] && [ ! -L ~/.zshrc ]; then
+    echo 'REMOVENDO O .zshrc PADRÃO E CONFIGURANDO O NOVO ARQUIVO .zshrc'
+    rm ~/.zshrc
+    ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+fi
