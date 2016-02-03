@@ -11,5 +11,5 @@ if [ -f ~/.gitconfig ]; then
     echo 'O ARQUIVO .gitconfig JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
 else
     echo 'CONFIGURANDO O ARQUIVO .gitconfig'
-    ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+    ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 fi

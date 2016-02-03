@@ -11,7 +11,7 @@ if [ -f ~/.vimrc ]; then
     echo 'O ARQUIVO .vimrc JÁ ESTÁ CONFIGURADO NESSE SISTEMA.'
 else    
     echo 'CONFIGURANDO O ARQUIVO .vimrc'
-    ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+    ln -s ~/.dotfiles/vimrc ~/.vimrc
 fi
 
 echo

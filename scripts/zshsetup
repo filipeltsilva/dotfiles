@@ -12,5 +12,5 @@ if [ -f ~/.zshrc  ] && [ -L ~/.zshrc ]; then
 elif [ -f ~/.zshrc ] && [ ! -L ~/.zshrc ]; then
     echo 'REMOVENDO O .zshrc PADRÃO E CONFIGURANDO O NOVO ARQUIVO .zshrc'
     rm ~/.zshrc
-    ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+    ln -s ~/.dotfiles/zshrc ~/.zshrc
 fi
