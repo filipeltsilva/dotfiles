@@ -86,7 +86,8 @@ call plug#begin()
     " FRONT-END
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'mattn/emmet-vim'
-    
+    Plug 'wavded/vim-stylus'
+
     " INTEGRATION WITH GIT
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
