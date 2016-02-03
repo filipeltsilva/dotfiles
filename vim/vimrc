@@ -73,12 +73,13 @@ call plug#begin()
     Plug 'flazz/vim-colorschemes'
 
     " IMPROVING THE VIM FUNCTIONALITY
-    Plug 'bling/vim-airline'
     Plug 'ervandew/supertab'
     Plug 'junegunn/vim-easy-align'
     Plug 'scrooloose/nerdtree'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Townk/vim-autoclose'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     
     " CSS
     Plug 'ap/vim-css-color'
