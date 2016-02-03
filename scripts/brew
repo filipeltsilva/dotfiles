@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Updating repositories and packages"
+echo
+sleep 2
+brew update
+brew upgrade
+
+echo
+
+echo "Cleaning the cache"
+echo
+sleep2
+brew cleanup

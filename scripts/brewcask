@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Installing Caskroom"
+echo
+sleep 2
+brew install caskroom/cask/brew-cask
+
+echo "Installing applications"
+echo
+sleep 2
+brew cask install atom iterm2
+
+echo "Installing browsers"
+echo
+sleep 2
+brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+
+echo "Cleaning the cache"
+echo
+sleep 2
+brew cask cleanup
