@@ -2,44 +2,23 @@
 " GENERAL SETTINGS
 "----------------------------------------
 filetype plugin indent on
-
 set autoindent
-
 set backspace=eol,indent,start
-
 set breakindent
-
 set copyindent
-
 set history=1000
-
 set laststatus=2
-
-" Enable mouse
 set mouse=a
-
 set nocompatible
-
 set nowrap
-
 set showcmd
-
 set showmatch
-
-" Show the current mode
 set showmode
-
 set title
-
 set ttyfast
-
 set ul=1000
-
 set visualbell
-
-" Improve the command line completion
 set wildmenu
-
 set wildmode=longest,list
 
 " Autoloading .vimrc file
@@ -47,12 +26,9 @@ if has('autocmd')
     autocmd BufWritePost ~/.vimrc source $MYVIMRC
 endif
 
-" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-
-" Search
 set hlsearch
 set ignorecase
 set incsearch
@@ -132,34 +108,16 @@ autocmd FileType scss set iskeyword+=-
 " VISUAL
 "----------------------------------------
 colorscheme obsidian
-
 set background=dark
-
-" Highlight the current line
 set cursorline
-
 set expandtab
-
-" Show line numbers
 set number
-
-" Show relative line numbers
 set relativenumber
-
-" Show the cursor position at the bottom-right corner
 set ruler
-
-set shiftwidth=4
-
+set shiftwidth=2
 set smarttab
-
-set softtabstop=4
-
-set tabstop=4
-
+set softtabstop=2
+set tabstop=2
 set t_Co=256
-
 set title
-
-" Enable syntax highlight
 syntax on
