@@ -6,7 +6,10 @@ sleep 2
 brew update
 brew upgrade
 
+echo "Installing terminal applications"
 echo
+sleep 2
+brew install htop-osx tmux
 
 echo "Cleaning the cache"
 echo
