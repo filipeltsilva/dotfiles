@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Updating repositories and packages"
+echo
+sleep 2
+brew cask update
+brew cask upgrade
+
 echo "Installing Caskroom"
 echo
 sleep 2
@@ -8,17 +14,18 @@ brew install caskroom/cask/brew-cask
 echo "Installing applications"
 echo
 sleep 2
-brew cask install android-file-transfer appcleaner iterm2 slack teamviewer utorrent vlc
+brew cask install android-file-transfer appcleaner filezilla iterm2 slack spotify spotify-notifications teamviewer utorrent vlc
 
 echo "Installing browsers"
 echo
 sleep 2
-brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+brew cask install google-chrome opera
+brew cask install firefox-pt-br firefoxdeveloperedition
 
 echo "Installing development tools"
 echo
 sleep 2
-brew cask install atom diffmerge
+brew cask install atom diffmerge poedit
 
 echo "Installing and configuring Docker"
 echo

@@ -11,6 +11,11 @@ echo
 sleep 2
 brew install htop-osx tmux
 
+echo "Installing development tools"
+echo
+sleep 2
+brew install hub
+
 echo "Cleaning the cache"
 echo
 sleep2
