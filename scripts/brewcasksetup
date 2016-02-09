@@ -18,7 +18,15 @@ brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-ca
 echo "Installing development tools"
 echo
 sleep 2
-brew cask install atom diffmerge dockertoolbox boot2docker
+brew cask install atom diffmerge
+
+echo "Installing and configuring Docker"
+echo
+sleep 2
+brew cask install virtualbox
+brew install docker boot2docker
+boot2docker init
+boot2docker up
 
 echo "Cleaning the cache"
 echo
