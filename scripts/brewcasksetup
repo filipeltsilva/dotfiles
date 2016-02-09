@@ -8,7 +8,7 @@ brew install caskroom/cask/brew-cask
 echo "Installing applications"
 echo
 sleep 2
-brew cask install android-file-transfer appcleaner iterm2 teamviewer utorrent vlc
+brew cask install android-file-transfer appcleaner iterm2 slack teamviewer utorrent vlc
 
 echo "Installing browsers"
 echo
