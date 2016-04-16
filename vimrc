@@ -4,7 +4,6 @@
 filetype plugin indent on
 set autoindent
 set backspace=eol,indent,start
-set breakindent
 set copyindent
 set history=1000
 set laststatus=2
