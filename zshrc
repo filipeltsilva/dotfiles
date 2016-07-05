@@ -86,7 +86,13 @@ alias sshfilipelemos="ssh filipelemos@filipelemos-com.umbler.net -p 9922"
 # RVM Settings
 source ~/.rvm/scripts/rvm
 
-# Terminal Aliases
+# TERMINAL ALIASES
 alias cl="clear"
 alias q="exit"
 alias resetzsh="source ~/.zshrc"
+
+# CUSTOM FUNCTIONS
+function localserver() {
+  python -m SimpleHTTPServer 8888
+}
+
