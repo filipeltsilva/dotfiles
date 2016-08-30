@@ -78,10 +78,6 @@ source $ZSH/oh-my-zsh.sh
 # Program Aliases
 alias bower="noglob bower"
 alias vim="mvim -v"
-alias wpscan="ruby ~/.wpscan/wpscan.rb"
-
-# SSH Aliases
-alias sshfilipelemos="ssh filipelemos@filipelemos-com.umbler.net -p 9922"
 
 # RVM Settings
 source ~/.rvm/scripts/rvm
