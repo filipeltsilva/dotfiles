@@ -1,6 +1,3 @@
-"----------------------------------------
-" VISUAL
-"----------------------------------------
 colorscheme obsidian
 set background=dark
 set cursorline
