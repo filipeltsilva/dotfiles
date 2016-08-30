@@ -1,4 +1,4 @@
-colorscheme obsidian
+colorscheme desert
 set background=dark
 set cursorline
 set expandtab
