@@ -77,7 +77,6 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # Program Aliases
 alias bower="noglob bower"
-alias vim="mvim -v"
 
 # RVM Settings
 source ~/.rvm/scripts/rvm
