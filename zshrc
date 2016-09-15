@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,15 +45,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases git git-extras gitfast)
+plugins=(bower brew common-aliases git git-extras gitfast sublime tmux web-search)
 
 # User configuration
 
 # MYSQL PATH
-export MYSQL_PATH="/usr/local/mysql"
+# export MYSQL_PATH="/usr/local/mysql"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/scripts"
-export PATH=$MYSQL_PATH/bin:$MYSQL_PATH/support-files:$PATH
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/scripts"
+# export PATH=$MYSQL_PATH/bin:$MYSQL_PATH/support-files:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 alias bower="noglob bower"
 
 # RVM Settings
-source ~/.rvm/scripts/rvm
+# source ~/.rvm/scripts/rvm
 
 # TERMINAL ALIASES
 alias cl="clear"
