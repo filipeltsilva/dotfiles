@@ -85,6 +85,7 @@ alias bower="noglob bower"
 alias cl="clear"
 alias q="exit"
 alias resetzsh="source ~/.zshrc"
+alias tm="tmux"
 
 # CUSTOM FUNCTIONS
 function localserver() {
