@@ -8,13 +8,13 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -23,10 +23,10 @@ ZSH_THEME="avit"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -47,13 +47,9 @@ ZSH_THEME="avit"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(bower brew common-aliases git git-extras gitfast sublime tmux web-search)
 
-# User configuration
+# USER CONFIGURATION
 
-# MYSQL PATH
-# export MYSQL_PATH="/usr/local/mysql"
-
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/scripts"
-# export PATH=$MYSQL_PATH/bin:$MYSQL_PATH/support-files:$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/scripts"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -62,11 +58,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -74,21 +70,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# ALIASES
-# Program Aliases
-alias bower="noglob bower"
-
-# RVM Settings
-# source ~/.rvm/scripts/rvm
-
-# TERMINAL ALIASES
-alias cl="clear"
-alias q="exit"
-alias resetzsh="source ~/.zshrc"
-alias tm="tmux"
-
-# CUSTOM FUNCTIONS
-function localserver() {
-  python -m SimpleHTTPServer 8888
-}
-
+# INCLUDE SETTINGS FILES
+source $HOME/.dotfiles/aliases
+source $HOME/.dotfiles/functions
