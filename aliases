@@ -1,9 +1,6 @@
 # FRONT-END ALIASES
 alias bower='noglob bower'
 
-# GIT ALIASES
-gcam='git commit -am'
-
 # TMUX ALIASES
 alias tm='tmux'
 
