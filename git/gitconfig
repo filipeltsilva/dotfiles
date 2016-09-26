@@ -13,4 +13,4 @@
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [core]
-	excludesfile = /Volumes/Arquivos/filipelemos/.gitignore_global
+	excludesfile = ~/.gitignore_global
