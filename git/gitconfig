@@ -20,5 +20,3 @@
 	changed = red bold
 	added = green bold
 	untracked = yellow bold
-[alias]
-	cam = commit -am
