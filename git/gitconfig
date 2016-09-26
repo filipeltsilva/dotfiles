@@ -1,8 +1,9 @@
 [user]
-	name = Filipe lemos
+	name = Filipe Lemos
 	email = contato@filipelemos.com
 [color]
 	ui = true
+	status = always
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -14,3 +15,8 @@
 	trustExitCode = true
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = vim
+[color "status"]
+	changed = red bold
+	added = green bold
+	untracked = yellow bold
