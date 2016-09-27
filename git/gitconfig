@@ -19,4 +19,4 @@
 [color "status"]
 	changed = red bold
 	added = green bold
-	untracked = cyan
+	untracked = cyan bold
