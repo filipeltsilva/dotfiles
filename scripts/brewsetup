@@ -1,22 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-echo "Updating repositories and packages"
-echo
-sleep 2
-brew update
-brew upgrade
+brew install htop-osx
 
-echo "Installing terminal applications"
-echo
-sleep 2
-brew install htop-osx tmux
+brew install git hub tmux
 
-echo "Installing development tools"
-echo
-sleep 2
-brew install hub
-
-echo "Cleaning the cache"
-echo
-sleep2
 brew cleanup
+
+brew cask install android-file-transfer appcleaner iterm2 slack spotify spotify-notifications teamviewer utorrent vlc
+
+brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+
+brew cask install diffmerge
