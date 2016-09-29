@@ -6,7 +6,7 @@ brew install git hub tmux
 
 brew install vim
 
-brew cask install android-file-transfer appcleaner iterm2 slack spotify spotify-notifications selfcontrol skype teamviewer utorrent vlc
+brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer utorrent vlc
 
 brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
 
