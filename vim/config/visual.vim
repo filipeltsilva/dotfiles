@@ -4,7 +4,6 @@ set background=dark
 set cursorline
 set expandtab
 set t_Co=256
-set title
 syntax on
 
 " LINE NUMBERS
