@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"AngularJS",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"CSS3",
+		"EditorConfig",
+		"Emmet",
+		"GitGutter",
+		"Handlebars",
+		"Jade",
+		"JavaScriptNext - ES6 Syntax",
+		"Markdown Preview",
+		"Package Control",
+		"SideBarEnhancements",
+		"Stylus",
+		"Stylus-Snippets",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"Theme - Afterglow",
+		"TrailingSpaces"
+	]
+}

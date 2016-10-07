@@ -1,0 +1,16 @@
+# GENERAL IGNORE
+.DS_Store
+
+# SUBLIME TEXT 3 IGNORE
+*.crt
+*.pyc
+*.tmTheme
+Color\ Highlighter/*
+Package\ Control.ca-bundle
+Package\ Control.ca-list
+Package\ Control.last-run
+Package\ Control.cache
+Package\ Control.merged-ca-bundle
+Package\ Control.system-ca-bundle
+Package\ Control.user-ca-bundle
+SublimeLinter/*
