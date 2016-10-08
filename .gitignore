@@ -2,6 +2,7 @@
 .DS_Store
 
 # SUBLIME TEXT 3 IGNORE
+*.cache
 *.crt
 *.pyc
 *.tmTheme
