@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+ln -s $HOME/.dotfiles/sublime-text-3 $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
