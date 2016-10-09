@@ -1,0 +1,31 @@
+#!/bin/bash
+
+GREEN="\033[1;32m"
+RED="\033[1;31m"
+YELLOW="\033[1;33m"
+
+NO_COLOR="\033[0m"
+
+message_info() {
+  echo -e "##### ${YELLOW} $1 ${NO_COLOR} #####"
+  pause
+}
+
+message_okay() {
+  echo -e "##### ${GREEN} $1 ${NO_COLOR} #####"
+  pause
+}
+
+message_warning() {
+  echo -e "##### ${RED} $1 ${NO_COLOR} #####"
+  pause
+}
+
+pause() {
+  sleep 2
+  echo
+}
+
+export -f message_info
+export -f message_okay
+export -f message_warning
