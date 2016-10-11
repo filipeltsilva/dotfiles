@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ./helpers/linking
+
+linking $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
