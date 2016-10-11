@@ -3,6 +3,10 @@
 source ./helpers/linking_files
 source ./helpers/messages
 
+message_info "SETUP DO GIT"
+linking_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+linking_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
+
 message_info "SETUP DO VIM"
 linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
 linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
