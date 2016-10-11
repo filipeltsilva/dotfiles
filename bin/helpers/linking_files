@@ -2,13 +2,17 @@
 
 source ./helpers/messages
 
-linking() {
+linking_file() {
   if [ -f $2  ] && [ -L $2 ]; then
     message_okay "O arquivo $2 já está devidamente configurado"
   else
+    if [ ! -L $2 ]; then
+      rm $2
+    fi
+
     message_info "Configurando o arquivo $2"
     ln -s $1 $2
   fi
 }
 
-export -f linking
+export -f linking_file

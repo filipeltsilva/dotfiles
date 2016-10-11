@@ -1,12 +1,12 @@
 #!/bin/bash
 
-source ./helpers/linking
+source ./helpers/linking_files
 source ./helpers/messages
 
-vimSetup() {
+vim_setup() {
   message_info "SETUP DO VIM"
-  linking $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
-  linking $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+  linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
+  linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 
   message_info "SETUP DO VIM-PLUG"
   if [ ! -d ~/.vim/autoload ]; then
@@ -18,4 +18,4 @@ vimSetup() {
   fi
 }
 
-export -f vimSetup
+export -f vim_setup
