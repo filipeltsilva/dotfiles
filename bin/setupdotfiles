@@ -1,5 +1,23 @@
 #!/bin/bash
 
-source ./helpers/vimsetup
+source ./helpers/linking_files
+source ./helpers/messages
 
-vim_setup
+message_info "SETUP DO VIM"
+linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
+linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+
+message_info "Setup do Vim-plug"
+if [ ! -d ~/.vim/autoload ]; then
+  message_info "Instalando o Vim-plug"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+  message_okay "O Vim-plug já está instalado e configurado"
+fi
+
+message_info "SETUP DO ZSH"
+message_info "Instalando o Oh My ZSH!"
+
+
+linking_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
