@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source ../bin/helpers/link_files
-source ../bin/helpers/messages
+source ./helpers/link_files
+source ./helpers/messages
 
 message_info "GIT SETUP"
 link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
@@ -30,4 +30,3 @@ fi
 
 link_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
 chsh -s /bin/zsh $USER
-source $HOME/.zshrc

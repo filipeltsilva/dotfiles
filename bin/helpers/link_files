@@ -1,4 +1,4 @@
-source ../bin/helpers/messages
+source ./helpers/messages
 
 link_file() {
   if [ -f $2  ] && [ -L $2 ]; then
@@ -13,4 +13,4 @@ link_file() {
   fi
 }
 
-export -f linking_file
+export -f link_file
