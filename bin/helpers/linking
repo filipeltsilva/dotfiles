@@ -7,7 +7,6 @@ linking() {
     message_okay "O arquivo $2 já está devidamente configurado"
   else
     message_info "Configurando o arquivo $2"
-    rm $2
     ln -s $1 $2
   fi
 }
