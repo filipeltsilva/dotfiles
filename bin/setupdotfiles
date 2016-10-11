@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source ./helpers/linking_files
-source ./helpers/messages
+source ../bin/helpers/link_files
+source ../bin/helpers/messages
 
 message_info "GIT SETUP"
-linking_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
-linking_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
+link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+link_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
 message_info "VIM SETUP"
 message_info "Vim-plug setup"
@@ -14,20 +14,20 @@ if [ ! -d ~/.vim/autoload ]; then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 else
-  message_okay "Vim-plug was already installed and configured"
+  message_okay "Vim-plug was already installed in this system"
 fi
 
-linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
-linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+link_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
+link_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 
 message_info "ZSH SETUP"
 message_info "Installing Oh My ZSH!"
 if [ ! -d $HOME/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-  message_okay "Oh My ZSH was already installed"
+  message_okay "Oh My ZSH was already installed in this system"
 fi
 
-# chsh -s /bin/zsh $USER
-
-linking_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+link_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+chsh -s /bin/zsh $USER
+source $HOME/.zshrc

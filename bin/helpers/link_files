@@ -1,8 +1,6 @@
-#!/bin/bash
+source ../bin/helpers/messages
 
-source ./messages
-
-linking_file() {
+link_file() {
   if [ -f $2  ] && [ -L $2 ]; then
     message_okay "The file $2 was already configured in this system"
   else
