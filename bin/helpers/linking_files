@@ -1,16 +1,16 @@
 #!/bin/bash
 
-source ./helpers/messages
+source ./messages
 
 linking_file() {
   if [ -f $2  ] && [ -L $2 ]; then
-    message_okay "O arquivo $2 já está devidamente configurado"
+    message_okay "The file $2 was already configured in this system"
   else
     if [ ! -L $2 ]; then
       rm $2
     fi
 
-    message_info "Configurando o arquivo $2"
+    message_info "Configuring the file $2"
     ln -s $1 $2
   fi
 }

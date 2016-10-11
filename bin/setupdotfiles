@@ -3,25 +3,31 @@
 source ./helpers/linking_files
 source ./helpers/messages
 
-message_info "SETUP DO GIT"
+message_info "GIT SETUP"
 linking_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 linking_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
-message_info "SETUP DO VIM"
-linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
-linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
-
-message_info "Setup do Vim-plug"
+message_info "VIM SETUP"
+message_info "Vim-plug setup"
 if [ ! -d ~/.vim/autoload ]; then
-  message_info "Instalando o Vim-plug"
+  message_info "Installing Vim-plug"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 else
-  message_okay "O Vim-plug já está instalado e configurado"
+  message_okay "Vim-plug was already installed and configured"
 fi
 
-message_info "SETUP DO ZSH"
-message_info "Instalando o Oh My ZSH!"
+linking_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
+linking_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 
+message_info "ZSH SETUP"
+message_info "Installing Oh My ZSH!"
+if [ ! -d $HOME/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+else
+  message_okay "Oh My ZSH was already installed"
+fi
+
+# chsh -s /bin/zsh $USER
 
 linking_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
