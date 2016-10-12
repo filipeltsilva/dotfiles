@@ -9,8 +9,8 @@
 #
 # AUTHOR: Filipe Lemos
 
-source ./helpers/link_files
-source ./helpers/messages
+source ./functions/link_files
+source ./functions/messages
 
 message_info "GIT SETUP"
 link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig

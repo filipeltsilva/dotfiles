@@ -8,16 +8,21 @@
 #
 # AUTHOR: Filipe Lemos
 
-brew install htop-osx
+source ../functions/messages
+message_info "INSTALLING CLI TOOLS"
+#brew install htop-osx
 
-brew install git hub tmux
+message_info "INSTALLING DEVELOPMENT TOOLS"
+#brew install git hub tmux
+#brew install vim
 
-brew install vim
+message_info "INSTALLING GRAPHICAL SOFTWARES"
+#brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer utorrent vlc
 
-brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer utorrent vlc
+message_info "INSTALLING BROWSERS"
+#brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
 
-brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
-
-brew cask install diffmerge
+message_info "INSTALLING GRAPHICAL DEVELOPMENT TOOLS"
+#brew cask install diffmerge sublime-text
 
 brew cleanup

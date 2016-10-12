@@ -1,4 +1,6 @@
-source ./helpers/messages
+#!/usr/bin/env bash
+
+source ./functions/messages
 
 link_file() {
   if [ -f $2  ] && [ -L $2 ]; then
