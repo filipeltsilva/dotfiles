@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: colours
+# CREATION DATE: 2016-10-12
+#
+#
+# DESCRIPTION: This script prints the 256-color table supported by the UNIX terminals.
+#
+# AUTHOR: Filipe Lemos
+
 for i in {0..255} ; do
   printf "\x1b[38;5;${i}m%3d " "${i}"
 

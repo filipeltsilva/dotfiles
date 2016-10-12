@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: brewupdate
+# CREATION DATE: 2016-10-12
+#
+#
+# DESCRIPTION: This script runs my Homebrew's update process.
+#
+# AUTHOR: Filipe Lemos
+
 brew update
 brew upgrade --all
 

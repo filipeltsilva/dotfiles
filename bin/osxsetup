@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: osxsetup
+# CREATION DATE: 2016-10-12
+#
+#
+# DESCRIPTION: This script automates my package installation with Homebrew.
+#
+# AUTHOR: Filipe Lemos
+
 brew install htop-osx
 
 brew install git hub tmux

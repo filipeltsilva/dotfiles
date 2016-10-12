@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: setup_dotfiles
+# CREATION DATE: 2016-10-12
+#
+#
+# DESCRIPTION: This script automates my dotfiles' symbolic linking and it installs some tools that my workflow needs
+# to work.
+#
+# AUTHOR: Filipe Lemos
+
 source ./helpers/link_files
 source ./helpers/messages
 
