@@ -48,7 +48,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(bower brew common-aliases git git-extras gitfast sublime tmux web-search)
 
 # USER CONFIGURATION
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/bin"
+MY_SCRIPTS=$HOME/.dotfiles/bin
+MY_FUNCTIONS=$MY_SCRIPTS/functions
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$MY_SCRIPTS:$MY_FUNCTIONS"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
