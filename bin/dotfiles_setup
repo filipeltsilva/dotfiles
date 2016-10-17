@@ -17,8 +17,8 @@ message_info "GIT SETUP"
 link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 link_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
-message_info "SUBLIME TEXT SETUP"
-link_folder "$HOME/.dotfiles/sublime-text-3" "$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+# message_info "SUBLIME TEXT SETUP"
+# link_folder $HOME/.dotfiles/sublime-text-3 $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
 message_info "VIM SETUP"
 message_info "Vim-plug setup"

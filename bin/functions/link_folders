@@ -3,13 +3,10 @@
 source messages
 
 link_folder() {
-  if [ -d $2 && -L $2 ]; then
+  if [[ -d $2 ]] && [[ -L $2 ]]; then
     message_okay "The folder $2 was already configured in this system"
-  else
-    if [ ! -L $2 ]; then
-      rm $2
-    fi
-
+  elif [[ ! -L $2 ]]; then
+    rm $2
     message_info "Configuring the folder $2"
     ln -s $1 $2
   fi
