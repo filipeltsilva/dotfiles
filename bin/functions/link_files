@@ -3,12 +3,12 @@
 source messages
 
 function link_file() {
-  if [[ -f $2 ]] && [[ -L $2 ]]; then
-    message_okay "The file $2 was already configured in this system"
-  elif [[ ! -L $2 ]]; then
-    rm $2
-    message_info "Configuring the file $2"
-    ln -s $1 $2
+  if [[ -f ${2} ]] && [[ -L ${2} ]]; then
+    message_okay "The file ${2} was already configured in this system"
+  elif [[ ! -L ${2} ]]; then
+    rm ${2}
+    message_info "Configuring the file ${2}"
+    ln -s ${1} ${2}
   fi
 }
 
