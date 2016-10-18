@@ -2,7 +2,7 @@
 
 source messages
 
-link_folder() {
+function link_folder() {
   if [[ -d $2 ]] && [[ -L $2 ]]; then
     message_okay "The folder $2 was already configured in this system"
   elif [[ ! -L $2 ]]; then
