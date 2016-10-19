@@ -1,6 +1,9 @@
 # FRONT-END ALIASES
 alias bower='noglob bower'
 
+# OSX ALIASES
+alias brewupdate='brew update | brew upgrade | brew cleanup'
+
 # TMUX ALIASES
 alias tm='tmux'
 
