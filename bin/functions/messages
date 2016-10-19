@@ -7,17 +7,17 @@ YELLOW="\033[1;33m"
 NO_COLOR="\033[0m"
 
 function message_info() {
-  echo -e "##### ${YELLOW} $1 ${NO_COLOR} #####"
+  echo -e "##### ${YELLOW} ${1} ${NO_COLOR} #####"
   pause
 }
 
 function message_okay() {
-  echo -e "##### ${GREEN} $1 ${NO_COLOR} #####"
+  echo -e "##### ${GREEN} ${1} ${NO_COLOR} #####"
   pause
 }
 
 function message_warning() {
-  echo -e "##### ${RED} $1 ${NO_COLOR} #####"
+  echo -e "##### ${RED} ${1} ${NO_COLOR} #####"
   pause
 }
 
