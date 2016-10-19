@@ -11,7 +11,7 @@
 source messages
 
 message_info "INSTALLING CLI TOOLS"
-#brew install htop-osx
+#brew install bash htop-osx tree zsh
 
 message_info "INSTALLING DEVELOPMENT TOOLS"
 #brew install git hub tmux
