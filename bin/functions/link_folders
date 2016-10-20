@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. ./messages
+. messages
 
 function link_folder() {
   if [[ -d ${2} ]] && [[ -L ${2} ]]; then
