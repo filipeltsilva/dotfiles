@@ -9,9 +9,9 @@
 #
 # AUTHOR: Filipe Lemos
 
-source link_files
-source link_folders
-source messages
+. link_files
+. link_folders
+. messages
 
 # message_info "GIT SETUP"
 # link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig

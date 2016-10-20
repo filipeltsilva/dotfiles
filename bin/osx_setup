@@ -8,7 +8,7 @@
 #
 # AUTHOR: Filipe Lemos
 
-source messages
+. messages
 
 message_info "INSTALLING CLI TOOLS"
 #brew install bash htop-osx tree zsh
