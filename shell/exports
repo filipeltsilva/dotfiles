@@ -3,6 +3,7 @@ export EDITOR='vim'
 
 # DEFAULT LANGUAGE
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # ENVIRONMENT VARIABLES
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/bin"
