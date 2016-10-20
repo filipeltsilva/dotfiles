@@ -9,13 +9,13 @@
 #
 # AUTHOR: Filipe Lemos
 
-. link_files
-. link_folders
-. messages
+. ./functions/link_files
+. ./functions/link_folders
+. ./functions/messages
 
-# message_info "GIT SETUP"
-# link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
-# link_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
+message_info "GIT SETUP"
+link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+link_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
 message_info "SUBLIME TEXT SETUP"
 ST3_SETTINGS_ORIGIN="$HOME/.dotfiles/sublime-text-3"

@@ -25,7 +25,3 @@ function pause() {
   sleep 2
   echo
 }
-
-export -f message_info
-export -f message_okay
-export -f message_warning

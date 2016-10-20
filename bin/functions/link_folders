@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. messages
+. ./messages
 
 function link_folder() {
   if [[ -d ${2} ]] && [[ -L ${2} ]]; then
@@ -11,5 +11,3 @@ function link_folder() {
     ln -s ${1} ${2}
   fi
 }
-
-export -f link_folder
