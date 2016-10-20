@@ -15,7 +15,7 @@ message_info "INSTALLING CLI TOOLS"
 
 message_info "INSTALLING DEVELOPMENT TOOLS"
 #brew install git hub tmux
-#brew install vim
+#brew install vim --with-override-system-vi
 
 message_info "INSTALLING GRAPHICAL SOFTWARES"
 #brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
