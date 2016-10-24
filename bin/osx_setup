@@ -8,7 +8,7 @@
 #
 # AUTHOR: Filipe Lemos
 
-. messages
+. ./bin/functions/messages
 
 message_info "INSTALLING CLI TOOLS"
 #brew install bash htop-osx tree youtube-dl zsh

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. messages
+. ./bin/functions/messages
 
 function link_file() {
   if [[ -f ${2} ]] && [[ -L ${2} ]]; then
