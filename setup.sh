@@ -10,15 +10,20 @@
 
 . lib/messages
 
+message_info "STARTING DOTFILE SETUP PROCESS"
+sudo -v
+
 . lib/brew_setup
 . lib/git_setup
+. lib/sublimetext_setup
 . lib/vim_setup
 . lib/zsh_setup
-
-message_info "STARTING SETUP PROCESS"
-sudo -v
 
 brew_setup
 git_setup
 vim_setup
 zsh_setup
+
+source $HOME/.zshrc
+
+message_okay "DOTFILES SETUP PROCESS FINISHED"

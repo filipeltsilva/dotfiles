@@ -20,4 +20,4 @@ else
 fi
 
 symlink_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
-chsh -s /bin/zsh $USER
+chsh -s /usr/bin/env zsh $USER

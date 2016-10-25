@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: vim_setup
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: Vim Setup
+#
+# AUTHOR: Filipe Lemos
+
+. lib/messages
+. lib/symlink_files
+
+message_info "VIM SETUP"
+message_info "Vim-plug setup"
+if [ ! -d ~/.vim/autoload ]; then
+  message_info "Installing Vim-plug"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+  message_okay "Vim-plug was already installed in this system"
+fi
+
+symlink_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
+symlink_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
