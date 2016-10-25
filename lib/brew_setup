@@ -8,6 +8,8 @@
 #
 # AUTHOR: Filipe Lemos
 
+message_info "HOMEBREW SETUP"
+
 message_info "INSTALLING CLI TOOLS"
 #brew install bash htop-osx tree youtube-dl zsh
 
