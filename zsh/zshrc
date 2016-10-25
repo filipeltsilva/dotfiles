@@ -9,5 +9,4 @@ ZSH_THEME="avit"
 
 plugins=(bower brew common-aliases git git-extras gitfast sublime tmux web-search)
 
-# export MANPATH="/usr/local/man:$MANPATH"
 . $ZSH/oh-my-zsh.sh
