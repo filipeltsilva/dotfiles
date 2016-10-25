@@ -4,12 +4,9 @@
 # CREATION DATE: 2016-10-25
 #
 #
-# DESCRIPTION: Vim Setup
+# DESCRIPTION: Setting up my GVim/Vim configuration
 #
 # AUTHOR: Filipe Lemos
-
-. lib/messages
-. lib/symlink_files
 
 message_info "VIM SETUP"
 message_info "Vim-plug setup"

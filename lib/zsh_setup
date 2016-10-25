@@ -4,12 +4,9 @@
 # CREATION DATE: 2016-10-25
 #
 #
-# DESCRIPTION: ZSH confguration
+# DESCRIPTION: Setting up my ZSH confguration
 #
 # AUTHOR: Filipe Lemos
-
-. lib/messages
-. lib/symlink_files
 
 message_info "ZSH SETUP"
 message_info "Installing Oh My ZSH!"

@@ -4,12 +4,9 @@
 # CREATION DATE: 2016-10-25
 #
 #
-# DESCRIPTION: My Git setup
+# DESCRIPTION: Setting up my Git configuration files
 #
 # AUTHOR: Filipe Lemos
-
-. lib/messages
-. lib/symlink_files
 
 message_info "GIT SETUP"
 symlink_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
