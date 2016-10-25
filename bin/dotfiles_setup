@@ -18,9 +18,9 @@ link_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 link_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
 message_info "SUBLIME TEXT SETUP"
-ST3_SETTINGS_ORIGIN="$HOME/.dotfiles/sublime-text-3"
-ST3_SETTINGS_DESTINATION="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-link_folder ${ST3_SETTINGS_ORIGIN} ${ST3_SETTINGS_DESTINATION}
+# ST3_SETTINGS_ORIGIN="$HOME/.dotfiles/sublime-text-3"
+# ST3_SETTINGS_DESTINATION="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+# link_folder ${ST3_SETTINGS_ORIGIN} ${ST3_SETTINGS_DESTINATION}
 
 # message_info "VIM SETUP"
 # message_info "Vim-plug setup"

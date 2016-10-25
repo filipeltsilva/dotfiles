@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-. lib/messages
-
-function link_file() {
+function symlink_file() {
   if [[ -f ${2} ]] && [[ -L ${2} ]]; then
     message_okay "The file ${2} was already configured in this system"
   elif [[ ! -L ${2} ]]; then
     rm ${2}
     message_info "Configuring the file ${2}"
-    ln -s ${1} ${2}
+    ln -sfn ${1} ${2}
   fi
 }

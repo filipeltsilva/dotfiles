@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: zsh_setup
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: ZSH confguration
+#
+# AUTHOR: Filipe Lemos
+
+. lib/messages
+. lib/symlink_files
+
+message_info "ZSH SETUP"
+message_info "Installing Oh My ZSH!"
+if [ ! -d $HOME/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+else
+  message_okay "Oh My ZSH was already installed in this system"
+fi
+
+symlink_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+chsh -s /bin/zsh $USER

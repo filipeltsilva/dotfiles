@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: brew_setup
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: This script automates my package installation with Homebrew.
+#
+# AUTHOR: Filipe Lemos
+
+. lib/messages
+
+function brew_setup() {
+  message_info "INSTALLING CLI TOOLS"
+  #brew install bash htop-osx tree youtube-dl zsh
+
+  message_info "INSTALLING DEVELOPMENT TOOLS"
+  #brew install git hub tmux
+  #brew install vim --with-override-system-vi
+
+  message_info "INSTALLING BROWSERS"
+  #brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+
+  message_info "INSTALLING GRAPHICAL DEVELOPMENT TOOLS"
+  #brew cask install diffmerge sublime-text
+
+  message_info "INSTALLING GRAPHICAL SOFTWARES"
+  #brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
+
+  brew cleanup
+}
