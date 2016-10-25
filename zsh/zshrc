@@ -2,11 +2,11 @@
 . $HOME/.dotfiles/shell/exports
 . $HOME/.dotfiles/shell/functions
 
+. $ZSH/oh-my-zsh.sh
+
 CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 ZSH_THEME="avit"
 
 plugins=(bower brew common-aliases git git-extras gitfast sublime tmux web-search)
-
-. $ZSH/oh-my-zsh.sh
