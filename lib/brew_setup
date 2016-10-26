@@ -8,22 +8,36 @@
 #
 # AUTHOR: Filipe Lemos
 
+function brew_setup() {
+  message_info "Configuring Homebrew"
+  brew tap caskroom/cask
+}
+
+function brew_software_install() {
+  message_info "Installing CLI tools"
+  brew install bash htop-osx tree youtube-dl zsh zsh-completions
+
+  message_info "Installing CLI development tools"
+  brew install git hub utf8proc tmux
+  brew install vim --with-override-system-vi
+
+  message_info "Installing browsers"
+  brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+
+  message_info "Installing graphical tools"
+  brew cask install diffmerge sublime-text
+
+  message_info "Installing graphical softwares"
+  brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
+}
+
 message_info "HOMEBREW SETUP"
-
-message_info "Installing CLI tools"
-#brew install bash htop-osx tree youtube-dl zsh
-
-message_info "Installing CLI development tools"
-#brew install git hub tmux
-#brew install vim --with-override-system-vi
-
-message_info "Installing browsers"
-#brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
-
-message_info "Installing graphical tools"
-#brew cask install diffmerge sublime-text
-
-message_info "Installing graphical softwares"
-#brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
-
-brew cleanup
+if [[ ! -f $(which brew) ]]; then
+  message_info "Download and install Brew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew_setup
+  brew_software_install
+else
+  brew update; brew upgrade
+  brew cleanup -n; brew cask cleanup -n
+fi

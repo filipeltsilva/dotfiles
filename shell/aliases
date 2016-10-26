@@ -2,7 +2,7 @@
 alias bower="noglob bower"
 
 # OSX ALIASES
-alias brewupdate="brew update | brew upgrade | brew cleanup"
+alias brewupdate="brew update | brew upgrade | brew cleanup -n"
 alias hidehiddenfiles="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
 alias showhiddenfiles="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
 
@@ -14,4 +14,4 @@ alias cl="clear"
 alias ping="ping -c 5"
 alias q="exit"
 alias svim="sudo vim"
-alias resetzsh="source ~/.zshrc"
+alias resetzsh="source $HOME/.zshrc"
