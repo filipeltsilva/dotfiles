@@ -11,6 +11,7 @@
 function brew_setup() {
   message_info "Configuring Homebrew"
   brew tap caskroom/cask
+  brew tap caskroom/fonts
 }
 
 function brew_software_install() {
@@ -23,6 +24,9 @@ function brew_software_install() {
 
   message_info "Installing browsers"
   brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
+
+  message_info "Installing fonts"
+  brew cask install font-menlo-for-powerline
 
   message_info "Installing graphical tools"
   brew cask install diffmerge sublime-text
