@@ -17,12 +17,16 @@ clear
 message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
-. lib/brew_setup
-. lib/git_setup
-. lib/sublimetext_setup
-. lib/vim_setup
-. lib/zsh_setup
+while true; do
+  sudo -n true; sleep 60; kill -0 "$$" || exit;
+done 2>/dev/null &
 
-source $HOME/.zshrc
+. lib/brew_setup
+# . lib/git_setup
+# . lib/sublimetext_setup
+# . lib/vim_setup
+# . lib/zsh_setup
+
+# source $HOME/.zshrc
 
 message_okay "DOTFILES SETUP PROCESS FINISHED"

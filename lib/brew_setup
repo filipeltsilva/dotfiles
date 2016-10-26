@@ -28,11 +28,11 @@ function brew_software_install() {
   message_info "Installing fonts"
   brew cask install font-menlo-for-powerline
 
-  message_info "Installing graphical tools"
-  brew cask install diffmerge sublime-text
+  message_info "Installing graphical software development tools"
+  brew cask install diffmerge macvim sublime-text
 
   message_info "Installing graphical softwares"
-  brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
+  brew cask install android-file-transfer appcleaner iterm2 java pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
 }
 
 message_info "HOMEBREW SETUP"
@@ -42,6 +42,8 @@ if [[ ! -f $(which brew) ]]; then
   brew_setup
   brew_software_install
 else
-  brew update; brew upgrade
-  brew cleanup -n; brew cask cleanup -n
+  message_info "Homebrew is already installed. Updating packages"
+  brew update
+  brew upgrade
+  brew cleanup -n
 fi
