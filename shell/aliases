@@ -3,8 +3,8 @@ alias bower="noglob bower"
 
 # OSX ALIASES
 alias brewupdate="brew update | brew upgrade | brew cleanup -n"
-alias hidehiddenfiles="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
-alias showhiddenfiles="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
+alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
+alias showfiles="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
 
 # TMUX ALIASES
 alias tm="tmux"
