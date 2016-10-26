@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: symlink_files
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: Custom function to create symbolic links to files
+#
+# AUTHOR: Filipe Lemos
+
 function symlink_file() {
   if [[ -f ${2} ]] && [[ -L ${2} ]]; then
     message_okay "The file ${2} was already configured in this system"

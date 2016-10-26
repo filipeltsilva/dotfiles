@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# SCRIPT NAME: messages
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: Custom and colored messages
+#
+# AUTHOR: Filipe Lemos
+
 GREEN="\033[1;32m"
 RED="\033[1;31m"
 YELLOW="\033[1;33m"

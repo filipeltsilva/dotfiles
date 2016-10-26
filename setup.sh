@@ -22,6 +22,6 @@ sudo -v
 . lib/vim_setup
 . lib/zsh_setup
 
-source $HOME/.zshrc
+. $HOME/.zshrc
 
 message_okay "DOTFILES SETUP PROCESS FINISHED"
