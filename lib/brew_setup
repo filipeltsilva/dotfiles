@@ -10,20 +10,20 @@
 
 message_info "HOMEBREW SETUP"
 
-message_info "INSTALLING CLI TOOLS"
+message_info "Installing CLI tools"
 #brew install bash htop-osx tree youtube-dl zsh
 
-message_info "INSTALLING DEVELOPMENT TOOLS"
+message_info "Installing CLI development tools"
 #brew install git hub tmux
 #brew install vim --with-override-system-vi
 
-message_info "INSTALLING BROWSERS"
+message_info "Installing browsers"
 #brew cask install firefox firefoxdeveloperedition google-chrome google-chrome-canary opera
 
-message_info "INSTALLING GRAPHICAL DEVELOPMENT TOOLS"
+message_info "Installing graphical tools"
 #brew cask install diffmerge sublime-text
 
-message_info "INSTALLING GRAPHICAL SOFTWARES"
+message_info "Installing graphical softwares"
 #brew cask install android-file-transfer appcleaner iterm2 pomello slack spotify spotify-notifications selfcontrol skype teamviewer tomighty utorrent vlc
 
 brew cleanup

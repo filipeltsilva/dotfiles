@@ -1,0 +1,7 @@
+CASE_SENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+DEFAULT_USER="filipelemos"
+ENABLE_CORRECTION="true"
+ZSH_THEME="agnoster"
+
+plugins=(bower brew common-aliases git git-extras gitfast osx sublime tmux web-search)

@@ -9,5 +9,6 @@
 # AUTHOR: Filipe Lemos
 
 message_info "GIT SETUP"
+
 symlink_file $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 symlink_file $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global

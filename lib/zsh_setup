@@ -13,7 +13,7 @@ message_info "Installing Oh My ZSH!"
 if [ ! -d $HOME/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-  message_okay "Oh My ZSH was already installed in this system"
+  message_okay "Oh My ZSH is already installed in this system"
 fi
 
 symlink_file $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
