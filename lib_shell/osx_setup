@@ -10,6 +10,20 @@
 
 message_info "OSX CUSTOM CONFIGURATIONS"
 
-message_info "iTerm2 setup"
+message_info "Dock configuration"
+defaults write com.apple.Dock autohide -float 1 && killall Dock
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+defaults write com.apple.dock expose-animation-duration -float 0.10 && killall Dock
+
+message_info "iTerm2 configuration"
 open iTerm2/*.itermcolors
+
+defaults.write com.googlecode.iterm2 PromptOnQuit -bool false
+
+message_info "OSX configuration"
+defaults write com.apple.screencapture location $HOME/Pictures/Screenshots
+defaults write com.apple.screencapture type jpg && killall SystemUIServer
+
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
 message_okay "OSX CUSTOM CONFIGURATIONS FINISHED SUCCESSFULLY"
