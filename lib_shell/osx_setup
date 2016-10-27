@@ -18,7 +18,11 @@ defaults write com.apple.dock expose-animation-duration -float 0.10 && killall D
 message_info "iTerm2 configuration"
 open iTerm2/*.itermcolors
 
-defaults.write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
+defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline-Regular 12"
+defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 Rows -float 46
 
 message_info "OSX configuration"
 defaults write com.apple.screencapture location $HOME/Pictures/Screenshots
