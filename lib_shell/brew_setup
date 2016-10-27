@@ -42,7 +42,7 @@ if [[ ! -f $(which brew) ]]; then
   brew_setup
   brew_software_install
 else
-  message_info "Homebrew is already installed. Updating packages"
+  message_okay "Homebrew is already installed. Updating packages"
   brew update
   brew upgrade
   brew cleanup -n

@@ -27,7 +27,7 @@ done 2>/dev/null &
 . lib_shell/vim_setup
 . lib_shell/zsh_setup
 
-.lib_shell/osx_setup
+. lib_shell/osx_setup
 
 source $HOME/.zshrc
 
