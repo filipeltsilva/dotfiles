@@ -2,7 +2,6 @@
 alias bower="noglob bower"
 
 # OSX ALIASES
-alias brewupdate="brew update | brew upgrade | brew cleanup -n"
 alias dfr="defaults read"
 alias dfw="defaults write"
 alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"

@@ -2,7 +2,17 @@ function local_server() {
   python -m SimpleHTTPServer ${1}
 }
 
-function brew_cask_upgrade() {
+function brew_upgrade() {
+  brew update
+
+  for application in $(brew list); do
+    brew install "${application}"
+  done
+
+  brew cleanup -n
+}
+
+function brewcask_upgrade() {
   rm -rf $(brew --cache)
   brew update
 
