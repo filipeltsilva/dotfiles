@@ -6,7 +6,8 @@
 #
 # DESCRIPTION: Custom and colored messages
 #
-# AUTHOR: Filipe Lemos
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
 
 GREEN="\033[1;32m"
 RED="\033[1;31m"

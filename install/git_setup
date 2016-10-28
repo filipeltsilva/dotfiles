@@ -6,7 +6,8 @@
 #
 # DESCRIPTION: Setting up my Git configuration files
 #
-# AUTHOR: Filipe Lemos
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
 
 message_info "GIT SETUP"
 

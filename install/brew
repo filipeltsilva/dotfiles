@@ -20,7 +20,6 @@ applications=(
   vim --with-override-system-vi
   youtube-dl
   zsh
-  zsh-completions
 )
 
 message_info "Downloading and installing Homebrew"

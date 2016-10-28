@@ -6,7 +6,8 @@
 #
 # DESCRIPTION: Custom function to create symbolic links to files
 #
-# AUTHOR: Filipe Lemos
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
 
 function symlink_file() {
   if [[ -f ${2} ]] && [[ -L ${2} ]]; then

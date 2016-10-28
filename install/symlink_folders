@@ -6,7 +6,8 @@
 #
 # DESCRIPTION: Custom functino to create symbolic links to folders
 #
-# AUTHOR: Filipe Lemos
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
 
 function symlink_folder() {
   if [[ -d ${2} ]] && [[ -L ${2} ]]; then
