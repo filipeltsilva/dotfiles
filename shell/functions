@@ -1,7 +1,3 @@
-function local_server() {
-  python -m SimpleHTTPServer ${1}
-}
-
 function brew_upgrade() {
   brew update
 
@@ -21,4 +17,8 @@ function brewcask_upgrade() {
   done
 
   brew cask cleanup -n
+}
+
+function local_server() {
+  python -m SimpleHTTPServer ${1}
 }

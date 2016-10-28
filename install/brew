@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: brew
+# CREATION DATE: 2016-10-28
+#
+#
+# DESCRIPTION: My Brew setup
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+applications=(
+  bash
+  git
+  htop-osx
+  hub
+  tmux
+  tree
+  utf8proc
+  vim --with-override-system-vi
+  youtube-dl
+  zsh
+  zsh-completions
+)
+
+message_info "Downloading and installing Homebrew"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install "${applications[@]}"

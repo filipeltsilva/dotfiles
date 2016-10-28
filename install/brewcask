@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: brewcask
+# CREATION DATE: 2016-10-28
+#
+#
+# DESCRIPTION: My Brew Cask setup
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+applications=(
+  android-file-transfer
+  appcleaner
+  diffmerge
+  firefox
+  firefoxdeveloperedition
+  font-menlo-for-powerline
+  google-chrome
+  google-chrome-canary
+  iterm2
+  java
+  macvim
+  opera
+  pomello
+  slack
+  selfcontrol
+  skype
+  spotify
+  spotify-notifications
+  sublime-text
+  teamviewer
+  tomighty
+  utorrent
+  vlc
+)
+
+message_info "Configuring Brew Cask"
+brew tap caskroom/cask
+brew tap caskroom/fonts
+
+message_info "Installing Brew Cask applications"
+brew cask install "${applications[@]}"
