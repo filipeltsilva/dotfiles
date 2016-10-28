@@ -10,24 +10,23 @@
 
 clear
 
-. lib_shell/messages
-. lib_shell/symlink_files
-. lib_shell/symlink_folders
+. install/messages
+. install/symlink_files
+. install/symlink_folders
 
 message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
-while true; do
-  sudo -n true; sleep 60; kill -0 "$$" || exit;
-done 2>/dev/null &
+# Update sudo while the script is running
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# . lib_shell/brew_setup
-# . lib_shell/git_setup
-# . lib_shell/sublimetext_setup
-# . lib_shell/vim_setup
-# . lib_shell/zsh_setup
+# . install/brew_setup
+# . install/git_setup
+. install/sublimetext_setup
+# . install/vim_setup
+# . install/zsh_setup
 
-. lib_shell/osx_setup
+# . install/osx_setup
 
 #source $HOME/.zshrc
 

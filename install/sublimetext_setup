@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: sublimetext_setup
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: Setting up my Sublime Text settings
+#
+# AUTHOR: Filipe Lemos
+
+message_info "SUBLIME TEXT 3 SETUP"
+symlink_folder $HOME/.dotfiles/sublime_text_3 $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
