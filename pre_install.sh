@@ -12,5 +12,6 @@
 cd $HOME
 
 curl -L https://github.com/filipeltsilva/dotfiles/zipball/master > dotfiles.zip
-unzip dotfiles.zip && mv filipeltsilva* .dotfiles
+unzip dotfiles.zip && rm -f dotfiles.zip
+mv filipeltsilva* .dotfiles
 cd $HOME/.dotfiles && ./install.sh
