@@ -11,8 +11,11 @@
 
 DOTFILES=$HOME/.dotfiles
 
-cd $HOME
-mkdir -p ${DOTFILES}
-curl -#L https://github.com/filipeltsilva/dotfiles/tarball/master > dotfiles.tar.gz
-tar -zxvf files.tar.gz -C ${DOTFILES} --strip-components=1 && rm -f dotfiles.tar.gz
-cd ${DOTFILES} && ./install.sh
+if [[ -d ${DOTFILES} ]]; then
+  echo "Filipe Lemos' dotfiles is already configured in this system"
+else
+  mkdir -p ${DOTFILES} && cd ${DOTFILES}
+  curl -#L https://github.com/filipeltsilva/dotfiles/tarball/master > dotfiles.tar.gz
+  tar -zxvf files.tar.gz -C ${DOTFILES} --strip-components=1 && rm -f dotfiles.tar.gz
+  ./install.sh
+fi
