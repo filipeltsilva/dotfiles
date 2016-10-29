@@ -5,3 +5,5 @@ ENABLE_CORRECTION="true"
 ZSH_THEME="agnoster"
 
 plugins=(bower brew common-aliases git git-extras gitfast osx sublime tmux web-search)
+
+. $ZSH/oh-my-zsh.sh
