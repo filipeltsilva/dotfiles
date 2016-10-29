@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# SCRIPT NAME: remote_install
+# SCRIPT NAME: pre_install
 # CREATION DATE: 2016-10-28
 #
 #

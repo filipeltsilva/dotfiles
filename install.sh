@@ -18,7 +18,7 @@ clear
 message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
-# Update sudo while the script is running
+Update sudo while the script is running
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 message_info "HOMEBREW SETUP"
@@ -37,5 +37,8 @@ fi
 . install/osx_setup
 
 source $HOME/.zshrc
+
+message_info "DOTFILES POST-INSTALLATION ROUTINE"
+git remote add origin git@github.com:filipeltsilva/dotfiles.git
 
 message_okay "DOTFILES SETUP PROCESS FINISHED"
