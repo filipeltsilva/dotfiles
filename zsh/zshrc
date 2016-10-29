@@ -1,4 +1,4 @@
-for file in $HOME/.dotfiles/shell; do
-  . $file
-done
-unset file
+. $HOME/.dotfiles/shell/aliases
+. $HOME/.dotfiles/shell/exports
+. $HOME/.dotfiles/shell/functions
+. $HOME/.dotfiles/shell/settings
