@@ -14,4 +14,4 @@ mkdir -p $HOME/.dotfiles
 curl -#L https://github.com/filipeltsilva/dotfiles/tarball/master > dotfiles.tar.gz
 tar -zxvf files.tar.gz -C $HOME/dotfailes --strip-components=1
 rm -f dotfiles.tar.gz
-. $HOME/.dotfiles/install.sh
+cd $HOME/.dotfiles && ./install.sh
