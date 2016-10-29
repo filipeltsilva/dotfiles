@@ -9,9 +9,10 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
+DOTFILES=$HOME/.dotfiles
+
 cd $HOME
-mkdir -p $HOME/.dotfiles
+mkdir -p ${DOTFILES}
 curl -#L https://github.com/filipeltsilva/dotfiles/tarball/master > dotfiles.tar.gz
-tar -zxvf files.tar.gz -C $HOME/dotfailes --strip-components=1
-rm -f dotfiles.tar.gz
-cd $HOME/.dotfiles && ./install.sh
+tar -zxvf files.tar.gz -C ${DOTFILES} --strip-components=1 && rm -f dotfiles.tar.gz
+cd ${DOTFILES} && ./install.sh
