@@ -9,13 +9,8 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-DOTFILES=$HOME/.dotfiles
+cd $HOME
 
-if [[ -d ${DOTFILES} ]]; then
-  echo "Filipe Lemos' dotfiles is already configured in this system"
-else
-  mkdir -p ${DOTFILES} && cd ${DOTFILES}
-  curl -#L https://github.com/filipeltsilva/dotfiles/tarball/master > dotfiles.tar.gz
-  tar -zxvf files.tar.gz -C ${DOTFILES} --strip-components=1 && rm -f dotfiles.tar.gz
-  ./install.sh
-fi
+curl -L https://github.com/filipeltsilva/dotfiles/zipball/master > dotfiles.zip
+unzip dotfiles.zip && mv filipeltsilva* .dotfiles
+cd $HOME/.dotfiles && ./install.sh
