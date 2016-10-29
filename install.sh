@@ -19,23 +19,26 @@ message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
 # Update sudo while the script is running
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-message_info "HOMEBREW SETUP"
-if [ ! -f $(which brew) ]; then
-  . install/brew
-  . install/brewcask
-else
-  message_okay "Homebrew is already installed in this system"
-fi
+# message_info "HOMEBREW SETUP"
+# if [ ! -f $(which brew) ]; then
+#   . install/brew
+#   . install/brewcask
+# else
+#   message_okay "Homebrew is already installed in this system"
+# fi
 
-. install/git_setup
-. install/sublimetext_setup
-. install/vim_setup
-. install/zsh_setup
+# . install/git_setup
+# . install/sublimetext_setup
+# . install/vim_setup
+# . install/zsh_setup
 
-. install/osx_setup
+# . install/osx_setup
 
-source $HOME/.zshrc
+# source $HOME/.zshrc
+
+message_info "DOTFILES POST-INSTALLATION ROUTINE"
+git remote add origina git@github.com:filipeltsilva/dotfiles.git
 
 message_okay "DOTFILES SETUP PROCESS FINISHED"
