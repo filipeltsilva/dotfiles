@@ -2,5 +2,3 @@ for file in $HOME/.dotfiles/shell; do
   . $file
 done
 unset file
-
-. $ZSH/oh-my-zsh.sh
