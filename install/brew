@@ -12,6 +12,7 @@
 applications=(
   bash
   git
+  git-lfs
   htop-osx
   hub
   openssh
