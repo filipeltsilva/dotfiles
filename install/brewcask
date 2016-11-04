@@ -13,12 +13,14 @@ applications=(
   android-file-transfer
   appcleaner
   diffmerge
+  docker
   firefox
   firefoxdeveloperedition
   flux
   font-menlo-for-powerline
   google-chrome
   google-chrome-canary
+  itau
   iterm2
   java
   macvim --override-system-vim --custom-system-icons
