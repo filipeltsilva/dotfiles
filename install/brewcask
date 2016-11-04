@@ -15,12 +15,13 @@ applications=(
   diffmerge
   firefox
   firefoxdeveloperedition
+  flux
   font-menlo-for-powerline
   google-chrome
   google-chrome-canary
   iterm2
   java
-  macvim
+  macvim --override-system-vim --custom-system-icons
   opera
   pomello
   slack
@@ -32,6 +33,8 @@ applications=(
   teamviewer
   tomighty
   utorrent
+  virtualbox
+  virtualbox-extension-pack
   vlc
 )
 

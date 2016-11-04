@@ -14,15 +14,23 @@ applications=(
   git
   htop-osx
   hub
+  openssh
+  rsync
+  speedtest_cli
   tmux
   tree
+  unrar
   utf8proc
   vim --with-override-system-vi
+  wget
   youtube-dl
   zsh
 )
 
 message_info "Downloading and installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+message_info "Configuring Brew"
+brew tap homebrew/dupes
 
 brew install "${applications[@]}"
