@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-for file in $(ls ~/.dotfiles/dotfiles); do
-  ln -s ${file} ~/.${file}
+DOTFILES=$(find -f ~/.dotfiles/dotfiles)
+
+for file in $DOTFILES; do
+  echo $file
 done
 
 unset file

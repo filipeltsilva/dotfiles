@@ -4,6 +4,11 @@ This is my dotfiles repository, that includes my configuration files and the nec
 
 ## How to setup
 
+In macOS systems, first is necessary install the Xcode or then the Xcode Command Line Tools as a smaller alternative through the command below:
+
+```shell
+xcode-select --install
+
 To install my dotfiles you should run the command below that will download and run a pre-installation script, who will download a .zip file that contains the files stored in the _master_ branch, unzip it and rename the unzipped folder to _~/.dotfiles_ hidden folder in your home directory, access it and run the install script.
 
 ```shell
