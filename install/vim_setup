@@ -11,7 +11,7 @@
 
 message_info "VIM SETUP"
 message_info "Vim-plug setup"
-if [ ! -d ~/.vim/autoload ]; then
+if [[ ! -d $HOME/.vim/autoload ]]; then
   message_info "Installing Vim-plug"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
