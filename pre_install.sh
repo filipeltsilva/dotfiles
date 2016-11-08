@@ -9,9 +9,28 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-cd ~
+function cloneDotfiles() {
+  git clone git@github.com:filipeltsilva/dotfiles ~/.dotfiles
+  runInstall
+}
 
-curl -L https://github.com/filipeltsilva/dotfiles/zipball/master > dotfiles.zip
-unzip dotfiles.zip && rm -f dotfiles.zip
-mv filipeltsilva* .dotfiles
-cd ~/.dotfiles && ./install.sh
+function runInstall() {
+  cd ~/.dotfiles && ./install.sh
+}
+
+case ${OSTYPE} in
+  darwin*)
+    if [[ ! -f $(which brew) ]]; then
+      echo "Downloading and installing Homebrew" && sleep 2
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+      brew install git
+      cloneDotfiles
+    else
+      echo "Homebrew is already installed in this system"
+    fi
+    ;;
+  *)
+    echo "Unknown operating system: $OSTYPE. Aborting" && exit 1
+    ;;
+esac

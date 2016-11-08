@@ -17,5 +17,4 @@ else
   message_okay "Oh My ZSH is already installed in this system"
 fi
 
-symlink_file ~/.dotfiles/zsh/zshrc ~/.zshrc
 chsh -s $(which zsh) $USER

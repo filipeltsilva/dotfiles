@@ -10,4 +10,5 @@
 # AUTHOR URL: filipelemos.com
 
 message_info "SUBLIME TEXT 3 SETUP"
-symlink_folder ~/.dotfiles/sublime_text_3 ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -sFfnv ~/.dotfiles/sublime_text_3 ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User

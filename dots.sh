@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-DOTFILES=$(find -f ~/.dotfiles/dotfiles)
+DOTFILES_PATH=~/.dotfiles/dotfiles
 
-for file in $DOTFILES; do
-  echo $file
+for file in $(ls ${DOTFILES_PATH}); do
+  ln -sfnv ${DOTFILES_PATH}/${file} ~/.${file}
 done
 
 unset file

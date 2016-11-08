@@ -11,11 +11,14 @@
 
 applications=(
   bash
-  git
+  coreutils
+  findutils
   git-lfs
+  grep
   htop-osx
   hub
   openssh
+  p7zip
   rsync
   speedtest_cli
   tmux
@@ -27,9 +30,6 @@ applications=(
   youtube-dl
   zsh
 )
-
-message_info "Downloading and installing Homebrew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 message_info "Configuring Brew"
 brew tap homebrew/dupes

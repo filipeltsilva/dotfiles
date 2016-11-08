@@ -13,7 +13,6 @@ clear
 
 . install/messages
 . install/symlink_files
-. install/symlink_folders
 
 message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
@@ -34,11 +33,8 @@ fi
 . install/vim_setup
 . install/zsh_setup
 
-. install/osx_setup
+./osx_setup.sh
 
-source ~/.zshrc
-
-message_info "DOTFILES POST-INSTALLATION ROUTINE"
-git remote add origin git@github.com:filipeltsilva/dotfiles.git
+. ~/.zshrc
 
 message_okay "DOTFILES SETUP PROCESS FINISHED"

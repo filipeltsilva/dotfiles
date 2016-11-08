@@ -18,6 +18,3 @@ if [[ ! -d ~/.vim/autoload ]]; then
 else
   message_okay "Vim-plug is already installed in this system"
 fi
-
-symlink_file ~/.dotfiles/vim/gvimrc ~/.gvimrc
-symlink_file ~/.dotfiles/vim/vimrc ~/.vimrc
