@@ -6,8 +6,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # ENVIRONMENT VARIABLES
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotfiles/bin"
 
 # ZSH AND OH MY ZSH SETTINGS
 export UPDATE_ZSH_DAYS=7
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=~/.oh-my-zsh

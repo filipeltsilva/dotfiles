@@ -11,7 +11,7 @@
 
 message_info "VIM SETUP"
 message_info "Vim-plug setup"
-if [[ ! -d $HOME/.vim/autoload ]]; then
+if [[ ! -d ~/.vim/autoload ]]; then
   message_info "Installing Vim-plug"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -19,5 +19,5 @@ else
   message_okay "Vim-plug is already installed in this system"
 fi
 
-symlink_file $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
-symlink_file $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+symlink_file ~/.dotfiles/vim/gvimrc ~/.gvimrc
+symlink_file ~/.dotfiles/vim/vimrc ~/.vimrc

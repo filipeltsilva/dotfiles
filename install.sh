@@ -36,7 +36,7 @@ fi
 
 . install/osx_setup
 
-source $HOME/.zshrc
+source ~/.zshrc
 
 message_info "DOTFILES POST-INSTALLATION ROUTINE"
 git remote add origin git@github.com:filipeltsilva/dotfiles.git

@@ -9,9 +9,9 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-cd $HOME
+cd ~
 
 curl -L https://github.com/filipeltsilva/dotfiles/zipball/master > dotfiles.zip
 unzip dotfiles.zip && rm -f dotfiles.zip
 mv filipeltsilva* .dotfiles
-cd $HOME/.dotfiles && ./install.sh
+cd ~/.dotfiles && ./install.sh
