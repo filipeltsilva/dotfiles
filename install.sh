@@ -22,7 +22,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 message_info "HOMEBREW SETUP"
-if [ ! -f $(which brew) ]; then
+if [[ ! -f $(which brew) ]]; then
   . install/brew
   . install/brewcask
 else
