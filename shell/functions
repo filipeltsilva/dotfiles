@@ -1,4 +1,4 @@
-function brew_upgrade() {
+function brew_update() {
   brew update
 
   for application in $(brew list); do
@@ -8,7 +8,7 @@ function brew_upgrade() {
   brew cleanup -n
 }
 
-function brewcask_upgrade() {
+function brewcask_update() {
   rm -rf $(brew --cache)
   brew update
 

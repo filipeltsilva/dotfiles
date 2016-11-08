@@ -1,3 +1,0 @@
-for sile in split(glob('~/.dotfiles/vim/config/*.vim'), '\n')
-  exe 'source' file
-endfor
