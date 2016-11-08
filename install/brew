@@ -34,5 +34,5 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 message_info "Configuring Brew"
 brew tap homebrew/dupes
 
-message_info "Installing applications"
+message_info "Installing Brew applications"
 brew install "${applications[@]}"
