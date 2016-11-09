@@ -8,8 +8,10 @@ In macOS systems, first is necessary install the Xcode or then the Xcode Command
 
 ```shell
 xcode-select --install
+```
 
 To install my dotfiles you should run the command below that will download and run a pre-installation script, who will download a .zip file that contains the files stored in the _master_ branch, unzip it and rename the unzipped folder to _~/.dotfiles_ hidden folder in your home directory, access it and run the install script.
 
 ```shell
 sh -c "`curl -fsSL https://raw.github.com/filipeltsilva/dotfiles/master/pre_install.sh`"
+```
