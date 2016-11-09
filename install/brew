@@ -31,7 +31,7 @@ applications=(
   zsh
 )
 
-message_info "Configuring Brew"
+message_info "HOMEBREW SETUP"
 brew tap homebrew/dupes
 
 message_info "Installing Brew applications"

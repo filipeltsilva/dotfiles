@@ -19,10 +19,8 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-message_info "HOMEBREW SETUP"
 . install/brew
 . install/brewcask
-
 . install/sublimetext_setup
 . install/symlink_files
 . install/vim_setup
