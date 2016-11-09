@@ -37,7 +37,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 open iTerm2/*.itermcolors
 
 message_info "OSX configuration"
-defaults write com.apple.screencapture location ~/Pictures/Screenshots
+defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
 defaults write com.apple.screencapture type jpg && killall SystemUIServer
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
