@@ -12,7 +12,6 @@
 clear
 
 . install/messages
-. install/symlink_files
 
 message_info "STARTING DOTFILES SETUP PROCESS"
 sudo -v
@@ -20,16 +19,16 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-message_info "HOMEBREW SETUP"
-if [[ ! -f $(which brew) ]]; then
-  . install/brew
-  . install/brewcask
-else
-  message_okay "Homebrew is already installed in this system"
-fi
+# message_info "HOMEBREW SETUP"
+# if [[ ! -f $(which brew) ]]; then
+#   . install/brew
+#   . install/brewcask
+# else
+#   message_okay "Homebrew is already installed in this system"
+# fi
 
-. install/git_setup
 . install/sublimetext_setup
+. install/symlink_files
 . install/vim_setup
 . install/zsh_setup
 

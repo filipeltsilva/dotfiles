@@ -4,17 +4,15 @@
 # CREATION DATE: 2016-10-25
 #
 #
-# DESCRIPTION: Custom function to create symbolic links to files
+# DESCRIPTION: Create symbolic links to files
 #
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-function symlink_file() {
-  if [[ -f ${2} ]] && [[ -L ${2} ]]; then
-    message_okay "The file ${2} is already configured in this system"
-  elif [[ ! -L ${2} ]]; then
-    rm ${2}
-    message_info "Configuring the file ${2}"
-    ln -sfnv ${1} ${2}
-  fi
-}
+DOTFILES_PATH=~/.dotfiles/files
+
+for file in $(ls ${DOTFILES_PATH}); do
+  ln -sfnv ${DOTFILES_PATH}/${file} ~/.${file}
+done
+
+unset file
