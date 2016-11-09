@@ -11,7 +11,7 @@
 
 message_info "ZSH SETUP"
 message_info "Installing Oh My ZSH!"
-if [ ! -d ~/.oh-my-zsh ]; then
+if [[ ! -d ~/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
   message_okay "Oh My ZSH is already installed in this system"

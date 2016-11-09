@@ -19,13 +19,9 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-# message_info "HOMEBREW SETUP"
-# if [[ ! -f $(which brew) ]]; then
-#   . install/brew
-#   . install/brewcask
-# else
-#   message_okay "Homebrew is already installed in this system"
-# fi
+message_info "HOMEBREW SETUP"
+. install/brew
+. install/brewcask
 
 . install/sublimetext_setup
 . install/symlink_files

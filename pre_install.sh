@@ -27,7 +27,7 @@ case ${OSTYPE} in
       brew install git
       cloneDotfiles
     else
-      echo "Homebrew is already installed in this system"
+      echo "Homebrew is already installed in this system" && exit 0
     fi
     ;;
   *)
