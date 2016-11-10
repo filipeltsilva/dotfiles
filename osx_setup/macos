@@ -29,11 +29,20 @@ defaults write com.apple.screencapture type -string "jpg"
 # Date and time settings
 sudo systemsetup -settimezone "America/Sao_Paulo" > /dev/null
 
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 # Displaying system informations on login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Expanding save panel
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Language and text format settings
+defaults write NSGlobalDomain AppleLanguages -array "en-BR"
+defaults write NSGlobalDomain AppleLocale -string "en_BR"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 killall SystemUIServer
