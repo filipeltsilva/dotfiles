@@ -6,13 +6,11 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # ENVIRONMENT VARIABLES
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/bin"
+export PATH="${PATH}:${HOME}/.dotfiles/bin"
 
 if [[ `uname` == "Darwin" ]]; then
-  export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
-  export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
-  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-  export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+  export MANPATH="${MANPATH}:$(brew --prefix coreutils)/libexec/gnuman:$(brew --prefix findutils)/libexec/gnuman"
+  export PATH="${PATH}:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin"
 fi
 
 # ZSH AND OH MY ZSH SETTINGS
