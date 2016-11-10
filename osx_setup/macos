@@ -11,8 +11,16 @@
 
 message_info "macOS settings"
 
+COMPUTER_NAME=${USER}
+
+# Avoid the creation of .DS_Store files in network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 # Battery settings
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Changing the computer name
+sudo scutil --set ComputerName ${COMPUTER_NAME}
 
 # Changing the screenshots folder
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"

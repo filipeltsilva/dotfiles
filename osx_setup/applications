@@ -91,17 +91,21 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 #######################################################################################################################
 
 #######################################################################################################################
-## RICHTEXT
-
-# Using plain text as the default text format in Apple's TextEdit
-defaults write com.apple.TextEdit RichText -int 0
-#######################################################################################################################
-
-#######################################################################################################################
 ## SAFARI
 
 # Disabling standard delay in rendering a web page
 defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
+#######################################################################################################################
+
+#######################################################################################################################
+## TEXTEDIT
+
+# Opening and saving files in UTF-8 format
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+# Using plain text as the default text format in Apple's TextEdit
+defaults write com.apple.TextEdit RichText -int 0
 #######################################################################################################################
 
 #######################################################################################################################
