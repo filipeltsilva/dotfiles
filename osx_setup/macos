@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: macos
+# CREATION DATE: 2016-11-09
+#
+#
+# DESCRIPTION: My macOS preferential settings
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+message_info "macOS settings"
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
+defaults write com.apple.screencapture type jpg && killall SystemUIServer
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName

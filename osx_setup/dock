@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: dock
+# CREATION DATE: 2016-11-09
+#
+#
+# DESCRIPTION: My Apple Dock preferential settings
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+message_info "Dock settings"
+defaults write com.apple.dock autohide -bool true && killall Dock
+defaults write com.apple.dock autohide-delay -float 0 && killall Dock
+defaults write com.apple.dock expose-animation-duration -float 0.10 && killall Dock
+defaults write com.apple.dock hide-mirror -bool true && killall Dock
+defaults write com.apple.dock mineffect -string "scale" && killall Dock
+defaults write com.apple.dock tilesize -int 32 && killall Dock

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: iterm2
+# CREATION DATE: 2016-11-09
+#
+#
+# DESCRIPTION: My iTerm2 preferential settings
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+message_info "iTerm2 settings"
+defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
+defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline-Regular 12"
+defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+open iTerm2/*.itermcolors
