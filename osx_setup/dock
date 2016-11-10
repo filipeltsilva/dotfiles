@@ -10,9 +10,11 @@
 # AUTHOR URL: filipelemos.com
 
 message_info "Dock settings"
-defaults write com.apple.dock autohide -bool true && killall Dock
-defaults write com.apple.dock autohide-delay -float 0 && killall Dock
-defaults write com.apple.dock expose-animation-duration -float 0.10 && killall Dock
-defaults write com.apple.dock hide-mirror -bool true && killall Dock
-defaults write com.apple.dock mineffect -string "scale" && killall Dock
-defaults write com.apple.dock tilesize -int 32 && killall Dock
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock expose-animation-duration -float 0.10
+defaults write com.apple.dock hide-mirror -bool true
+defaults write com.apple.dock mineffect -string "scale"
+defaults write com.apple.dock tilesize -int 32
+
+killall Dock

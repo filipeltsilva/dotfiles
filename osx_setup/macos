@@ -11,5 +11,7 @@
 
 message_info "macOS settings"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
-defaults write com.apple.screencapture type jpg && killall SystemUIServer
+defaults write com.apple.screencapture type jpg
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+killall SystemUIServer
