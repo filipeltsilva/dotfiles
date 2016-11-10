@@ -12,11 +12,14 @@
 applications=(
   bash
   coreutils
-  findutils
+  ffmpeg
+  findutils --with-default-names
   git-lfs
-  grep
+  grep --with-default-names
+  gzip
   htop-osx
   hub
+  libav
   openssh
   p7zip
   rsync
@@ -25,7 +28,7 @@ applications=(
   tree
   unrar
   utf8proc
-  vim --with-override-system-vi
+  vim --override-system-vi
   wget
   youtube-dl
   zsh

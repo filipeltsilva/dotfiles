@@ -8,6 +8,13 @@ export LC_ALL=en_US.UTF-8
 # ENVIRONMENT VARIABLES
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.dotfiles/bin"
 
+if [[ `uname` == "Darwin" ]]; then
+  export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+  export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+fi
+
 # ZSH AND OH MY ZSH SETTINGS
 export UPDATE_ZSH_DAYS=7
 export ZSH=~/.oh-my-zsh
