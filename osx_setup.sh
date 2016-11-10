@@ -11,14 +11,13 @@
 
 . install/messages
 
+sudo -v
+
 message_info "OSX CUSTOM SETTINGS"
 
-. osx_setup/app_store
-. osx_setup/dock
-. osx_setup/finder
-. osx_setup/iterm2
+. osx_setup/applications
+. osx_seupt/keyboard
 . osx_setup/macos
-. osx_setup/time_machine
-. osx_setup/transmission
+. osx_setup/trackpad
 
-message_okay "OSX CUSTOM SETTINGS FINISHED SUCCESSFULLY"
+message_okay "OSX CUSTOM SETTINGS FINISHED SUCCESSFULLY. REBOOT YOUR COMPUTER!"

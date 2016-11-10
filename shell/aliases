@@ -6,8 +6,8 @@ if [[ `uname` == "Darwin" ]]; then
   alias ddl="defaults delete"
   alias dfr="defaults read"
   alias dfw="defaults write"
-  alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
-  alias showfiles="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
+  alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles -bool false"
+  alias showfiles="defaults write com.apple.Finder AppleShowAllFiles -bool true"
 fi
 
 

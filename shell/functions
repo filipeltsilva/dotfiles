@@ -10,7 +10,7 @@ function brew_update() {
 
 function brewcask_update() {
   rm -rf $(brew --cache)
-  brew update
+  brew cask update
 
   for application in $(brew cask list); do
     brew cask install --force "${application}"

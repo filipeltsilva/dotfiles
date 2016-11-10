@@ -10,8 +10,22 @@
 # AUTHOR URL: filipelemos.com
 
 message_info "macOS settings"
+
+# Battery settings
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Changing the screenshots folder
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
-defaults write com.apple.screencapture type jpg
+defaults write com.apple.screencapture type -string "jpg"
+
+# Date and time settings
+sudo systemsetup -settimezone "America/Sao_Paulo" > /dev/null
+
+# Displaying system informations on login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Expanding save panel
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 killall SystemUIServer
