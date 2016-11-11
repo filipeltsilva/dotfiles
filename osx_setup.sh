@@ -16,7 +16,7 @@ sudo -v
 message_info "OSX CUSTOM SETTINGS"
 
 . osx_setup/applications
-. osx_seupt/keyboard
+. osx_setup/keyboard
 . osx_setup/macos
 . osx_setup/trackpad
 
