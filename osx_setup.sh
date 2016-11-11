@@ -13,11 +13,11 @@
 
 sudo -v
 
-message_info "OSX CUSTOM SETTINGS"
+message_info "MACOS CUSTOM SETTINGS"
 
 . osx_setup/applications
 . osx_setup/keyboard
 . osx_setup/macos
 . osx_setup/trackpad
 
-message_okay "OSX CUSTOM SETTINGS FINISHED SUCCESSFULLY. REBOOT YOUR COMPUTER!"
+message_okay "MACOS CUSTOM SETTINGS FINISHED SUCCESSFULLY. REBOOT YOUR COMPUTER!"
