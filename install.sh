@@ -19,8 +19,9 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-. install/brew
 . install/brewcask
+. install/brew
+
 . install/sublimetext_setup
 . install/symlink_files
 . install/vim_setup

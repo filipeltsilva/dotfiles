@@ -23,6 +23,7 @@ applications=(
   java
   macvim --override-system-vim --custom-system-icons
   opera
+  osxfuse
   pomello
   slack
   selfcontrol
@@ -37,6 +38,8 @@ applications=(
   virtualbox-extension-pack
   vlc
 )
+
+message_info "HOMEBREW SETUP"
 
 message_info "Configuring Brew Cask"
 brew tap caskroom/cask

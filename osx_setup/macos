@@ -16,6 +16,10 @@ COMPUTER_NAME=${USER}
 # Avoid the creation of .DS_Store files in network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Allow NTFS volumes writing
+sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.original
+sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
+
 # Battery settings
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 

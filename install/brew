@@ -20,6 +20,7 @@ applications=(
   htop-osx
   hub
   libav
+  ntfs-3g
   openssh
   p7zip
   rsync
@@ -34,8 +35,9 @@ applications=(
   zsh
 )
 
-message_info "HOMEBREW SETUP"
+message_info "Configuring Brew"
 brew tap homebrew/dupes
+brew tap homebrew/fuse
 
 message_info "Installing Brew applications"
 brew install "${applications[@]}"
