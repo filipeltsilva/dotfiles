@@ -1,6 +1,6 @@
 function brew_update() {
   brew update
-  brew upgrade `brew outdated`
+  brew upgrade --cleanup `brew outdated`
 
   brew cleanup -n
 }
