@@ -1,9 +1,6 @@
 function brew_update() {
   brew update
-
-  for application in $(brew list); do
-    brew install "${application}"
-  done
+  brew upgrade `brew outdated`
 
   brew cleanup -n
 }

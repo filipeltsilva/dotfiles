@@ -12,6 +12,7 @@
 applications=(
   bash
   coreutils
+  doxygen
   ffmpeg
   findutils --with-default-names
   git-lfs
