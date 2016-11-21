@@ -19,3 +19,15 @@ function brewcask_update() {
 function local_server() {
   python -m SimpleHTTPServer ${1}
 }
+
+function ytdl() {
+  if [[ `echo $1 | grep playlist` ]]; then
+    youtube-dl $1 -f $2 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --youtube-skip-dash-manifest
+  else
+    youtube-dl $1 -f $2 -o '%(title)s.%(ext)s' --youtube-skip-dash-manifest
+  fi
+}
+
+function ytdl_info() {
+  youtube-dl -F $1
+}

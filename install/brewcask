@@ -21,9 +21,11 @@ applications=(
   itau
   iterm2
   java
+  libreoffice
   macvim --override-system-vim --custom-system-icons
   opera
   osxfuse
+  playonmac
   pomello
   slack
   selfcontrol
