@@ -1,3 +1,6 @@
+# DOCKER ALIASES
+alias dck="docker"
+
 # FRONT-END ALIASES
 alias bower="noglob bower"
 
@@ -9,7 +12,6 @@ if [[ `uname` == "Darwin" ]]; then
   alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles -bool false"
   alias showfiles="defaults write com.apple.Finder AppleShowAllFiles -bool true"
 fi
-
 
 # TMUX ALIASES
 alias tm="tmux"
