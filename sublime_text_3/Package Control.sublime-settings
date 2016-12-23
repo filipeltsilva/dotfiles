@@ -18,13 +18,14 @@
 		"Handlebars",
 		"JavaScriptNext - ES6 Syntax",
 		"Markdown Preview",
+		"Material Theme",
 		"Package Control",
 		"SideBarEnhancements",
 		"Stylus",
 		"Stylus-Snippets",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
-		"Theme - Afterglow",
-		"TrailingSpaces"
+		"TrailingSpaces",
+		"zz File Icons"
 	]
 }
