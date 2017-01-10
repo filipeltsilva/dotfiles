@@ -12,6 +12,7 @@
 		"BracketHighlighter",
 		"Color Highlighter",
 		"CSS3",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
 		"GitGutter",
@@ -23,8 +24,6 @@
 		"SideBarEnhancements",
 		"Stylus",
 		"Stylus-Snippets",
-		"SublimeLinter",
-		"SublimeLinter-jshint",
 		"TrailingSpaces",
 		"zz File Icons"
 	]
