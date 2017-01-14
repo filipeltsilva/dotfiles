@@ -1,6 +1,3 @@
-# DOCKER ALIASES
-alias dck="docker"
-
 # FRONT-END ALIASES
 alias bower="noglob bower"
 
@@ -18,6 +15,7 @@ alias tm="tmux"
 
 # UNIX ALIASES
 alias cl="clear"
+alias hgrep="history | grep"
 alias ping="ping -c 5"
 alias q="exit"
 alias svim="sudo vim"
