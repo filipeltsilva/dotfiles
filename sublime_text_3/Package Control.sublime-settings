@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
 		"AngularJS",
 		"ApplySyntax",
@@ -20,12 +21,12 @@
 		"Handlebars",
 		"JavaScriptNext - ES6 Syntax",
 		"Markdown Preview",
+		"MarkdownEditing",
 		"Material Theme",
 		"Package Control",
 		"SideBarEnhancements",
 		"Stylus",
 		"Stylus-Snippets",
-		"TrailingSpaces",
-		"zz File Icons"
+		"TrailingSpaces"
 	]
 }

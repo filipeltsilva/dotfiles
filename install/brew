@@ -10,6 +10,7 @@
 # AUTHOR URL: filipelemos.com
 
 applications=(
+  ack
   bash
   coreutils
   doxygen
