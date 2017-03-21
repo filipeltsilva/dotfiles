@@ -1,3 +1,9 @@
+" CHARSET SETTINGS
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+
+" GENERAL SETTINGS
 filetype plugin indent on
 set autoindent
 set backspace=eol,indent,start
@@ -16,10 +22,8 @@ set visualbell
 set wildmenu
 set wildmode=longest,list
 
-" CHARSET SETTINGS
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
+" PACKAGES SETTINGS
+let g:jsx_ext_required = 0 " Allow JSX in JS files
 
 " SEARCH SETTINGS
 set hlsearch
