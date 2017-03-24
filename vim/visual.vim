@@ -1,9 +1,8 @@
 " COLORS AND THEME SETTINGS
-colorscheme desert
+colorscheme brogrammer
 set background=dark
 set cursorline
 set expandtab
-set t_Co=256
 syntax enable
 
 " LINE NUMBERS
@@ -18,3 +17,8 @@ set shiftwidth=2
 set smarttab
 set softtabstop=2
 set tabstop=2
+
+" VISUAL
+filetype plugin indent on
+set autoindent
+set copyindent
