@@ -1,9 +1,9 @@
 " COLORS AND THEME SETTINGS
-colorscheme brogrammer
 set background=dark
+colorscheme brogrammer
 set cursorline
 set expandtab
-syntax enable
+syntax on
 
 " LINE NUMBERS
 set number

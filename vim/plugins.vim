@@ -8,10 +8,11 @@ call plug#begin()
   
   " PROGRAMMING LANGUAGES PLUGINS
   Plug 'mxw/vim-jsx'
+  Plug 'othree/es.next.syntax.vim'
   Plug 'sheerun/vim-polyglot'
   
   " PROGRAMMING TOOLS PLUGINS
+  Plug 'ervandew/supertab'
   Plug 'mattn/emmet-vim'
-  Plug 'oblitum/youcompleteme'
   Plug 'Townk/vim-autoclose'
 call plug#end()
