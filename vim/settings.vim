@@ -23,10 +23,6 @@ set ttyfast
 set undolevels=1000
 set visualbell
 
-" PACKAGES SETTINGS
-let g:jsx_ext_required = 0 " Allow JSX in JS files
-let g:user_emmet_expandabbr_key='<Tab>'
-
 " SEARCH SETTINGS
 set hlsearch
 set ignorecase
