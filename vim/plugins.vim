@@ -14,4 +14,9 @@ call plug#begin()
   " PROGRAMMING TOOLS
   Plug 'mattn/emmet-vim'
   Plug 'Townk/vim-autoclose'
+
+  " UTILITIES
+  Plug 'scrooloose/nerdtree'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 call plug#end()
