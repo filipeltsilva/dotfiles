@@ -19,4 +19,5 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
