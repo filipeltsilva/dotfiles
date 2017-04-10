@@ -16,6 +16,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " Closing Vim when only NERDTree tab is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', '.git']
+
 " NERDTREE GIT PLUGIN
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
@@ -29,6 +31,9 @@ let g:NERDTreeIndicatorMapCustom = {
   \ 'Ignored'   : '☒',
   \ "Unknown"   : "?"
   \ }
+
+" VIM-AIRLINE
+let g:airline_powerline_fonts = 1
 
 " VIM-JSX (Supports JSX syntax in React)
 let g:jsx_ext_required = 0 " Allow JSX in JS files

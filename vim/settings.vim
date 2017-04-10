@@ -4,7 +4,7 @@ set fileencoding=utf-8
 
 " COMPLETION SETTINGS
 set wildchar=<Tab>
-set wildignore+=*.DS_STORE,node_modules/**
+set wildignore+=*.DS_STORE,**/node_modules,**/bower_components,**/tmp
 set wildmenu
 set wildmode=list:longest
 
@@ -13,6 +13,7 @@ set autoread
 set backspace=eol,indent,start
 set history=1000
 set laststatus=2
+set lazyredraw
 set mouse=a
 set nocompatible
 set nowrap

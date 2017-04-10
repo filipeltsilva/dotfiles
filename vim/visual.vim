@@ -1,12 +1,14 @@
 " COLORS AND THEME SETTINGS
 set background=dark
 colorscheme brogrammer
+set cursorcolumn
 set cursorline
 set expandtab
 syntax on
 
 " LINE NUMBERS
 set number
+set numberwidth=3
 set relativenumber
 
 " RULER
