@@ -14,6 +14,7 @@ call plug#begin()
   " PROGRAMMING TOOLS
   Plug 'mattn/emmet-vim'
   Plug 'Townk/vim-autoclose'
+  Plug 'valloric/youcompleteme'
 
   " UTILITIES
   Plug 'scrooloose/nerdtree'

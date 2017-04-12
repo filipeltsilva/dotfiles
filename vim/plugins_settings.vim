@@ -34,6 +34,7 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " VIM-AIRLINE
 let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " VIM-JSX (Supports JSX syntax in React)
 let g:jsx_ext_required = 0 " Allow JSX in JS files
