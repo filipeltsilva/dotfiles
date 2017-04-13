@@ -18,3 +18,7 @@ if [[ ! -d ~/.vim/autoload ]]; then
 else
   message_okay "Vim-plug is already installed in this system"
 fi
+
+message_info "Preparing Vim to use"
+vim -c PlugInstall -c q -c q
+~/.vim/plugged/youcompleteme/install.py --clang-completer --tern-completer

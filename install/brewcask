@@ -12,6 +12,7 @@
 applications=(
   android-file-transfer
   appcleaner
+  cmake
   diffmerge
   docker
   firefox
