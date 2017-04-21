@@ -32,6 +32,11 @@ let g:NERDTreeIndicatorMapCustom = {
   \ "Unknown"   : "?"
   \ }
 
+" ULTISNIPS
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+
 " VIM-AIRLINE
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'

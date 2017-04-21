@@ -12,9 +12,10 @@ call plug#begin()
   Plug 'sheerun/vim-polyglot'
   
   " PROGRAMMING TOOLS
+  Plug 'honza/vim-snippets'
   Plug 'mattn/emmet-vim'
+  Plug 'SirVer/ultisnips'
   Plug 'Townk/vim-autoclose'
-  Plug 'valloric/youcompleteme'
 
   " UTILITIES
   Plug 'scrooloose/nerdtree'
