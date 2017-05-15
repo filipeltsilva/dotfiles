@@ -34,8 +34,8 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " ULTISNIPS
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 " VIM-AIRLINE
 let g:airline_powerline_fonts = 1

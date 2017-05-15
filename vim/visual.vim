@@ -21,7 +21,6 @@ set softtabstop=2
 set tabstop=2
 
 " VISUAL
-filetype plugin indent on
 set autoindent
 set copyindent
 set textwidth=80
