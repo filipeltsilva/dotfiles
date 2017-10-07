@@ -23,6 +23,7 @@ applications=(
   itau
   iterm2
   java
+  mactex
   macvim --override-system-vim --custom-system-icons
   opera
   osxfuse
@@ -39,6 +40,7 @@ applications=(
   transmission
   virtualbox
   virtualbox-extension-pack
+  visual-studio-code
   vlc
 )
 
