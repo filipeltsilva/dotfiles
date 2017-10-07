@@ -8,10 +8,8 @@ function brew_update() {
 function brewcask_update() {
   rm -rf $(brew --cache)
   brew cask update
-
-  for application in $(brew cask list); do
-    brew cask install --force "${application}"
-  done
+  
+  brew cask reinstall $(brew cask outdated)
 
   brew cask cleanup -n
 }
