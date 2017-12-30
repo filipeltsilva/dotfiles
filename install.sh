@@ -22,7 +22,6 @@ while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 . install/brewcask
 . install/brew
 
-. install/sublimetext_setup
 . install/symlink_files
 . install/vim_setup
 . install/zsh_setup
