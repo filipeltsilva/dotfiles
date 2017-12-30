@@ -22,6 +22,8 @@ applications=(
   htop-osx
   hub
   libav
+  mongodb
+  node
   ntfs-3g
   openssh
   p7zip
