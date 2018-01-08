@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SCRIPT NAME: setup.sh
-# CREATION DATE: 2016-10-25
+# CREATION DATE: 2018-01-08
 #
 #
 # DESCRIPTION: This script prepares my environment to work
