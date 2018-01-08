@@ -24,7 +24,7 @@ applications=(
   iterm2
   java
   mactex
-  macvim --override-system-vim --custom-system-icons
+  macvim
   mongodb-compass
   opera
   osxfuse
