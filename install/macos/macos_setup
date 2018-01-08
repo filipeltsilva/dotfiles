@@ -73,7 +73,7 @@ defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline
 defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
 
 # Install themes
-open iTerm2/*.itermcolors
+open ./iTerm2/*.itermcolors
 
 # Removing the dialog box when exiting the program
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
