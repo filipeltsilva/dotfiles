@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: zsh_setup
+# CREATION DATE: 2016-10-25
+#
+#
+# DESCRIPTION: Setting up my ZSH confguration
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+message_info "ZSH SETUP"
+message_info "Installing Oh My ZSH!"
+if [[ ! -d ~/.oh-my-zsh ]]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+else
+  message_okay "Oh My ZSH is already installed in this system"
+fi
+
+chsh -s $(which zsh) $USER

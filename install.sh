@@ -19,12 +19,12 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-. install/brewcask
-. install/brew
+. install/macos/brew
+. install/macos/brewcask
 
-. install/symlink_files
-. install/vim_setup
-. install/zsh_setup
+. install/common/symlink_files
+. install/common/vim_setup
+. install/common/zsh_setup
 
 ./osx_setup.sh
 

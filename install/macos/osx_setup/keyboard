@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# SCRIPT NAME: keyboard
+# CREATION DATE: 2016-11-10
+#
+#
+# DESCRIPTION: My macOS keyboard preferential settings
+#
+# AUTHOR: Filipe Lemos <contato@filipelemos.com>
+# AUTHOR URL: filipelemos.com
+
+message_info "Keyboard settings"
+
+# Automatically illuminate the MacBook keyboard in low light
+defaults write com.apple.BezelServices kDim -bool true
+
+# Disabling press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
+
+# Enabling access for all controls (and Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Faster react to keystrokes
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain KeyRepeat -float 1
+
+# Turn off keyboard illumination when computer is not used for 5 minutes
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# Using scroll gesture with Ctrl (^) key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
