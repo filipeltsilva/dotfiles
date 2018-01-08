@@ -19,14 +19,19 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-. install/macos/brew
-. install/macos/brewcask
+case ${OSTYPE} in
+  darwin*)
+    . install/macos/brew
+    . install/macos/brewcask
+    ;;
+  *)
+    echo 'Unknown operating system: $OSTYPE. Aborting' && exit 1
+    ;;
+esac
 
 . install/common/symlink_files
 . install/common/vim_setup
 . install/common/zsh_setup
-
-./osx_setup.sh
 
 . ~/.zshrc
 
