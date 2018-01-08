@@ -23,6 +23,7 @@ case ${OSTYPE} in
   darwin*)
     . install/macos/brew
     . install/macos/brewcask
+    . install/macos/macos_setup
     ;;
   *)
     echo 'Unknown operating system: $OSTYPE. Aborting' && exit 1

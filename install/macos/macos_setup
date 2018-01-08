@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
 
 # SCRIPT NAME: applications
-# CREATION DATE: 2016-11-10
+# CREATION DATE: 2018-01-08
 #
 #
-# DESCRIPTION: My macOS applications preferential settings
+# DESCRIPTION: My macOS preferential settings
 #
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
 message_info "macOS applications settings"
 
-#######################################################################################################################
 ## APP STORE
-
 # Check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
@@ -25,11 +23,8 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
 # Install system data files and critical updates
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
-#######################################################################################################################
 
-#######################################################################################################################
 ## DOCK
-
 # Auto-hiding dock
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
@@ -48,11 +43,8 @@ defaults write com.apple.dock mineffect -string "scale"
 defaults write com.apple.dock minimize-to-application -bool true
 
 killall Dock
-#######################################################################################################################
 
-#######################################################################################################################
 ## FINDER
-
 # Open a new Finder when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
@@ -71,11 +63,8 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 killall Finder
-#######################################################################################################################
 
-#######################################################################################################################
 ## ITERM2
-
 # Allow clipboard access
 defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
 
@@ -88,64 +77,23 @@ open iTerm2/*.itermcolors
 
 # Removing the dialog box when exiting the program
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-#######################################################################################################################
 
-#######################################################################################################################
 ## SAFARI
-
 # Disabling standard delay in rendering a web page
 defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
-#######################################################################################################################
 
-#######################################################################################################################
 ## TEXTEDIT
-
 # Opening and saving files in UTF-8 format
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 # Using plain text as the default text format in Apple's TextEdit
 defaults write com.apple.TextEdit RichText -int 0
-#######################################################################################################################
 
-#######################################################################################################################
 ## TIME MACHINE
-
 # Not show message to use external hard drives to backup
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 hash tmutil &> /dev/null && sudo tmutil disablelocal
-#######################################################################################################################
-
-#######################################################################################################################
-## TRANSMISSION
-
-# Deleting the original torrent file
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Enabling incomplete download folder
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-
-# Folder settings
-defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/Torrents"
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents/Incompletes"
-defaults write org.m0k.transmission NSNavLastRootDirectory -string "${HOME}/Downloads/Torrents"
-
-# Removing dialog boxes
-defaults write org.m0k.transmission DownloadAsk -bool false
-defaults write org.m0k.transmission MagnetOpenAsk -bool false
-defaults write org.m0k.transmission WarningDonate -bool false
-defaults write org.m0k.transmission WarningLegal -bool false
-#######################################################################################################################
-#!/usr/bin/env bash
-
-# SCRIPT NAME: keyboard
-# CREATION DATE: 2016-11-10
-#
-#
-# DESCRIPTION: My macOS keyboard preferential settings
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
 
 message_info "Keyboard settings"
 
@@ -169,16 +117,6 @@ defaults write com.apple.BezelServices kDimTime -int 300
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-#!/usr/bin/env bash
-
-# SCRIPT NAME: macos
-# CREATION DATE: 2016-11-09
-#
-#
-# DESCRIPTION: My macOS preferential settings
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
 
 message_info "macOS settings"
 
@@ -221,16 +159,6 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 killall SystemUIServer
-#!/usr/bin/env bash
-
-# SCRIPT NAME: trackpad
-# CREATION DATE: 2016-11-10
-#
-#
-# DESCRIPTION: My trackpad preferential settings
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
 
 message_info "Trackpad settings"
 
