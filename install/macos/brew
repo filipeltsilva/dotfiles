@@ -32,7 +32,6 @@ applications=(
   tree
   unrar
   utf8proc
-  vim --override-system-vi
   wget
   youtube-dl
   zsh
