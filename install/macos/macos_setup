@@ -120,8 +120,6 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 message_info "macOS settings"
 
-COMPUTER_NAME=${USER}
-
 # Avoid the creation of .DS_Store files in network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -133,7 +131,7 @@ sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Changing the computer name
-sudo scutil --set ComputerName ${COMPUTER_NAME}
+sudo scutil --set ComputerName filipelemos01
 
 # Changing the screenshots folder
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
