@@ -13,7 +13,7 @@ clear
 
 . install/messages
 
-echo 'STARTING DOTFILES SETUP PROCESS'
+echo "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
 # Update sudo while the script is running
@@ -36,4 +36,4 @@ esac
 
 . ~/.zshrc
 
-echo 'DOTFILES SETUP PROCESS FINISHED'
+echo "DOTFILES SETUP PROCESS FINISHED"

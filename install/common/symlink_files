@@ -9,7 +9,7 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-message_info "CREATING DOTFILES SYMBOLIC LINKS"
+echo "CREATING DOTFILES SYMBOLIC LINKS"
 DOTFILES_PATH=~/.dotfiles/dotfiles
 
 for file in $(ls ${DOTFILES_PATH}); do
