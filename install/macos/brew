@@ -37,7 +37,7 @@ applications=(
   zsh
 )
 
-message_info "Configuring Brew"
+echo "Configuring Brew"
 
-message_info "Installing Brew applications"
+echo "Installing Brew applications"
 brew install "${applications[@]}"

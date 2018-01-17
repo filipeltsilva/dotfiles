@@ -13,7 +13,7 @@ clear
 
 . install/messages
 
-message_info "STARTING DOTFILES SETUP PROCESS"
+echo 'STARTING DOTFILES SETUP PROCESS'
 sudo -v
 
 # Update sudo while the script is running
@@ -26,7 +26,7 @@ case ${OSTYPE} in
     . install/macos/macos_setup
     ;;
   *)
-    echo 'Unknown operating system: $OSTYPE. Aborting' && exit 1
+    echo "Unknown operating system: $OSTYPE. Aborting" && exit 1
     ;;
 esac
 
@@ -36,4 +36,4 @@ esac
 
 . ~/.zshrc
 
-message_okay "DOTFILES SETUP PROCESS FINISHED"
+echo 'DOTFILES SETUP PROCESS FINISHED'

@@ -9,7 +9,7 @@
 # AUTHOR: Filipe Lemos <contato@filipelemos.com>
 # AUTHOR URL: filipelemos.com
 
-message_info "macOS applications settings"
+echo "macOS applications settings"
 
 ## APP STORE
 # Check for software updates daily
@@ -95,7 +95,7 @@ defaults write com.apple.TextEdit RichText -int 0
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
-message_info "Keyboard settings"
+echo "Keyboard settings"
 
 # Automatically illuminate the MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
@@ -118,7 +118,7 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
-message_info "macOS settings"
+echo "macOS settings"
 
 # Avoid the creation of .DS_Store files in network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -158,7 +158,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 killall SystemUIServer
 
-message_info "Trackpad settings"
+echo "Trackpad settings"
 
 # Enabling tap to click
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
