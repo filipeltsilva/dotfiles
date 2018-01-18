@@ -1,0 +1,22 @@
+# FRONT-END ALIASES
+alias bower="noglob bower"
+
+# OSX ALIASES
+if [[ `uname` == "Darwin" ]]; then
+  alias ddl="defaults delete"
+  alias dfr="defaults read"
+  alias dfw="defaults write"
+  alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles -bool false"
+  alias showfiles="defaults write com.apple.Finder AppleShowAllFiles -bool true"
+fi
+
+# TMUX ALIASES
+alias tm="tmux"
+
+# UNIX ALIASES
+alias cl="clear"
+alias hgrep="history | grep"
+alias ping="ping -c 5"
+alias q="exit"
+alias svim="sudo vim"
+alias upzsh="source ~/.zshrc"

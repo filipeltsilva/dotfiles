@@ -11,8 +11,6 @@
 
 clear
 
-. install/messages
-
 echo "STARTING DOTFILES SETUP PROCESS"
 sudo -v
 
