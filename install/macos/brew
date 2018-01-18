@@ -16,6 +16,7 @@ applications=(
   doxygen
   ffmpeg
   findutils --with-default-names
+  git
   git-lfs
   grep --with-default-names
   gzip

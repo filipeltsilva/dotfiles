@@ -13,6 +13,9 @@ echo "ZSH SETUP"
 echo "Installing Oh My ZSH!"
 if [[ ! -d ~/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  echo "Installing Powerlevel9k theme"
+  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 else
   echo "Oh My ZSH is already installed in this system"
 fi

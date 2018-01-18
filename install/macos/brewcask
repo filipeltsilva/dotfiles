@@ -18,7 +18,6 @@ applications=(
   filezilla
   firefox
   flux
-  font-menlo-for-powerline
   google-chrome
   itau
   iterm2
@@ -48,7 +47,6 @@ echo "HOMEBREW SETUP"
 
 echo "Configuring Brew Cask"
 brew tap caskroom/cask
-brew tap caskroom/fonts
 
 echo "Installing Brew Cask applications"
 brew cask install "${applications[@]}"
