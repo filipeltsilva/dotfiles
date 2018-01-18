@@ -1,4 +1,4 @@
-. ~/.dotfiles/shell/aliases
-. ~/.dotfiles/shell/exports
-. ~/.dotfiles/shell/functions
-. ~/.dotfiles/shell/settings
+. ~/.dotfiles/files/zsh/aliases
+. ~/.dotfiles/files/zsh/exports
+. ~/.dotfiles/files/zsh/functions
+. ~/.dotfiles/files/zsh/settings
