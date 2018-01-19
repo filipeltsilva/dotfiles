@@ -1,14 +1,3 @@
-#!/usr/bin/env bash
-
-# SCRIPT NAME: symlink_files
-# CREATION DATE: 2016-10-25
-#
-#
-# DESCRIPTION: Create symbolic links to the most important dotfiles
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
-
 echo "CREATING DOTFILES SYMBOLIC LINKS"
 DOTFILES_PATH=~/.dotfiles/files
 

@@ -1,14 +1,3 @@
-#!/usr/bin/env bash
-
-# SCRIPT NAME: vim_setup
-# CREATION DATE: 2016-10-25
-#
-#
-# DESCRIPTION: Setting up my GVim/Vim configuration
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
-
 echo "VIM SETUP"
 echo "Vim-plug setup"
 if [[ ! -d ~/.vim/autoload ]]; then

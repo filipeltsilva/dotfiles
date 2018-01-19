@@ -1,14 +1,3 @@
-#!/usr/bin/env bash
-
-# SCRIPT NAME: zsh_setup
-# CREATION DATE: 2016-10-25
-#
-#
-# DESCRIPTION: Setting up my ZSH confguration
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
-
 echo "ZSH SETUP"
 echo "Installing Oh My ZSH!"
 if [[ ! -d ~/.oh-my-zsh ]]; then
