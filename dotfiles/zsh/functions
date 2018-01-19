@@ -1,20 +1,18 @@
-function brew_update() {
+function brewup() {
+  echo "Updating Brew and Brew Packages"
   brew update
   brew upgrade --cleanup `brew outdated`
 
-  brew cleanup -n
-}
-
-function brewcask_update() {
   rm -rf $(brew --cache)
   brew cask update
-  
-  brew cask reinstall $(brew cask outdated)
+  brew cask reinstall $(brew cask outdated)  
 
-  brew cask cleanup -n
+  echo "Deleting unecessary files"
+  brew cleanup -n
+  rew cask cleanup -n
 }
 
-function local_server() {
+function localserver() {
   python -m SimpleHTTPServer ${1}
 }
 
@@ -26,6 +24,6 @@ function ytdl() {
   fi
 }
 
-function ytdl_info() {
+function ytdlinfo() {
   youtube-dl -F $1
 }

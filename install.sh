@@ -19,8 +19,7 @@ while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
 case ${OSTYPE} in
   darwin*)
-    . install/macos/brew
-    . install/macos/brewcask
+    . install/macos/brew_setup
     . install/macos/macos_setup
     ;;
   *)

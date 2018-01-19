@@ -1,0 +1,77 @@
+brewApplications=(
+  ack
+  bash
+  coreutils
+  doxygen
+  ffmpeg
+  findutils --with-default-names
+  git
+  git-lfs
+  grep --with-default-names
+  gzip
+  hub
+  libav
+  mongodb
+  node
+  ntfs-3g
+  openssh
+  p7zip
+  rsync
+  speedtest_cli
+  tmux
+  tree
+  unrar
+  utf8proc
+  wget
+  youtube-dl
+  zsh
+)
+
+brewcaskApplications=(
+  android-file-transfer
+  appcleaner
+  cmake
+  diffmerge
+  docker
+  filezilla
+  firefox
+  flux
+  google-chrome
+  itau
+  iterm2
+  java
+  mactex
+  macvim
+  mongodb-compass
+  opera
+  osxfuse
+  pomello
+  slack
+  selfcontrol
+  skype
+  spotify
+  spotify-notifications
+  teamviewer
+  telegram
+  tomighty
+  transmission
+  virtualbox
+  virtualbox-extension-pack
+  visual-studio-code
+  vlc
+)
+
+echo "HOMEBREW SETUP"
+echo "Configuring Brew"
+echo "Installing Brew applications"
+brew install "${brewApplications[@]}"
+
+echo "Configuring Brew Cask"
+brew tap caskroom/cask
+
+echo "Installing Brew Cask applications"
+brew cask install "${brewcaskApplications[@]}"
+
+echo "Deleting unecessary files"
+brew cleanup
+brew cask cleanup -n

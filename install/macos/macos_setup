@@ -1,14 +1,3 @@
-#!/usr/bin/env bash
-
-# SCRIPT NAME: applications
-# CREATION DATE: 2018-01-08
-#
-#
-# DESCRIPTION: My macOS preferential settings
-#
-# AUTHOR: Filipe Lemos <contato@filipelemos.com>
-# AUTHOR URL: filipelemos.com
-
 echo "macOS applications settings"
 
 ## APP STORE

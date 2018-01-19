@@ -13,7 +13,10 @@ echo "CREATING DOTFILES SYMBOLIC LINKS"
 DOTFILES_PATH=~/.dotfiles/files
 
 for file in $(ls ${DOTFILES_PATH}); do
-  ln -sfnv ${DOTFILES_PATH}/${file} ~/.${file}
+  #ln -sfnv ${DOTFILES_PATH}/${file} ~/.${file}
+  if [ -f "$file" ] then
+    cat ${file}
+  fi
 done
 
 unset file
