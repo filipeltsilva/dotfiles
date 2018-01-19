@@ -34,6 +34,12 @@ defaults write com.apple.dock minimize-to-application -bool true
 killall Dock
 
 ## FINDER
+# Allow quitting Finder
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Start in the home directory when opening a new window
+defaults write com.apple.finder NewWindowTargetPath "file://~"
+
 # Open a new Finder when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
@@ -41,6 +47,9 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Displaying the path bar
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Displaying Tab Bar
+defaults write com.apple.finder ShowTabView -bool true
 
 # Displaying the status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -58,8 +67,8 @@ killall Finder
 defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
 
 # Font settings
-defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline-Regular 12"
-defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
+# defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline-Regular 12"
+# defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
 
 # Install themes
 open ./iTerm2/*.itermcolors
@@ -120,10 +129,10 @@ sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Changing the computer name
-sudo scutil --set ComputerName filipelemos01
+sudo scutil --set ComputerName "filipelemos01"
 
 # Changing the screenshots folder
-defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
+defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
 defaults write com.apple.screencapture type -string "jpg"
 
 # Date and time settings
@@ -134,6 +143,12 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Displaying system informations on login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Don't show special icons on desktop
+defaults write ShowExternalHardDrivesOnDesktop -bool false
+defaults write ShowHardDrivesOnDesktop -bool false
+defaults write ShowRemovableMediaOnDesktop -bool false
+defaults write ShowMountedServersOnDesktop -bool false
 
 # Expanding save panel
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true

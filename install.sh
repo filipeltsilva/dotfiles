@@ -27,10 +27,10 @@ case ${OSTYPE} in
     ;;
 esac
 
-. install/common/symlink_files
-. install/common/vim_setup
-. install/common/zsh_setup
+# . install/common/symlink_files
+# . install/common/vim_setup
+# . install/common/zsh_setup
 
-. ~/.zshrc
+# . ~/.zshrc
 
 echo "DOTFILES SETUP PROCESS FINISHED"
