@@ -91,7 +91,6 @@ defaults write com.apple.TextEdit RichText -int 0
 ## TIME MACHINE
 # Not show message to use external hard drives to backup
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 echo "Keyboard settings"
 
@@ -131,7 +130,20 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Changing the computer name
 sudo scutil --set ComputerName "filipelemos01"
 
+# Changing the local host name (finishing with .local)
+sudo scutil --set LocalHostName "filipelemos01"
+
+# Changing the host name
+sudo scutil --set HostName "filipelemos01"
+
+# Changing the language and text format settings
+defaults write NSGlobalDomain AppleLanguages -array "en-BR"
+defaults write NSGlobalDomain AppleLocale -string "en_BR"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
 # Changing the screenshots folder
+mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
 defaults write com.apple.screencapture type -string "jpg"
 
@@ -153,12 +165,6 @@ defaults write ShowMountedServersOnDesktop -bool false
 # Expanding save panel
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-
-# Language and text format settings
-defaults write NSGlobalDomain AppleLanguages -array "en-BR"
-defaults write NSGlobalDomain AppleLocale -string "en_BR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 killall SystemUIServer
 
