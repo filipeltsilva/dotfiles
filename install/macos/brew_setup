@@ -36,6 +36,7 @@ brewcaskApplications=(
   filezilla
   firefox
   flux
+  font-fira-code
   google-chrome
   itau
   iterm2
@@ -68,6 +69,7 @@ brew install "${brewApplications[@]}"
 
 echo "Configuring Brew Cask"
 brew tap caskroom/cask
+brew tap caskroom/fonts
 
 echo "Installing Brew Cask applications"
 brew cask install "${brewcaskApplications[@]}"

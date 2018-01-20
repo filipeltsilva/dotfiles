@@ -16,7 +16,7 @@ function localserver() {
   python -m SimpleHTTPServer ${1}
 }
 
-function ytdl() {
+function yt() {
   if [[ `echo $1 | grep playlist` ]]; then
     youtube-dl $1 -f $2 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --youtube-skip-dash-manifest
   else
@@ -24,6 +24,6 @@ function ytdl() {
   fi
 }
 
-function ytdlinfo() {
+function ytinfo() {
   youtube-dl -F $1
 }

@@ -67,8 +67,8 @@ killall Finder
 defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
 
 # Font settings
-# defaults write com.googlecode.iterm2 "Non Ascii Font" -string "MenloForPowerline-Regular 12"
-# defaults write com.googlecode.iterm2 "Normal Font" -string "Menlo-Regular 13"
+# defaults write com.googlecode.iterm2 "Non Ascii Font" -string "FiraCode-Regular 12"
+# defaults write com.googlecode.iterm2 "Normal Font" -string "FiraCode-Regular 12"
 
 # Install themes
 open ~/.dotfiles/install/macos/iTerm2/*.itermcolors

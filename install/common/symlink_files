@@ -1,11 +1,6 @@
-echo "CREATING DOTFILES SYMBOLIC LINKS"
-DOTFILES_PATH=~/.dotfiles/files
-
-for file in $(ls ${DOTFILES_PATH}); do
-  #ln -sfnv ${DOTFILES_PATH}/${file} ~/.${file}
-  if [ -f "$file" ] then
-    cat ${file}
-  fi
-done
-
-unset file
+echo "SYMLINK FILES"
+ln -sfnv ~/.dotfiles/files/gitconfig ~/.gitconfig
+ln -sfnv ~/.dotfiles/files/gitignore_global ~/.gitignore_global
+ln -sfnv ~/.dotfiles/files/tmux.conf ~/.tmux.conf
+ln -sfnv ~/.dotfiles/files/vimrc ~/.vimrc
+ln -sfnv ~/.dotfiles/files/zshrc ~/.zshrc
