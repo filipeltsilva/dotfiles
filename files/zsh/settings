@@ -9,7 +9,8 @@ POWERLEVEL9K_MODE="awesome-fontconfig"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ram)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram)
+POWERLEVEL9K_TIME_FORMAT="%D{\uf073 %d.%m.%Y \uf017 %H:%M}"
 
 plugins=(bower brew common-aliases git git-extras gitfast osx tmux web-search)
 

@@ -36,7 +36,8 @@ brewcaskApplications=(
   filezilla
   firefox
   flux
-  font-fira-code
+  font-fira-code-nerd-font
+  font-source-code-pro
   google-chrome
   itau
   iterm2
