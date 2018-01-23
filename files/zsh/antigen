@@ -1,0 +1,24 @@
+. ~/.antigen/antigen.zsh
+
+# Loading oh-my-zsh
+antigen use oh-my-zsh
+
+# Install and load oh-my-zsh plugins
+antigen bundles <<EOBUNDLES
+    git
+    git-extras
+EOBUNDLES
+
+# Setting up Powerlevel9k theme
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_MODE="awesome-fontconfig"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram)
+POWERLEVEL9K_TIME_FORMAT="%D{\uf073 %d.%m.%Y \uf017 %H:%M}"
+
+antigen theme bhilburn/powerlevel9k
+
+# Applying instructions
+antigen apply
