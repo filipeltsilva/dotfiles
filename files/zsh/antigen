@@ -9,6 +9,10 @@ antigen bundles <<EOBUNDLES
     git-extras
 EOBUNDLES
 
+# Install and load non-oh-my-zsh plugins to improve zsh
+# antigen bundle zsh-user/zsh-autosuggestions
+# antigen bundle zsh-user/zsh-syntax-highlighting
+
 # Setting up Powerlevel9k theme
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE="awesome-fontconfig"
