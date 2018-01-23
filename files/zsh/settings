@@ -12,6 +12,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram)
 POWERLEVEL9K_TIME_FORMAT="%D{\uf073 %d.%m.%Y \uf017 %H:%M}"
 
-plugins=(bower brew common-aliases git git-extras gitfast osx tmux web-search)
+# plugins=(bower brew common-aliases git git-extras gitfast osx tmux web-search)
 
-. $ZSH/oh-my-zsh.sh
+# . $ZSH/oh-my-zsh.sh

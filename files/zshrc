@@ -1,3 +1,4 @@
+. ~/.dotfiles/files/zsh/antigen
 . ~/.dotfiles/files/zsh/aliases
 . ~/.dotfiles/files/zsh/exports
 . ~/.dotfiles/files/zsh/functions
