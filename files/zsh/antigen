@@ -7,10 +7,15 @@ antigen use oh-my-zsh
 
 # Install and load oh-my-zsh plugins
 antigen bundles <<EOBUNDLES
+    common-aliases
+    docker
+    docker-compose
     git
     git-extras
     node
     npm
+    thefuck
+    tmux
     wp-cli
     yarn
     web-search
@@ -20,6 +25,7 @@ EOBUNDLES
 
 if [[ `uname` == "Darwin" ]]; then
     antigen bundle brew
+    antigen bundle iterm2
     antigen bundle osx
     antigen bundle xcode
 fi

@@ -1,12 +1,8 @@
 # FRONT-END ALIASES
 alias bower="noglob bower"
 
-# TMUX ALIASES
-alias tm="tmux"
-
-# UNIX ALIASES
+# MY TERMINAL ALIASES
 alias cl="clear"
-alias hgrep="history | grep"
 alias ping="ping -c 5"
 alias q="exit"
 alias svim="sudo vim"
