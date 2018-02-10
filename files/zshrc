@@ -1,5 +1,5 @@
-. ~/.dotfiles/files/zsh/antigen
-. ~/.dotfiles/files/zsh/aliases
-. ~/.dotfiles/files/zsh/exports
-. ~/.dotfiles/files/zsh/functions
-. ~/.dotfiles/files/zsh/settings
+. $HOME/.dotfiles/files/zsh/antigen
+. $HOME/.dotfiles/files/zsh/aliases
+. $HOME/.dotfiles/files/zsh/exports
+. $HOME/.dotfiles/files/zsh/functions
+. $HOME/.dotfiles/files/zsh/settings

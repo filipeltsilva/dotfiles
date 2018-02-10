@@ -14,7 +14,7 @@
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	editor = vim
 [filter "lfs"]
 	required = true

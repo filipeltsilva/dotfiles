@@ -12,7 +12,3 @@ if [[ `uname` == "Darwin" ]]; then
 else
   export PATH="${PATH}:${HOME}/.dotfiles/bin"
 fi
-
-# ZSH AND OH MY ZSH SETTINGS
-export UPDATE_ZSH_DAYS=7
-export ZSH=~/.oh-my-zsh

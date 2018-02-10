@@ -1,28 +1,26 @@
-unsetopt EXTENDED_GLOB
-
-. ~/.antigen/antigen.zsh
+. $HOME/.antigen/antigen.zsh
 
 # Loading oh-my-zsh
 antigen use oh-my-zsh
 
 # Install and load oh-my-zsh plugins
 antigen bundles <<EOBUNDLES
+    colored-man-pages
     common-aliases
     docker
     docker-compose
     git
     git-extras
+    history
     node
     npm
-    thefuck
     tmux
     wp-cli
     yarn
     web-search
-    zsh-user/zsh-autosuggestions
-    # zsh-user/zsh-syntax-highlighting
 EOBUNDLES
 
+# Plugins for macOS only
 if [[ `uname` == "Darwin" ]]; then
     antigen bundle brew
     antigen bundle iterm2

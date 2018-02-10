@@ -31,6 +31,6 @@ esac
 . install/common/vim_setup
 . install/common/zsh_setup
 
-. ~/.zshrc
+. $HOME/.zshrc
 
 echo "DOTFILES SETUP PROCESS FINISHED"

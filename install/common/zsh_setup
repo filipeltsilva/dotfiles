@@ -1,7 +1,6 @@
 echo "ZSH SETUP"
-if [[ ! -d ~/.antigen ]]; then
-  mkdir -p ~/.antigen
-  curl -L git.io/antigen > ~/.antigen/antigen.zsh
+if [[ ! -d $HOME/.antigen ]]; then
+  git clone https://github.com/zsh-users/antigen.git $HOME/.antigen
 else
   echo "Antigen is already installed in this system"
 fi
