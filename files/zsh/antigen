@@ -9,6 +9,11 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
     git
     git-extras
+    node
+    npm
+    wp-cli
+    yarn
+    web-search
     zsh-user/zsh-autosuggestions
     # zsh-user/zsh-syntax-highlighting
 EOBUNDLES
@@ -16,6 +21,7 @@ EOBUNDLES
 if [[ `uname` == "Darwin" ]]; then
     antigen bundle brew
     antigen bundle osx
+    antigen bundle xcode
 fi
 
 # Setting up Powerlevel9k theme
