@@ -5,11 +5,11 @@ function brewup() {
 
   rm -rf $(brew --cache)
   brew cask update
-  brew cask reinstall $(brew cask outdated)  
+  brew cask reinstall $(brew cask outdated)
 
   echo "Deleting unecessary files"
   brew cleanup -n
-  rew cask cleanup -n
+  brew cask cleanup -n
 }
 
 function localserver() {

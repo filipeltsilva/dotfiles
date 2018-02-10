@@ -1,3 +1,5 @@
+unsetopt EXTENDED_GLOB
+
 . ~/.antigen/antigen.zsh
 
 # Loading oh-my-zsh
@@ -7,11 +9,14 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
     git
     git-extras
+    zsh-user/zsh-autosuggestions
+    # zsh-user/zsh-syntax-highlighting
 EOBUNDLES
 
-# Install and load non-oh-my-zsh plugins to improve zsh
-# antigen bundle zsh-user/zsh-autosuggestions
-# antigen bundle zsh-user/zsh-syntax-highlighting
+if [[ `uname` == "Darwin" ]]; then
+    antigen bundle brew
+    antigen bundle osx
+fi
 
 # Setting up Powerlevel9k theme
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
