@@ -1,4 +1,6 @@
 echo "macOS applications settings"
+echo "What will be the computer's name?"
+read COMPUTER_NAME
 
 ## APP STORE
 # Check for software updates daily
@@ -34,6 +36,9 @@ defaults write com.apple.dock minimize-to-application -bool true
 killall Dock
 
 ## FINDER
+# Allow changing file extensions
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Allow quitting Finder
 defaults write com.apple.finder QuitMenuItem -bool true
 
@@ -51,6 +56,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Displaying Tab Bar
 defaults write com.apple.finder ShowTabView -bool true
 
+# Displaying the Library folder
+chflags nohidden ~/Library
+
 # Displaying the status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
@@ -59,6 +67,9 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # No warning before cleaning the the trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Show file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 killall Finder
 
@@ -97,9 +108,6 @@ echo "Keyboard settings"
 # Automatically illuminate the MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
 
-# Disabling press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
-
 # Enabling access for all controls (and Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
@@ -128,13 +136,14 @@ sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Changing the computer name
-sudo scutil --set ComputerName "filipelemos01"
+sudo scutil --set ComputerName "$COMPUTER_NAME"
 
 # Changing the local host name (finishing with .local)
-sudo scutil --set LocalHostName "filipelemos01"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
 
 # Changing the host name
-sudo scutil --set HostName "filipelemos01"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Changing the language and text format settings
 defaults write NSGlobalDomain AppleLanguages -array "en-BR"
@@ -147,14 +156,23 @@ mkdir -p $HOME/Pictures/Screenshots
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 defaults write com.apple.screencapture type -string "jpg"
 
+# Computer sleep
+sudo pmset sleep 10
+
 # Date and time settings
 sudo systemsetup -settimezone "America/Sao_Paulo" > /dev/null
+
+# Defining audio volume
+osascript -e "set volume 3"
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Displaying system informations on login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Display sleep
+sudo pmset displaysleep 5
 
 # Don't show special icons on desktop
 defaults write ShowExternalHardDrivesOnDesktop -bool false
@@ -165,6 +183,9 @@ defaults write ShowMountedServersOnDesktop -bool false
 # Expanding save panel
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Saving files in the disk instead of iCloud by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 killall SystemUIServer
 
