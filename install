@@ -17,20 +17,30 @@ sudo -v
 # Update sudo while the script is running
 while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
-case ${OSTYPE} in
-  darwin*)
-    . install/macos/brew_setup
-    . install/macos/macos_setup
-    ;;
-  *)
-    echo "Unknown operating system: $OSTYPE. Aborting" && exit 1
-    ;;
+# case ${OSTYPE} in
+#  darwin*)
+#    . install/macos/brew_setup
+#    . install/macos/macos_setup
+#    ;;
+#  *)
+#    echo "Unknown operating system: $OSTYPE. Aborting" && exit 1
+#    ;;
+#esac
+
+# . install/common/symlink_files
+# . install/common/vim_setup
+# . install/common/zsh_setup
+
+#. $HOME/.zshrc
+
+case $1 in
+	-h | --help)
+		echo "ajuda"
+	;;
+
+	-f | --filipe)
+		echo "filipe"
+	;;
 esac
-
-. install/common/symlink_files
-. install/common/vim_setup
-. install/common/zsh_setup
-
-. $HOME/.zshrc
 
 echo "DOTFILES SETUP PROCESS FINISHED"
