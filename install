@@ -33,14 +33,21 @@ while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
 #. $HOME/.zshrc
 
+DOTFILES_DIR=$(pwd)
+echo $DOTFILES_DIR
 case $1 in
 	-h | --help)
-		echo "ajuda"
-	;;
+		echo "ajuda";;
 
 	-f | --filipe)
-		echo "filipe"
-	;;
+		echo "filipe";;
+	
+	-t | --teste)
+		. install_scripts/zsh_setup;;
+	
+	-l | --links)
+		. install_scripts/symlink_files;;
 esac
 
+unset DOTFILES_DIR
 echo "DOTFILES SETUP PROCESS FINISHED"

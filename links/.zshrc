@@ -1,4 +1,4 @@
-. $HOME/.dotfiles/files/zsh/aliases
-. $HOME/.dotfiles/files/zsh/exports
-. $HOME/.dotfiles/files/zsh/functions
-. $HOME/.dotfiles/files/zsh/settings
+. $HOME/.dotfiles/links/.zsh/aliases
+. $HOME/.dotfiles/links/.zsh/exports
+. $HOME/.dotfiles/links/.zsh/functions
+. $HOME/.dotfiles/links/.zsh/settings

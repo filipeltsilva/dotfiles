@@ -1,7 +1,9 @@
 echo "SYMLINK FILES"
-ln -sfnv $HOME/.dotfiles/files/gitconfig $HOME/.gitconfig
-ln -sfnv $HOME/.dotfiles/files/gitignore_global $HOME/.gitignore_global
-ln -sfnv $HOME/.dotfiles/files/npmrc $HOME/.npmrc
-ln -sfnv $HOME/.dotfiles/files/tmux.conf $HOME/.tmux.conf
-ln -sfnv $HOME/.dotfiles/files/vimrc $HOME/.vimrc
-ln -sfnv $HOME/.dotfiles/files/zshrc $HOME/.zshrc
+ln -sfnv $DOTFILES_DIR/links/.gitconfig $HOME/.gitconfig
+ln -sfnv $DOTFILES_DIR/links/.gitignore_global $HOME/.gitignore_global
+ln -sfnv $DOTFILES_DIR/links/.npmrc $HOME/.npmrc
+ln -sfnv $DOTFILES_DIR/links/.tmux.conf $HOME/.tmux.conf
+ln -sfnv $DOTFILES_DIR/links/.vim $HOME/.vim
+ln -sfnv $DOTFILES_DIR/links/.vimrc $HOME/.vimrc
+ln -sfnv $DOTFILES_DIR/links/.zsh $HOME/.zsh
+ln -sfnv $DOTFILES_DIR/links/.zshrc $HOME/.zshrc
