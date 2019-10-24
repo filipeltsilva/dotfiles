@@ -1,9 +1,0 @@
-# FRONT-END ALIASES
-alias bower="noglob bower"
-
-# MY TERMINAL ALIASES
-alias cl="clear"
-alias ping="ping -c 5"
-alias q="exit"
-alias svim="sudo vim"
-alias upzsh="source ~/.zshrc"
