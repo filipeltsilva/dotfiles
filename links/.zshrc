@@ -35,10 +35,6 @@ function brewup() {
   brew cask cleanup -n
 }
 
-function localserver() {
-  python -m SimpleHTTPServer ${1}
-}
-
 function yt() {
   if [[ `echo $1 | grep playlist` ]]; then
     youtube-dl $1 -f $2 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --youtube-skip-dash-manifest
@@ -54,3 +50,8 @@ CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 DEFAULT_USER="$USER"
 ENABLE_CORRECTION="true"
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  git
+)

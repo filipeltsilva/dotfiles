@@ -3,7 +3,5 @@ ln -sfnv $DOTFILES_DIR/links/.gitconfig $HOME/.gitconfig
 ln -sfnv $DOTFILES_DIR/links/.gitignore_global $HOME/.gitignore_global
 ln -sfnv $DOTFILES_DIR/links/.npmrc $HOME/.npmrc
 ln -sfnv $DOTFILES_DIR/links/.tmux.conf $HOME/.tmux.conf
-ln -sfnv $DOTFILES_DIR/links/.vim $HOME/.vim
 ln -sfnv $DOTFILES_DIR/links/.vimrc $HOME/.vimrc
-ln -sfnv $DOTFILES_DIR/links/.zsh $HOME/.zsh
 ln -sfnv $DOTFILES_DIR/links/.zshrc $HOME/.zshrc
