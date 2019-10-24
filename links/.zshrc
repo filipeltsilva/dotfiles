@@ -1,3 +1,6 @@
+export ZSH=$HOME/.oh-my-zsh
+. $ZSH/oh-my-zsh.sh
+
 # FRONT-END ALIASES
 alias bower="noglob bower"
 
