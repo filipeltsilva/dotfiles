@@ -5,4 +5,5 @@ else
   echo "Oh-my-zsh is already installed in this system"
 fi
 
+ln -sfnv $PWD/.zshrc $HOME/.zshrc
 chsh -s $(which zsh) $USER
