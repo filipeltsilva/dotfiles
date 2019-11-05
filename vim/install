@@ -11,3 +11,5 @@ fi
 echo "Preparing Vim to use"
 vim -c PlugInstall -c q -c q
 $HOME/.vim/plugged/youcompleteme/install.py --clang-completer --tern-completer
+
+ln -sfnv $PWD/.vimrc $HOME/.vimrc
