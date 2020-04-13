@@ -1,3 +1,5 @@
+cask_args appdir: "/Applications"
+
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -94,3 +96,4 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
+cask "microsoft-teams"
