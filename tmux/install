@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "TMUX SETUP"
+# if [[ ! -d $HOME/.oh-my-zsh ]]; then
+#  sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+#  ln -sfnv $PWD/.zshrc $HOME/.zshrc
+#  chsh -s $(which zsh) $USER
+# else
+#   echo "Oh-my-zsh is already installed in this system"
+# fi
+
+ln -sfnv $PWD/.tmux.conf $HOME/.tmux.conf

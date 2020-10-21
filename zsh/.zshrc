@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX=true
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -68,7 +69,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wp-cli)
+plugins=(git wp-cli zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,7 +110,6 @@ alias cl="clear"
 alias ping="ping -c 5"
 alias q="exit"
 alias svim="sudo vim"
-alias upzsh="source ~/.zshrc"
 
 # ENVIRONMENT VARIABLES
 if [[ `uname` == "Darwin" ]]; then
@@ -148,3 +148,4 @@ CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 DEFAULT_USER="$USER"
 ENABLE_CORRECTION="true"
+
