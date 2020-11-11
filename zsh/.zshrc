@@ -102,9 +102,6 @@ export editor='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# FRONT-END ALIASES
-alias bower="noglob bower"
-
 # MY TERMINAL ALIASES
 alias cl="clear"
 alias ping="ping -c 5"
