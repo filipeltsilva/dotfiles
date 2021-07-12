@@ -7,6 +7,7 @@ plugins=(
 	colored-man-pages
 	git
 	npm
+	tmux
 	wp-cli
 	zsh_reload
 )

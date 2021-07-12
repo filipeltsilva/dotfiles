@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "ZSH SETUP"
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 echo "Creating links"
 ln -sfnv $PWD/.zshrc $HOME/.zshrc
