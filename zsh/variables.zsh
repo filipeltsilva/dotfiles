@@ -1,7 +1,3 @@
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export editor='vim'
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # ENVIRONMENT VARIABLES
