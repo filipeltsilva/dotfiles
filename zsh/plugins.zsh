@@ -11,5 +11,3 @@ plugins=(
 	wp-cli
 	zsh_reload
 )
-
-
