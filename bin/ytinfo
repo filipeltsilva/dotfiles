@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-youtube-dl -F $1
+youtube-dl -F $1 --default-search ytsearch
