@@ -1,3 +1,3 @@
 export TERM="xterm-256color"
 
-ZSH_THEME="dst"
+ZSH_THEME="af-magic"
