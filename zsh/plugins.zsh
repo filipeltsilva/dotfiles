@@ -6,8 +6,10 @@
 plugins=(
 	colored-man-pages
 	git
+	node
 	npm
 	tmux
+	web-search
 	wp-cli
 	zsh_reload
 )
