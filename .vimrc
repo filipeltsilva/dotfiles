@@ -3,6 +3,6 @@ if has('autocmd')
     autocmd BufWritePost ~/.vimrc source $MYVIMRC
 endif
 
-for file in split(glob('$HOME/.dotfiles/vim/*.vim'), '\n')
+for file in split(glob('$DOTFILES/vim/*.vim'), '\n')
 	exe 'source' file
 endfor
