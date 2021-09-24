@@ -31,4 +31,6 @@ ln -sfnv $PWD/.vimrc $HOME/.vimrc
 ln -sfnv $PWD/.zshenv $HOME/.zshenv
 ln -sfnv $PWD/.zshrc $HOME/.zshrc
 
+source $HOME/.zshrc
+
 echo "Done!"
