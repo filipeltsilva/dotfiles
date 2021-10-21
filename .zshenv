@@ -1,2 +1,3 @@
-export DOTFILES="$HOME/.dotfiles"
-export PATH=$PATH:$(yarn global bin):$DOTFILES/bin
+export DOTFILES_PATH=$HOME/.dotfiles/
+
+export PATH=$PATH:$DOTFILES_PATH/bin
