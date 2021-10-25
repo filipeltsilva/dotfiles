@@ -18,8 +18,6 @@ then
   asdf plugin add nodejs
 
   asdf install
-
-  asdf global nodejs lts
 else
   echo "Nothing to do here!"
 fi
