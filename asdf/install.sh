@@ -12,6 +12,14 @@ then
   ln -sfnv $PWD/.asdfrc $HOME/.asdfrc
   ln -sfnv $PWD/.default-npm-packages $HOME/.default-npm-packages
   ln -sfnv $PWD/.tool-versions $HOME/.tool-versions
+
+  asdf plugin list-all
+
+  asdf plugin add nodejs
+
+  asdf install
+
+  asdf global nodejs lts
 else
   echo "Nothing to do here!"
 fi
