@@ -7,7 +7,7 @@ echo ""
 
 if [[ ! -d $HOME/.oh-my-zsh ]]
 then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/master/tools/install.sh)" "" --unattended
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
   ln -sfnv $PWD/.zshenv $HOME/.zshenv
   ln -sfnv $PWD/.zshrc $HOME/.zshrc
