@@ -11,5 +11,4 @@ plugins=(
 	npm
 	tmux
 	web-search
-	wp-cli
 )
