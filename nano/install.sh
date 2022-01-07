@@ -5,7 +5,7 @@ echo "### NANO SETUP ###"
 echo "##################"
 echo ""
 
-if [[ ! -f $HOME/.nanorc && ! -f $HOME/.gitignore_global ]]
+if [[ ! -f $HOME/.nanorc ]]
 then
   ln -sfnv $PWD/.nanorc $HOME/.nanorc
 else

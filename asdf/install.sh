@@ -16,8 +16,6 @@ then
   asdf plugin list-all
 
   asdf plugin add nodejs
-
-  asdf install
 else
   echo "Nothing to do here!"
 fi
