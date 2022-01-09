@@ -5,3 +5,5 @@ for file in $(ls $DOTFILES_PATH/zsh/*.zsh); do
 done
 
 . $ZSH/oh-my-zsh.sh
+
+neofetch
