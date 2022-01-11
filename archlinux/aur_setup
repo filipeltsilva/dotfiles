@@ -1,1 +1,8 @@
-echo "Installing AUR"
+echo "Installing AUR Packages"
+
+packages=(
+  spotify
+)
+
+yay -Syy
+yay -S ${packages[@]} --noconfirm
