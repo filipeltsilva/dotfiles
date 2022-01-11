@@ -1,0 +1,16 @@
+echo "Installing Pacman Packages"
+
+packages=(
+  gimp
+  gimp-help-en
+  inkscape
+  kde-applications
+  krita
+  nano
+  neofetch
+  tmux
+  zsh
+)
+
+sudo pacman -Syy
+sudo pacman -S ${packages[@]} --noconfirm
