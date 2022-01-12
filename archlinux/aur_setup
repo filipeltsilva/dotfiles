@@ -1,7 +1,12 @@
 echo "Installing AUR Packages"
 
 packages=(
+  insomnia-bin
+  obsidian
   spotify
+  ttf-ms-fonts
+  ungoogled-chromium
+  visual-studio-code-bin
 )
 
 yay -Syy

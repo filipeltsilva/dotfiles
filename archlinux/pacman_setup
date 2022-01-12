@@ -1,14 +1,24 @@
 echo "Installing Pacman Packages"
 
 packages=(
+  conky
+  dbeaver
   gimp
   gimp-help-en
+  git-lfs
+  github-cli
   inkscape
   kde-applications
   krita
+  meld
   nano
   neofetch
+  steam
   tmux
+  torbrowser-launcher
+  virtualbox
+  virtualbox-host-modules-arch
+  youtube-dl
   zsh
 )
 
