@@ -1,13 +1,23 @@
-echo "Installing AUR Packages"
 
 packages=(
   insomnia-bin
   obsidian
+  nvidia-390xx
+  nvidia-390xx-settings
+  skypeforlinux-stable-bin
   spotify
   ttf-ms-fonts
   ungoogled-chromium
   visual-studio-code-bin
 )
 
+echo "Installing AUR support by yay
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+cd ..
+rm -rf yay-git
+
+echo "Installing AUR Packages"
 yay -Syy
 yay -S ${packages[@]} --noconfirm

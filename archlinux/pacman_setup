@@ -3,6 +3,8 @@ echo "Installing Pacman Packages"
 packages=(
   conky
   dbeaver
+  dkms
+  discord
   gimp
   gimp-help-en
   git-lfs
@@ -10,10 +12,12 @@ packages=(
   inkscape
   kde-applications
   krita
+  linux-headers
   meld
   nano
   neofetch
   steam
+  telegram-desktop
   tmux
   torbrowser-launcher
   virtualbox
