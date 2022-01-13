@@ -4,6 +4,7 @@ packages=(
   obsidian
   nvidia-390xx
   nvidia-390xx-settings
+  optimus-manager-qt
   skypeforlinux-stable-bin
   spotify
   ttf-ms-fonts
