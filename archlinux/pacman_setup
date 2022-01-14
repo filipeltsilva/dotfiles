@@ -1,5 +1,3 @@
-echo "Installing Pacman Packages"
-
 packages=(
   conky
   dbeaver
@@ -26,5 +24,6 @@ packages=(
   zsh
 )
 
+echo "Installing Pacman Packages"
 sudo pacman -Syy
 sudo pacman -S ${packages[@]} --noconfirm
