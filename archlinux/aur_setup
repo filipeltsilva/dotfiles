@@ -1,5 +1,7 @@
 packages=(
   insomnia-bin
+  iridium-rpm
+  librewolf-bin
   obsidian
   nvidia-390xx
   nvidia-390xx-settings
@@ -7,7 +9,6 @@ packages=(
   skypeforlinux-stable-bin
   spotify
   ttf-ms-fonts
-  ungoogled-chromium
   visual-studio-code-bin
 )
 
@@ -20,4 +21,4 @@ rm -rf yay-git
 
 echo "Installing AUR Packages"
 yay -Syy
-yay -S ${packages[@]} --noconfirm
+yay -S ${packages[@]}
