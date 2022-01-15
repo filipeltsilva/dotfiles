@@ -2,10 +2,11 @@ packages=(
   insomnia-bin
   iridium-rpm
   librewolf-bin
-  obsidian
   nvidia-390xx
   nvidia-390xx-settings
+  obsidian
   optimus-manager-qt
+  rar
   skypeforlinux-stable-bin
   spotify
   ttf-ms-fonts

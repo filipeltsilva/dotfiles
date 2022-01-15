@@ -1,4 +1,5 @@
 packages=(
+  conky
   dbeaver
   dkms
   discord
@@ -13,13 +14,17 @@ packages=(
   meld
   nano
   neofetch
+  p7zip
   steam
   telegram-desktop
   tmux
   torbrowser-launcher
+  unrar
+  unzip
   virtualbox
   virtualbox-host-modules-arch
   youtube-dl
+  zip
   zsh
 )
 
