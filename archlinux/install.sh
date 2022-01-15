@@ -5,7 +5,7 @@ echo "### ARCH LINUX SETUP  ###"
 echo "#########################"
 echo ""
 
-. aur_setup
 . pacman_setup
+. aur_setup
 
 yay -Sc
