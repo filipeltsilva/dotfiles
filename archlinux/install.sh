@@ -9,3 +9,4 @@ echo ""
 . pacman_setup
 
 sudo pacman -Sc
+yay -Sc
