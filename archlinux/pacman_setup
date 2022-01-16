@@ -12,7 +12,6 @@ packages=(
   krita
   linux-headers
   meld
-  nano
   neofetch
   p7zip
   steam
