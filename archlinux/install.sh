@@ -8,4 +8,4 @@ echo ""
 . aur_setup
 . pacman_setup
 
-yay -Sc
+sudo pacman -Sc

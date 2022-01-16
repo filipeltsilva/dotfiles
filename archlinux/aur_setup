@@ -13,6 +13,8 @@ packages=(
   visual-studio-code-bin
 )
 
+sudo pacman -Syy
+
 echo "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
@@ -21,5 +23,4 @@ cd ..
 rm -rf yay-git
 
 echo "Installing AUR Packages"
-yay -Syy
 yay -S ${packages[@]}

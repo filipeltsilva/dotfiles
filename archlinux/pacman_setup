@@ -10,7 +10,6 @@ packages=(
   inkscape
   kde-applications
   krita
-  linux-headers
   meld
   neofetch
   p7zip
@@ -18,7 +17,6 @@ packages=(
   telegram-desktop
   tmux
   torbrowser-launcher
-  unrar
   unzip
   virtualbox
   virtualbox-host-modules-arch
@@ -28,5 +26,4 @@ packages=(
 )
 
 echo "Installing Pacman Packages"
-sudo pacman -Syy
 sudo pacman -S ${packages[@]} --noconfirm
