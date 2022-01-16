@@ -1,7 +1,6 @@
 packages=(
   conky
   dbeaver
-  dkms
   discord
   gimp
   gimp-help-en
