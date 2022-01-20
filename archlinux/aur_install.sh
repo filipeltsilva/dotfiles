@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 packages=(
   insomnia-bin
   iridium-rpm
