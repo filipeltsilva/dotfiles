@@ -17,10 +17,11 @@ sudo pacman -Syy
 
 echo "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
-makepkg -si
-cd ..
-rm -rf yay-git
+(
+  cd yay-git || exit
+  makepkg -si
+  rm -rf yay-git
+)
 
 echo "Installing AUR Packages"
 yay -S "${packages[@]}"
