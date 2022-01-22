@@ -2,7 +2,7 @@
 
 echo "macOS applications settings"
 echo "What will be the computer's name?"
-read COMPUTER_NAME
+read -r COMPUTER_NAME
 
 ## APP STORE
 # Check for software updates daily
@@ -84,7 +84,7 @@ defaults write com.googlecode.iterm2 "Non Ascii Font" -string "FuraCodeNerdFontC
 defaults write com.googlecode.iterm2 "Normal Font" -string "SourceCodePro-Regular 13"
 
 # Install themes
-open $HOME/.dotfiles/install/macos/iTerm2/*.itermcolors
+open "$HOME"/.dotfiles/install/macos/iTerm2/*.itermcolors
 
 # Removing the dialog box when exiting the program
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -154,7 +154,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Changing the screenshots folder
-mkdir -p $HOME/Pictures/Screenshots
+mkdir -p "$HOME"/Pictures/Screenshots
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 defaults write com.apple.screencapture type -string "jpg"
 

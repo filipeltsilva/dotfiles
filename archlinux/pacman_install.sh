@@ -15,6 +15,7 @@ packages=(
   meld
   neofetch
   p7zip
+  shellcheck
   steam
   telegram-desktop
   tmux
@@ -29,4 +30,4 @@ packages=(
 )
 
 echo "Installing Pacman Packages"
-sudo pacman -S ${packages[@]} --noconfirm
+sudo pacman -S "${packages[@]}" --noconfirm

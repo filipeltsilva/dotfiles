@@ -7,9 +7,9 @@ echo ""
 
 if [[ ! -d $HOME/.tmux/plugins/tpm ]]
 then
-  git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
-  ln -sfnv $PWD/.tmux.conf $HOME/.tmux.conf
+  ln -sfnv "$PWD"/.tmux.conf "$HOME"/.tmux.conf
 else
   echo "Nothing to do here!"
 fi

@@ -10,6 +10,7 @@ packages=(
   spotify
   ttf-ms-fonts
   visual-studio-code-bin
+  xp-pen-tablet
 )
 
 sudo pacman -Syy
@@ -22,4 +23,4 @@ cd ..
 rm -rf yay-git
 
 echo "Installing AUR Packages"
-yay -S ${packages[@]}
+yay -S "${packages[@]}"

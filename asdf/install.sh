@@ -7,11 +7,11 @@ echo ""
 
 if [[ ! -d $HOME/.asdf ]]
 then
-  git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf
+  git clone https://github.com/asdf-vm/asdf.git "$HOME"/.asdf
 
-  ln -sfnv $PWD/.asdfrc $HOME/.asdfrc
-  ln -sfnv $PWD/.default-npm-packages $HOME/.default-npm-packages
-  ln -sfnv $PWD/.tool-versions $HOME/.tool-versions
+  ln -sfnv "$PWD"/.asdfrc "$HOME"/.asdfrc
+  ln -sfnv "$PWD"/.default-npm-packages "$HOME"/.default-npm-packages
+  ln -sfnv "$PWD"/.tool-versions "$HOME"/.tool-versions
 else
   echo "Nothing to do here!"
 fi

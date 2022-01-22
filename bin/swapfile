@@ -3,7 +3,7 @@
 if [[ ! -f /swapfile ]]
 then
   sudo touch /swapfile
-  sudo fallocate -l $1 /swapfile
+  sudo fallocate -l "$1" /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
