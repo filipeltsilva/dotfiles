@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 packages=(
   conky
   dbeaver
@@ -9,17 +7,20 @@ packages=(
   gimp-help-en
   git-lfs
   github-cli
+  gnuchess
   inkscape
   kde-applications
   krita
   meld
   neofetch
   p7zip
+  ruby
   shellcheck
   steam
   telegram-desktop
   tmux
   torbrowser-launcher
+  ttf-fira-code
   ttf-roboto
   unzip
   virtualbox

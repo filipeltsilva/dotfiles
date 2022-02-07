@@ -1,19 +1,18 @@
-#!/usr/bin/env bash
-
 packages=(
   insomnia-bin
   iridium-rpm
   librewolf-bin
-  obsidian
-  rar
+  #obsidian
+  #rar
   skypeforlinux-stable-bin
   spotify
+  stockfish
   ttf-ms-fonts
   visual-studio-code-bin
   xp-pen-tablet
 )
 
-sudo pacman -Syy
+sudo pacman -Sy
 
 echo "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git

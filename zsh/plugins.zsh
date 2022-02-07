@@ -7,7 +7,6 @@ plugins=(
 	asdf
 	colored-man-pages
 	git
-	node
 	npm
 	tmux
 	web-search

@@ -5,9 +5,8 @@ echo "### ARCH LINUX SETUP  ###"
 echo "#########################"
 echo ""
 
-./pre_install.sh
-./aur_install.sh
-./pacman_install.sh
+./pre_install
+./aur_install
+./pacman_install
 
-sudo pacman -Sc
 yay -Sc
