@@ -12,8 +12,6 @@ packages=(
   xp-pen-tablet
 )
 
-sudo pacman -Sy
-
 echo "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git
 (

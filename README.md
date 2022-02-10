@@ -13,3 +13,5 @@ xcode-select --install
 After install Xcode, copy and paste [this command](https://gist.github.com/filipeltsilva/39192759622a1ae1cd6381636e76ad8f) in a terminal to install Homebrew and Git.
 
 Then, clone this repository to the ~/.dotfiles folder, access the folder and run the install.sh file.
+
+In Linux systems, the main requirement is install Git.
