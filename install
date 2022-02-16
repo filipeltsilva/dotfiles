@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
-./dotfiles/xpto.sh
+#./archlinux/install
+
+./zsh/install
+./tmux/install
+
+./git/install
+./nano/install
+
+./asdf/install

@@ -13,5 +13,5 @@ else
   echo "Nothing to do here!"
 fi
 
-ln -sfnv "$PWD"/.zshenv "$HOME"/.zshenv
-ln -sfnv "$PWD"/.zshrc "$HOME"/.zshrc
+ln -sfnv "$HOME"/.dotfiles/zsh/.zshenv "$HOME"/.zshenv
+ln -sfnv "$HOME"/.dotfiles/zsh/.zshrc "$HOME"/.zshrc
