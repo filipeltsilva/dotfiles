@@ -1,9 +1,7 @@
 packages=(
   insomnia-bin
-  iridium-rpm
   librewolf-bin
-  #obsidian
-  #rar
+  rar
   skypeforlinux-stable-bin
   spotify
   stockfish

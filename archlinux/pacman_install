@@ -1,4 +1,5 @@
 packages=(
+  chromium
   conky
   dbeaver
   discord
@@ -13,6 +14,7 @@ packages=(
   krita
   meld
   neofetch
+  obsidian
   p7zip
   reflector
   ruby
