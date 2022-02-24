@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# shellcheck source=../helpers
+. ../helpers
+
 echo "##################"
 echo "### TMUX SETUP ###"
 echo "##################"
@@ -9,7 +12,7 @@ if [[ ! -d $HOME/.tmux/plugins/tpm ]]
 then
   git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
-  ln -sfnv "$HOME"/.dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
+  symlink "$HOME"/.dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
 else
   echo "Nothing to do here!"
 fi

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# shellcheck source=../helpers
+. ../helpers
+
 echo "#################"
 echo "### GIT SETUP ###"
 echo "#################"
@@ -7,8 +10,8 @@ echo ""
 
 if [[ ! -f $HOME/.gitconfig && ! -f $HOME/.gitignore_global ]]
 then
-  ln -sfnv "$HOME"/.dotfiles/git/.gitconfig "$HOME"/.gitconfig
-  ln -sfnv "$HOME"/.dotfiles/git/.gitignore_global "$HOME"/.gitignore_global
+  symlink "$HOME"/.dotfiles/git/.gitconfig "$HOME"/.gitconfig
+  symlink "$HOME"/.dotfiles/git/.gitignore_global "$HOME"/.gitignore_global
 else
   echo "Nothing to do here!"
 fi

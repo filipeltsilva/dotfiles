@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# shellcheck source=../helpers
+. ../helpers
+
 echo "#################"
 echo "### VIM SETUP ###"
 echo "#################"
@@ -10,7 +13,7 @@ then
   curl -fLo "$HOME"/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-  ln -sfnv "$HOME"/.dotfiles/vim/.vimrc "$HOME"/.vimrc
+  symlink "$HOME"/.dotfiles/vim/.vimrc "$HOME"/.vimrc
 else
   echo "Nothing to do here!"
 fi

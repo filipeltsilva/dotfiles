@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# shellcheck source=../helpers
+. ../helpers
+
 echo "##################"
 echo "### NANO SETUP ###"
 echo "##################"
