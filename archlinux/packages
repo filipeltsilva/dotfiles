@@ -1,4 +1,17 @@
-packages=(
+#!/usr/bin/env bash
+
+export AUR_PACKAGES=(
+  insomnia-bin
+  librewolf-bin
+  rar
+  skypeforlinux-stable-bin
+  stockfish
+  ttf-ms-fonts
+  visual-studio-code-bin
+  xp-pen-tablet
+)
+
+export PACMAN_PACKAGES=(
   chromium
   conky
   dbeaver
@@ -32,6 +45,3 @@ packages=(
   zip
   zsh
 )
-
-echo "Installing Pacman Packages"
-sudo pacman -S "${packages[@]}" --noconfirm
