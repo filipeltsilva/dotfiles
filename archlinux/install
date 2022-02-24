@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
+. packages
+
 echo "#########################"
 echo "### ARCH LINUX SETUP  ###"
 echo "#########################"
 echo ""
-
-. packages
 
 sudo pacman -Sy
 

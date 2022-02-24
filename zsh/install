@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. ../helpers
+
 echo "#################"
 echo "### ZSH SETUP ###"
 echo "#################"
@@ -13,5 +15,5 @@ else
   echo "Nothing to do here!"
 fi
 
-ln -sfnv "$HOME"/.dotfiles/zsh/.zshenv "$HOME"/.zshenv
-ln -sfnv "$HOME"/.dotfiles/zsh/.zshrc "$HOME"/.zshrc
+symlink "$HOME"/.dotfiles/zsh/.zshenv "$HOME"/.zshenv
+symlink "$HOME"/.dotfiles/zsh/.zshrc "$HOME"/.zshrc

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+symlink() {
+  ln -sfnv "$1" "$2"
+}
