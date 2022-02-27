@@ -3,14 +3,14 @@
 # shellcheck source=../helpers
 . ../helpers
 
-echo "##################"
-echo "### NANO SETUP ###"
-echo "##################"
-echo ""
+header_text "NANO SETUP"
 
 if [[ ! -f $HOME/.nanorc ]]
 then
   ln -sfnv "HOME"/.dotfiles/nano/.nanorc "$HOME"/.nanorc
 else
   echo "Nothing to do here!"
+  exit
 fi
+
+success_text "NANO SETUP IS COMPLETE!"

@@ -3,10 +3,7 @@
 # shellcheck source=../helpers
 . ../helpers
 
-echo "#################"
-echo "### GIT SETUP ###"
-echo "#################"
-echo ""
+echo "GIT SETUP"
 
 if [[ ! -f $HOME/.gitconfig && ! -f $HOME/.gitignore_global ]]
 then
@@ -14,4 +11,7 @@ then
   symlink "$HOME"/.dotfiles/git/.gitignore_global "$HOME"/.gitignore_global
 else
   echo "Nothing to do here!"
+  exit
 fi
+
+echo "GIT SETUP IS COMPLETE!"

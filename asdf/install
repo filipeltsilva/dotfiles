@@ -3,10 +3,7 @@
 # shellcheck source=../helpers
 . ../helpers
 
-echo "##################"
-echo "### ASDF SETUP ###"
-echo "##################"
-echo ""
+header_text "ASDF SETUP"
 
 if [[ ! -d $HOME/.asdf ]]
 then
@@ -18,4 +15,7 @@ then
   symlink "$HOME"/.dotfiles/asdf/.tool-versions "$HOME"/.tool-versions
 else
   echo "Nothing to do here!"
+  exit
 fi
+
+success_text "ASDF SETUP IS COMPLETE!"

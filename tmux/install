@@ -3,10 +3,7 @@
 # shellcheck source=../helpers
 . ../helpers
 
-echo "##################"
-echo "### TMUX SETUP ###"
-echo "##################"
-echo ""
+header_text "TMUX SETUP"
 
 if [[ ! -d $HOME/.tmux/plugins/tpm ]]
 then
@@ -14,5 +11,8 @@ then
 
   symlink "$HOME"/.dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
 else
-  echo "Nothing to do here!"
+  warning_text "Nothing to do here!"
+  exit
 fi
+
+success_text "TMUX SETUP IS COMPLETE"
