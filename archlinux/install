@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
+# shellcheck source=../helpers
+. ../helpers
+
 . packages
 
-echo "#########################"
-echo "### ARCH LINUX SETUP  ###"
-echo "#########################"
-echo ""
+header_text "ARCH LINUX SETUP"
 
 sudo pacman -Sy
 
-echo "Installing AUR support by yay"
+warning_text "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git
 (
   cd yay-git || exit
@@ -17,11 +17,13 @@ git clone https://aur.archlinux.org/yay-git.git
   rm -rf yay-git
 )
 
-echo "Installing AUR packages"
+warning_text "Installing AUR packages"
 yay -S "${AUR_PACKAGES[@]}"
 
-echo "Installing Pacman packages"
+warning_text "Installing Pacman packages"
 yay -S "${PACMAN_PACKAGES[@]}" --noconfirm
 
-echo "Cleaning temporary files"
+warning_text "Cleaning temporary files"
 yay -Sc
+
+success_text "ARCH LINUX SETUP IS COMPLETE!"

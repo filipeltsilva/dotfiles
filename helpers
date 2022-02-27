@@ -1,5 +1,30 @@
 #!/usr/bin/env bash
 
+NORMAL_TEXT='\e[m'
+
+GREEN='\e[32;1m'
+PURPLE='\e[35;1m'
+RED='\e[31;1m'
+YELLOW='\e[33;1m'
+
 symlink() {
   ln -sfnv "$1" "$2"
+}
+
+error_text() {
+  echo -e "${RED}##### $* #####${NORMAL_TEXT}"
+}
+
+header_text() {
+  clear
+  echo -e "${PURPLE}##### $* #####${NORMAL_TEXT}"
+  echo ""
+}
+
+success_text() {
+  echo -e  "${GREEN}##### $* #####${NORMAL_TEXT}"
+}
+
+warning_text() {
+  echo -e "${YELLOW}##### $* #####${NORMAL_TEXT}"
 }

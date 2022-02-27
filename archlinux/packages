@@ -29,6 +29,7 @@ export PACMAN_PACKAGES=(
   neofetch
   obsidian
   p7zip
+  python-pip
   reflector
   ruby
   shellcheck

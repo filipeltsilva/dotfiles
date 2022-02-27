@@ -3,10 +3,7 @@
 # shellcheck source=../helpers
 . ../helpers
 
-echo "#################"
-echo "### VIM SETUP ###"
-echo "#################"
-echo ""
+header_text "VIM SETUP"
 
 if [[ ! -d $HOME/.vim ]]
 then
@@ -15,5 +12,8 @@ then
 
   symlink "$HOME"/.dotfiles/vim/.vimrc "$HOME"/.vimrc
 else
-  echo "Nothing to do here!"
+  warning_text "Nothing to do here!"
+  exit
 fi
+
+success_text "VIM SETUP IS COMPLETE!"
