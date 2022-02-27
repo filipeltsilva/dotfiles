@@ -15,4 +15,4 @@ else
   exit
 fi
 
-success_text "TMUX SETUP IS COMPLETE"
+success_text "TMUX SETUP IS COMPLETE!"
