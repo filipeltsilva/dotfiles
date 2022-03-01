@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# shellchek source=../helpers
+. ../helpers
+
+. packages
+
+header_text "FLATPAK SETUP"
+
+warning_text "Installing Flatpack packages"
+flatpak install "${FLATPAK_PACKAGES[@]}"
+
+success_text "FLATPAK SETUP IS COMPLETE!"

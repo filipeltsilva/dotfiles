@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
 export AUR_PACKAGES=(
-  insomnia-bin
-  librewolf-bin
+  asdf-vm
   rar
-  skypeforlinux-stable-bin
   stockfish
   ttf-ms-fonts
-  visual-studio-code-bin
   xp-pen-tablet
 )
 
@@ -17,6 +14,7 @@ export PACMAN_PACKAGES=(
   dbeaver
   discord
   firefox-developer-edition
+  flatpak
   gimp
   gimp-help-en
   git-lfs

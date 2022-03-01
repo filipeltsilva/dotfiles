@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+export FLATPAK_PACKAGES=(
+  com.skype.Client
+  com.visualstudio.code
+  io.gitlab.librewolf-community
+  rest.insomnia.Insomnia
+)

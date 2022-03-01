@@ -13,18 +13,22 @@ symlink() {
 
 error_text() {
   echo -e "${RED}##### $* #####${NORMAL_TEXT}"
+  sleep 3
 }
 
 header_text() {
   clear
   echo -e "${PURPLE}##### $* #####${NORMAL_TEXT}"
   echo ""
+  sleep 3
 }
 
 success_text() {
   echo -e  "${GREEN}##### $* #####${NORMAL_TEXT}"
+  sleep 3
 }
 
 warning_text() {
   echo -e "${YELLOW}##### $* #####${NORMAL_TEXT}"
+  sleep 3
 }
