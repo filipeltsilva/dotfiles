@@ -7,8 +7,8 @@ echo "GIT SETUP"
 
 if [[ ! -f $HOME/.gitconfig && ! -f $HOME/.gitignore_global ]]
 then
-  symlink "$HOME"/.dotfiles/git/.gitconfig "$HOME"/.gitconfig
-  symlink "$HOME"/.dotfiles/git/.gitignore_global "$HOME"/.gitignore_global
+  symlink "$DOTFILES_PATH"/git/.gitconfig "$HOME"/.gitconfig
+  symlink "$DOTFILES_PATH"/git/.gitignore_global "$HOME"/.gitignore_global
 else
   echo "Nothing to do here!"
   exit

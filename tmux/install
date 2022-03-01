@@ -9,7 +9,7 @@ if [[ ! -d $HOME/.tmux/plugins/tpm ]]
 then
   git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
-  symlink "$HOME"/.dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
+  symlink "$DOTFILES_PATH"/tmux/.tmux.conf "$HOME"/.tmux.conf
 else
   warning_text "Nothing to do here!"
   exit

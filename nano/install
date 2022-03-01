@@ -7,7 +7,7 @@ header_text "NANO SETUP"
 
 if [[ ! -f $HOME/.nanorc ]]
 then
-  ln -sfnv "HOME"/.dotfiles/nano/.nanorc "$HOME"/.nanorc
+  ln -sfnv "$DOTFILES_PATH"/nano/.nanorc "$HOME"/.nanorc
 else
   echo "Nothing to do here!"
   exit

@@ -9,10 +9,10 @@ if [[ ! -d $HOME/.asdf ]]
 then
   git clone https://github.com/asdf-vm/asdf.git "$HOME"/.asdf
 
-  symlink "$HOME"/.dotfiles/asdf/.asdfrc "$HOME"/.asdfrc
-  symlink "$HOME"/.dotfiles/asdf/.default-gems "$HOME"/.default-gems
-  symlink "$HOME"/.dotfiles/asdf/.default-npm-packages "$HOME"/.default-npm-packages
-  symlink "$HOME"/.dotfiles/asdf/.tool-versions "$HOME"/.tool-versions
+  symlink "$DOTFILES_PATH"/asdf/.asdfrc "$HOME"/.asdfrc
+  symlink "$DOTFILES_PATH"/asdf/.default-gems "$HOME"/.default-gems
+  symlink "$DOTFILES_PATH"/asdf/.default-npm-packages "$HOME"/.default-npm-packages
+  symlink "$DOTFILES_PATH"/asdf/.tool-versions "$HOME"/.tool-versions
 else
   echo "Nothing to do here!"
   exit

@@ -14,7 +14,7 @@ else
   exit
 fi
 
-symlink "$HOME"/.dotfiles/zsh/.zshenv "$HOME"/.zshenv
-symlink "$HOME"/.dotfiles/zsh/.zshrc "$HOME"/.zshrc
+symlink "$DOTFILES_PATH"/zsh/.zshenv "$HOME"/.zshenv
+symlink "$DOTFILES_PATH"/zsh/.zshrc "$HOME"/.zshrc
 
 success_text "ZSH SETUP IS COMPLETE!"
