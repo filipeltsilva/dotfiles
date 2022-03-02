@@ -8,9 +8,9 @@
 ######## ARCH LINUX ########
 header_text "ARCH LINUX SETUP"
 
+warning_text "Installing AUR support by yay"
 sudo pacman -Sy
 
-warning_text "Installing AUR support by yay"
 git clone https://aur.archlinux.org/yay-git.git
 (
   cd yay-git || exit
@@ -25,7 +25,7 @@ warning_text "Installing Pacman packages"
 yay -S "${PACMAN_PACKAGES[@]}" --noconfirm
 
 warning_text "Cleaning temporary files"
-yay -Sc
+yay -Sc --noconfirm
 
 success_text "ARCH LINUX SETUP IS COMPLETE!"
 
@@ -64,7 +64,7 @@ find "$DOTFILES_DIR" -type f -name ".*" -exec ln -sfnv {} "$HOME" \;
 
 success_text "SYMLINK FILES IS COMPLETE!"
 
-######## FINAL ADJUSTS ########
+######## FINAL ADJUSTMENTS ########
 header_text "CHANGING DEFAULT SHELL TO ZSH"
 
 sudo chsh -s "$(which zsh)" "$USER"

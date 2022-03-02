@@ -14,6 +14,7 @@ git_clone() {
 }
 
 error_text() {
+  echo ""
   echo -e "${RED}##### $* #####${NORMAL_TEXT}"
   sleep 2
 }
