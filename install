@@ -29,9 +29,18 @@ yay -Sc
 
 success_text "ARCH LINUX SETUP IS COMPLETE!"
 
+######## FLATPAK ########
+header_text "FLATPAK SETUP"
+
+warning_text "Installing Flatpak packages"
+flatpak install "${FLATPAK_PACKAGES[@]}"
+
+success_text "FLATPAK SETUP IS COMPLETE!"
+
 ######## TMUX ########
 header_text "TMUX SETUP"
 
+warning_text "Installing TPM"
 git_clone tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
 success_text "TMUX SETUP IS COMPLETE!"
@@ -39,10 +48,21 @@ success_text "TMUX SETUP IS COMPLETE!"
 ######## ZSH ########
 header_text "ZSH SETUP"
 
+warning_text "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+warning_text "Installing Autosuggestions plugin"
 git_clone zsh-users/zsh-autosuggestions "$HOME"/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 success_text "ZSH SETUP IS COMPLETE!"
+
+######## CREATING LINKS ########
+header_text "CREATING DOTFILES LINKS"
+
+warning_text "Symlink files"
+find "$DOTFILES_DIR" -type f -name ".*" -exec ln -sfnv {} "$HOME" \;
+
+success_text "SYMLINK FILES IS COMPLETE!"
 
 ######## FINAL ADJUSTS ########
 header_text "CHANGING DEFAULT SHELL TO ZSH"
