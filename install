@@ -1,11 +1,51 @@
 #!/usr/bin/env bash
 
-#./archlinux/install
+# shellcheck source=./helpers
+. helpers
+# shellcheck source=./packages
+. packages
 
-./zsh/install
-./tmux/install
+######## ARCH LINUX ########
+header_text "ARCH LINUX SETUP"
 
-./git/install
-./nano/install
+sudo pacman -Sy
 
-./asdf/install
+warning_text "Installing AUR support by yay"
+git clone https://aur.archlinux.org/yay-git.git
+(
+  cd yay-git || exit
+  makepkg -si
+  rm -rf yay-git
+)
+
+warning_text "Installing AUR packages"
+yay -S "${AUR_PACKAGES[@]}"
+
+warning_text "Installing Pacman packages"
+yay -S "${PACMAN_PACKAGES[@]}" --noconfirm
+
+warning_text "Cleaning temporary files"
+yay -Sc
+
+success_text "ARCH LINUX SETUP IS COMPLETE!"
+
+######## TMUX ########
+header_text "TMUX SETUP"
+
+git_clone tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
+
+success_text "TMUX SETUP IS COMPLETE!"
+
+######## ZSH ########
+header_text "ZSH SETUP"
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+git_clone zsh-users/zsh-autosuggestions "$HOME"/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+success_text "ZSH SETUP IS COMPLETE!"
+
+######## FINAL ADJUSTS ########
+header_text "CHANGING DEFAULT SHELL TO ZSH"
+
+sudo chsh -s "$(which zsh)" "$USER"
+success_text "DEFAULT SHELL CHANGED!"

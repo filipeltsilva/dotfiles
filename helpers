@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export DOTFILES_PATH="$HOME"/.dotfiles # Just for install the dotfiles
+export DOTFILES_PATH="$HOME"/.dotfiles/dotfiles # Just for install the dotfiles
 
 NORMAL_TEXT='\e[m'
 
@@ -8,6 +8,10 @@ GREEN='\e[32;1m'
 PURPLE='\e[35;1m'
 RED='\e[31;1m'
 YELLOW='\e[33;1m'
+
+git_clone() {
+  git clone https://github.com/"$1" "$2"
+}
 
 symlink() {
   ln -sfnv "$1" "$2"

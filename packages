@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+export ASDF_PACKAGES=(
+  nodejs
+  ruby
+)
+
+export AUR_PACKAGES=(
+  asdf-vm
+  rar
+  stockfish
+  ttf-ms-fonts
+  xp-pen-tablet
+)
+
+export FLATPAK_PACKAGES=(
+  com.skype.Client
+  com.visualstudio.code
+  io.gitlab.librewolf-community
+  rest.insomnia.Insomnia
+)
+
+export PACMAN_PACKAGES=(
+  chromium
+  conky
+  dbeaver
+  discord
+  flatpak
+  gimp
+  gimp-help-en
+  git-lfs
+  github-cli
+  gnuchess
+  inkscape
+  kde-applications
+  krita
+  meld
+  neofetch
+  obsidian
+  p7zip
+  python-pip
+  reflector
+  ruby
+  shellcheck
+  steam
+  telegram-desktop
+  tmux
+  torbrowser-launcher
+  ttf-fira-code
+  ttf-roboto
+  unzip
+  virtualbox
+  virtualbox-host-modules-arch
+  youtube-dl
+  zip
+  zsh
+)

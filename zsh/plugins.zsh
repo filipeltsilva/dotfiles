@@ -10,4 +10,5 @@ plugins=(
 	npm
 	tmux
 	web-search
+	zsh-autosuggestions
 )
