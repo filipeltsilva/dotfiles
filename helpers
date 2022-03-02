@@ -21,16 +21,17 @@ error_text() {
 header_text() {
   clear
   echo -e "${PURPLE}##### $* #####${NORMAL_TEXT}"
-  echo ""
   sleep 2
 }
 
 success_text() {
+  echo ""
   echo -e  "${GREEN}##### $* #####${NORMAL_TEXT}"
   sleep 2
 }
 
 warning_text() {
+  echo ""
   echo -e "${YELLOW}##### $* #####${NORMAL_TEXT}"
   sleep 2
 }
