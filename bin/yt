@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if echo "$1" | grep -q playlist
-then
-  youtube-dl "$1" -f "$2" -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --youtube-skip-dash-manifest --default-search ytsearch
-else
-  youtube-dl "$1" -f "$2" -o '%(title)s.%(ext)s' --youtube-skip-dash-manifest --default-search ytsearch
-fi

@@ -34,6 +34,7 @@ export PACMAN_PACKAGES=(
   inkscape
   kde-applications
   krita
+  libreoffice-still
   meld
   neofetch
   obsidian
