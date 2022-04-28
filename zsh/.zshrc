@@ -8,4 +8,4 @@ done
 
 neofetch
 
-. /opt/asdf-vm/asdf.sh
+. "$ASDF_DIR/asdf.sh"

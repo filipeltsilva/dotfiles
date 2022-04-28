@@ -1,4 +1,3 @@
-alias dot='cd $DOTFILES'
 alias grep='grep --color=auto'
 alias la='ls -la --color=auto'
 alias ls='ls --color=auto'
