@@ -1,10 +1,8 @@
-alias gaa='git add .'
-
 alias gco='git checkout'
 
 alias gdif='git diff'
 
-alias gcam='git commit -am'
+alias gcam='git add .; git commit -m'
 
 alias gst='git status'
 
