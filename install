@@ -5,6 +5,8 @@
 # shellcheck source=./packages
 . packages
 
+XDG_CONFIG_HOME="$HOME/.config"
+
 ######## ARCH LINUX ########
 header_text "ARCH LINUX SETUP"
 
@@ -37,33 +39,16 @@ flatpak install "${FLATPAK_PACKAGES[@]}"
 
 success_text "FLATPAK SETUP IS COMPLETE!"
 
-######## TMUX ########
-header_text "TMUX SETUP"
-
-warning_text "Installing TPM"
-git_clone tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
-
-success_text "TMUX SETUP IS COMPLETE!"
-
-######## ZSH ########
-header_text "ZSH SETUP"
-
-warning_text "Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-warning_text "Installing Autosuggestions plugin"
-git_clone zsh-users/zsh-autosuggestions "$HOME"/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-warning_text "Installing Powerlevel10k theme"
-git_clone romkatv/powerlevel10k "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
-
-success_text "ZSH SETUP IS COMPLETE!"
-
 ######## CREATING LINKS ########
 header_text "CREATING DOTFILES LINKS"
 
 warning_text "Symlink files"
-find "$DOTFILES_DIR" -type f -name ".*" -exec ln -sfnv {} "$HOME" \;
+create_link "$PWD/git" "$XDG_CONFIG_HOME/git"
+create_link "$PWD/nvim" "$XDG_CONFIG_HOME/nvim"
+create_link "$PWD/tmux" "$XDG_CONFIG_HOME/tmux"
+create_link "$PWD/zsh" "$XDG_CONFIG_HOME/zsh"
+
+create_link "$PWD/.zshenv" "$HOME/.zshenv"
 
 success_text "SYMLINK FILES IS COMPLETE!"
 

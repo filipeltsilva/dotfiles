@@ -1,4 +1,3 @@
-# System Aliases
 alias dot='cd $DOTFILES'
 alias grep='grep --color=auto'
 alias la='ls -la --color=auto'
@@ -10,7 +9,3 @@ alias q='exit'
 alias reb='reboot'
 alias sc='shellcheck'
 alias update='yay -Syu && yay -Sc --noconfirm'
-
-# Git Aliases
-alias gaa='git add'
-alias gst='git status'
