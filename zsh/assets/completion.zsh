@@ -4,7 +4,7 @@ setopt AUTO_PARAM_SLASH
 setopt COMPLETE_ALIASES
 setopt MENU_COMPLETE
 
-autoload -Uz compinit; compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+autoload -Uz compinit; compinit -d "$XDG_CACHE_HOME/zsh/zcompdump_$ZSH_VERSION"
 zstyle ':completion:*' menu select
 
 zstyle ':completion:*' use-cache on

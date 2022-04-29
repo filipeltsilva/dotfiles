@@ -4,6 +4,7 @@ export DOTFILES="$HOME/.dotfiles"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
@@ -15,9 +16,9 @@ export ASDF_NPM_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/asdf/.default-npm-packag
 
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
-### COLORED MAN PAGES ###
-#export LESS_TERMCAP_md=$'\e[38;5;81;1m'   # start bold
-#export LESS_TERMCAP_so=$'\e[38;5;141;1m'  # start standout (reverse video)
-#export LESS_TERMCAP_us=$'\e[38;5;141;4m'  # start underline
+export HISTFILE="$XDG_DATA_HOME/zsh/zsh_history_$ZSH_VERSION"
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTORY_IGNORE="(cat|cd|clear|echo|exit|history|ls|pwd)"
 
 export EDITOR="nvim"
