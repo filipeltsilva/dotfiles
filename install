@@ -6,6 +6,7 @@
 . packages
 
 XDG_CONFIG_HOME="$HOME/.config"
+XDG_CACHE_HOME="$HOME/.cache"
 
 ######## ARCH LINUX ########
 header_text "ARCH LINUX SETUP"
@@ -55,7 +56,14 @@ create_link "$PWD/.zshenv" "$HOME/.zshenv"
 success_text "SYMLINK FILES IS COMPLETE!"
 
 ######## FINAL ADJUSTMENTS ########
+header_text "CREATING ZSH CACHE FOLDER"
+
+mkdir -p "$XDG_CACHE_HOME/zsh"
+
+success_text "ZSH CACHE FOLDER CREATED!"
+
 header_text "CHANGING DEFAULT SHELL TO ZSH"
 
 sudo chsh -s "$(which zsh)" "$USER"
 success_text "DEFAULT SHELL CHANGED!"
+
