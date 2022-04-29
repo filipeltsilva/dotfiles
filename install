@@ -5,8 +5,9 @@
 # shellcheck source=./packages
 . packages
 
-XDG_CONFIG_HOME="$HOME/.config"
 XDG_CACHE_HOME="$HOME/.cache"
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$HOME/.local/share"
 
 ######## ARCH LINUX ########
 header_text "ARCH LINUX SETUP"
@@ -56,11 +57,12 @@ create_link "$PWD/.zshenv" "$HOME/.zshenv"
 success_text "SYMLINK FILES IS COMPLETE!"
 
 ######## FINAL ADJUSTMENTS ########
-header_text "CREATING ZSH CACHE FOLDER"
+header_text "CREATING ZSH HELPERS FOLDERS"
 
 mkdir -p "$XDG_CACHE_HOME/zsh"
+mkdir -p "$XDG_DATA_HOME/zsh"
 
-success_text "ZSH CACHE FOLDER CREATED!"
+success_text "ZSH HELPERS FOLDERS CREATED!"
 
 header_text "CHANGING DEFAULT SHELL TO ZSH"
 

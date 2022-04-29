@@ -9,6 +9,8 @@ warning_color='202'
 
 new_line=$'\n'
 
+GREP_COLORS="mc=38;5;${color1};1:ms=38;5;${color1};1:mt=38;5;${color1};1"
+
 LS_COLORS="di=38;5;${color2};1:ln=38;5;${color3};1"
 
 LESS_TERMCAP_md=$(tput bold; tput setaf ${color2})  # start bold
