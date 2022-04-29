@@ -19,6 +19,5 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export HISTFILE="$XDG_DATA_HOME/zsh/zsh_history_$ZSH_VERSION"
 export HISTSIZE=10000
 export SAVEHIST=10000
-export HISTORY_IGNORE="(cat|cd|clear|echo|exit|history|ls|pwd)"
 
 export EDITOR="nvim"

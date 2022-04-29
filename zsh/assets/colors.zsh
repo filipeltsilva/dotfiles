@@ -1,11 +1,3 @@
-### COLORED MAN PAGES ###
-man() {
-	LESS_TERMCAP_md=$'\e[38;5;200;1m'   # start bold
-	LESS_TERMCAP_so=$'\e[38;5;200;1m'  # start standout (reverse video)
-	LESS_TERMCAP_us=$'\e[38;5;200;4m'  # start underline
-	command man "$@"
-}
-
 ### MY COLORS AND TEXT FORMAT DEFINITIONS ###
 color1='39'
 color2='81'
@@ -16,3 +8,9 @@ success_color='34'
 warning_color='202'
 
 new_line=$'\n'
+
+LS_COLORS="di=38;5;${color2};1:ln=38;5;${color3};1"
+
+LESS_TERMCAP_md=$(tput bold; tput setaf ${color2})  # start bold
+LESS_TERMCAP_so=$(tput bold; tput setaf ${color3})  # start standout (reverse video)
+LESS_TERMCAP_us=$(tput smul; tput setaf ${color3})  # start underline

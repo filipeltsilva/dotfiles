@@ -1,4 +1,5 @@
 alias grep='grep --color=auto'
+alias history='history -i'
 alias la='ls -la --color=auto'
 alias ls='ls --color=auto'
 alias nv='nvim'
