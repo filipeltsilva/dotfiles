@@ -1,4 +1,3 @@
-### MY COLORS AND TEXT FORMAT DEFINITIONS ###
 color1='39'
 color2='81'
 color3='147'

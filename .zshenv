@@ -1,4 +1,3 @@
-### FOLDERS ###
 export DOTFILES="$HOME/.dotfiles"
 
 export XDG_CONFIG_HOME="$HOME/.config"
