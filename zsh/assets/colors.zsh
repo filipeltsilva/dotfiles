@@ -16,5 +16,3 @@ success_color='34'
 warning_color='202'
 
 new_line=$'\n'
-
-

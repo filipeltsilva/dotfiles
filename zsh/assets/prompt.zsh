@@ -1,4 +1,3 @@
-# Prompting Options
 setopt PROMPT_SUBST
 
 autoload -Uz add-zsh-hook vcs_info
@@ -17,5 +16,3 @@ git_info='%B%F{$color3}${vcs_info_msg_0_}%f%b'
 prompt_info='%(?.%B%F{$color1}.%B%F{$error_color})%(!.#.>)%f%b '
 
 export PROMPT="${new_line}${user_info} in ${folder_info} ${git_info} ${new_line}${prompt_info}"
-
-
