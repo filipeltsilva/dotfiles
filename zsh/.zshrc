@@ -6,6 +6,6 @@ done
 # CUSTOM COMMANDS
 [ -z "$TMUX" ] && { exec tmux "$@" || exec tmux attach; }
 
-neofetch
+neofetch --ascii_colors $neofetch_ascii_colors --colors $neofetch_colors
 
 . "$ASDF_DIR/asdf.sh"
