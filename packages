@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 export ASDF_PACKAGES=(
+  neovim
   nodejs
-  ruby
 )
 
 export AUR_PACKAGES=(
