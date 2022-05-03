@@ -1,38 +1,33 @@
-vim.cmd("set encoding=utf-8")
-vim.cmd("set fileencodings=utf-8")
+local set = vim.o  -- Global set
 
-vim.cmd("filetype plugin indent on")
+set.encoding = 'utf-8'
+set.fileencoding = 'utf-8'
 
-vim.cmd("set nocompatible")
+set.number = true
+set.numberwidth = 4
+set.relativenumber = true
 
-vim.cmd("syntax on")
+set.autoindent = true
+set.expandtab = true
+set.shiftround = true
+set.shiftwidth = 2
+set.tabstop = 2
 
-vim.cmd("set wildmenu")
-vim.cmd("set wildmode=list:longest")
+set.hlsearch = true
+set.ignorecase = true
+set.incsearch = true
 
-vim.cmd("set number")
-vim.cmd("set numberwidth=4")
-vim.cmd("set relativenumber")
+set.cursorline = true
+set.termguicolors = true
+set.wildmenu = true 
+set.wildmode = 'longest:list,full'
 
-vim.cmd("set autoindent")
-vim.cmd("set expandtab")
-vim.cmd("set shiftround")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set tabstop=2")
+set.confirm = true
 
-vim.cmd("set hlsearch")
-vim.cmd("set ignorecase")
-vim.cmd("set incsearch")
+set.autoread = true
 
-vim.cmd("set cursorline")
+set.history = 5000
 
-vim.cmd("set history=1000")
-
-vim.cmd("set autoread")
-
-vim.cmd("set confirm")
-
-vim.cmd("set backupdir=~/.cache/nvim")
-vim.cmd("set dir=~/.cache/nvim")
-
-vim.cmd("set shell=/usr/bin/zsh")
+set.backupdir = '~/.cache/nvim'
+set.dir = '~/.cache/nvim'
+set.shell = '/usr/bin/zsh'
