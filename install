@@ -56,6 +56,13 @@ create_link "$PWD/.zshenv" "$HOME/.zshenv"
 
 success_text "SYMLINK FILES IS COMPLETE!"
 
+######## INSTALL NEOVIM PACKAGE MANAGER (PACKER) ########
+header_text "INSTALLING PACKER"
+
+git_clone wbthomason/packer.nvim "$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim"
+
+success_text "PACKER INSTALLATION IS COMPLETE!"
+
 ######## FINAL ADJUSTMENTS ########
 header_text "CREATING ZSH HELPERS FOLDERS"
 
