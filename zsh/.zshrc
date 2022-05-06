@@ -1,6 +1,6 @@
 for file in $ZDOTDIR/assets/*.zsh
 do
-	. $file
+  . $file
 done
 
 # CUSTOM COMMANDS

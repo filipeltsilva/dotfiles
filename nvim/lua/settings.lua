@@ -1,5 +1,7 @@
 local set = vim.o  -- Global set
 
+vim.cmd [[ filetype plugin indent on ]]
+
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 
@@ -31,3 +33,5 @@ set.history = 5000
 set.backupdir = '~/.cache/nvim'
 set.dir = '~/.cache/nvim'
 set.shell = '/usr/bin/zsh'
+
+set.clipboard = 'unnamedplus'
