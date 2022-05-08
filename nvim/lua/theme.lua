@@ -1,9 +1,7 @@
-local set = vim.o
+vim.o.syntax = 'on'
 
-set.syntax = 'on'
+vim.o.background = 'dark'
+vim.o.t_co = 256
+vim.o.termguicolors = true
 
-set.background = 'dark'
-set.t_co = 256
-set.termguicolors = true
-
-vim.cmd [[ colorscheme slate ]]
+vim.cmd 'colorscheme slate'

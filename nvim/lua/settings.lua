@@ -1,37 +1,34 @@
-local set = vim.o  -- Global set
+vim.cmd 'filetype plugin indent on'
 
-vim.cmd [[ filetype plugin indent on ]]
+vim.o.encoding = 'utf-8'
+vim.o.fileencoding = 'utf-8'
 
-set.encoding = 'utf-8'
-set.fileencoding = 'utf-8'
+vim.o.number = true
+vim.o.numberwidth = 4
+vim.o.relativenumber = true
 
-set.number = true
-set.numberwidth = 4
-set.relativenumber = true
+vim.o.autoindent = true
+vim.o.expandtab = true
+vim.o.shiftround = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
 
-set.autoindent = true
-set.expandtab = true
-set.shiftround = true
-set.shiftwidth = 2
-set.tabstop = 2
+vim.o.hlsearch = true
+vim.o.ignorecase = true
+vim.o.incsearch = true
 
-set.hlsearch = true
-set.ignorecase = true
-set.incsearch = true
+vim.o.cursorline = true
+vim.o.wildmenu = true 
+vim.o.wildmode = 'longest:list,full'
 
-set.cursorline = true
-set.termguicolors = true
-set.wildmenu = true 
-set.wildmode = 'longest:list,full'
+vim.o.confirm = true
 
-set.confirm = true
+vim.o.autoread = true
 
-set.autoread = true
+vim.o.history = 5000
 
-set.history = 5000
+vim.o.backupdir = '~/.cache/nvim'
+vim.o.dir = '~/.cache/nvim'
+vim.o.shell = '/usr/bin/zsh'
 
-set.backupdir = '~/.cache/nvim'
-set.dir = '~/.cache/nvim'
-set.shell = '/usr/bin/zsh'
-
-set.clipboard = 'unnamedplus'
+vim.o.clipboard = 'unnamedplus'
