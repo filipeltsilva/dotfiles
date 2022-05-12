@@ -1,5 +1,7 @@
 vim.cmd 'filetype plugin indent on'
 
+vim.cmd 'set nobackup'
+
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 
@@ -18,7 +20,7 @@ vim.o.ignorecase = true
 vim.o.incsearch = true
 
 vim.o.cursorline = true
-vim.o.wildmenu = true 
+vim.o.wildmenu = true
 vim.o.wildmode = 'longest:list,full'
 
 vim.o.confirm = true
@@ -27,8 +29,6 @@ vim.o.autoread = true
 
 vim.o.history = 5000
 
-vim.o.backupdir = '~/.cache/nvim'
-vim.o.dir = '~/.cache/nvim'
 vim.o.shell = '/usr/bin/zsh'
 
 vim.o.clipboard = 'unnamedplus'

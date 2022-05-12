@@ -6,7 +6,9 @@ export ASDF_PACKAGES=(
 )
 
 export AUR_PACKAGES=(
+  adobe-icc
   asdf-vm
+  eci-icc
   librewolf-bin
   rar
   stockfish
