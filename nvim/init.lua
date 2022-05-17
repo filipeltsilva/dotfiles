@@ -8,3 +8,4 @@ require('assets/theme')
 require('assets/plugins')
 
 require('config/lualine')
+require('config/onedark')

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# shellcheck source=./helpers
+. helpers
+# shellcheck source=./packages
+. packages
+
+XDG_CACHE_HOME="$HOME/.cache"
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$HOME/.local/share"
+
+######## ARCH LINUX ########
+header_text "ASDF SETUP"
+
+warning_text "Installing Plugins"
+asdf plugin add "${ASDF_PACKAGES[@]}"
+
+warning_text "Installing Packages"
+asdf install
+
+success_text "ASDF SETUP IS COMPLETE!"
+
+header_text "INSTALLING PACKER"
+
+git_clone wbthomason/packer.nvim "$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim"
+
+success_text "PACKER INSTALLATION IS COMPLETE!"
+
+######## FINAL ADJUSTMENTS ########
+header_text "CREATING FILES DATABASE"
+
+sudo updatedb
+
+success_text "FILES DATABASE CREATED!"

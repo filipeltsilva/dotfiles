@@ -11,6 +11,7 @@ export AUR_PACKAGES=(
   eci-icc
   librewolf-bin
   rar
+  sk1
   stockfish
   ttf-ms-fonts
   xp-pen-tablet
@@ -26,6 +27,7 @@ export PACMAN_PACKAGES=(
   chromium
   conky
   dbeaver
+  devtools
   discord
   flatpak
   gimp
@@ -41,6 +43,8 @@ export PACMAN_PACKAGES=(
   neofetch
   obsidian
   p7zip
+  pkgconf
+  plocate
   python-pip
   reflector
   ruby
