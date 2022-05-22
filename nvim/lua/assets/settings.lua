@@ -20,8 +20,11 @@ vim.o.ignorecase = true
 vim.o.incsearch = true
 
 vim.o.cursorline = true
+
 vim.o.wildmenu = true
 vim.o.wildmode = 'longest:list,full'
+
+vim.o.completeopt = 'longest,menuone'
 
 vim.o.confirm = true
 
