@@ -24,7 +24,7 @@ vim.o.cursorline = true
 vim.o.wildmenu = true
 vim.o.wildmode = 'longest:list,full'
 
-vim.o.completeopt = 'longest,menuone'
+vim.o.completeopt = 'menu,menuone,noselect'
 
 vim.o.confirm = true
 
