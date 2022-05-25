@@ -75,4 +75,3 @@ header_text "CHANGING DEFAULT SHELL TO ZSH"
 
 sudo chsh -s "$(which zsh)" "$USER"
 success_text "DEFAULT SHELL CHANGED!"
-
