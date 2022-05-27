@@ -1,6 +1,8 @@
+local packer = require('packer')
+
 vim.cmd 'packadd packer.nvim'
 
-return require('packer').startup(function()
+packer.startup(function()
   use'wbthomason/packer.nvim'
 
   use 'navarasu/onedark.nvim'
