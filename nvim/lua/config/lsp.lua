@@ -6,12 +6,14 @@ local language_servers = {
   'sumneko_lua',
   'tsserver'
 }
+local lsp = require('lspconfig')
+local lsp_installer = require('nvim-lsp-installer')
 
-require('nvim-lsp-installer').setup {
+lsp_installer.setup({
   automatic_installation = true,
   ensure_installed = language_servers
-}
+})
 
 for _, language in ipairs(language_servers) do
-  require('lspconfig')[language].setup {}
+  lsp[language].setup({})
 end

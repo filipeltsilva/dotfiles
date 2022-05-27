@@ -1,5 +1,7 @@
-require('onedark').setup {
-  style = 'deep'
-}
+local onedark = require('onedark')
 
-require('onedark').load()
+onedark.setup({
+  style = 'deep'
+})
+
+onedark.load()
