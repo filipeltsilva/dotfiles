@@ -1,4 +1,4 @@
-for file in $ZDOTDIR/assets/*.zsh
+for file in $ZDOTDIR/config/*.zsh
 do
   . $file
 done

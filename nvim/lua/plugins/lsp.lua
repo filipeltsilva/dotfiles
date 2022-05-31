@@ -2,6 +2,8 @@ local language_servers = {
   'bashls',
   'cucumber_language_server',
   'emmet_ls',
+  'eslint',
+  'html',
   'solargraph',
   'sumneko_lua',
   'tsserver'
