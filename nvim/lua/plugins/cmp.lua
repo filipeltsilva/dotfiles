@@ -12,10 +12,10 @@ cmp.setup({
     format = lspkind.cmp_format({
       mode = 'symbol_text',
       menu = ({
-        buffer = '[BUFFER]',
-        luasnip = '[LUASNIP]',
+        buffer = '[Buffer]',
+        luasnip = '[LuaSnip]',
         nvim_lsp = '[LSP]',
-        nvim_lua = '[LUA]'
+        nvim_lua = '[Lua]'
       })
     })
   },
@@ -25,7 +25,7 @@ cmp.setup({
     [ '<C-j>' ] = cmp.mapping.select_next_item(select_opts),
     [ '<C-k>' ] = cmp.mapping.select_prev_item(select_opts),
     [ '<CR>' ] = cmp.mapping.confirm({ select = true }),
-    [ '<esc>' ] = cmp.mapping.abort()
+    [ '<C-e>' ] = cmp.mapping.abort()
   }),
 
   snippet = {
