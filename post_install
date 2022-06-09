@@ -5,8 +5,6 @@
 # shellcheck source=./packages
 . packages
 
-XDG_CACHE_HOME="$HOME/.cache"
-XDG_CONFIG_HOME="$HOME/.config"
 XDG_DATA_HOME="$HOME/.local/share"
 
 ######## ARCH LINUX ########
@@ -20,8 +18,9 @@ asdf install
 
 success_text "ASDF SETUP IS COMPLETE!"
 
-header_text "INSTALLING PACKER"
+header_text "NEOVIM PACKAGE MANAGER SETUP"
 
+warning_text "Installing Packer"
 git_clone wbthomason/packer.nvim "$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim"
 
 success_text "PACKER INSTALLATION IS COMPLETE!"
