@@ -9,8 +9,10 @@ export ASDF_PACKAGES=(
 
 export AUR_PACKAGES=(
   adobe-icc
-  asdf-vm
+  asdf-vm-git
+  colorway
   eci-icc
+  emulsion-palette
   librewolf-bin
   rar
   sk1
