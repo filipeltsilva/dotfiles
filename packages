@@ -33,6 +33,7 @@ export PACMAN_PACKAGES=(
   dbeaver
   devtools
   discord
+  fish
   flatpak
   gimp
   gimp-help-en
@@ -41,6 +42,7 @@ export PACMAN_PACKAGES=(
   gnuchess
   inkscape
   kde-applications
+  kitty
   krita
   libreoffice-still
   meld
