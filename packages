@@ -47,6 +47,7 @@ export PACMAN_PACKAGES=(
   libreoffice-still
   meld
   neofetch
+  neovim
   obsidian
   p7zip
   pkgconf
