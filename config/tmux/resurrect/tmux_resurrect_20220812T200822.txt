@@ -1,4 +1,0 @@
-pane	0	0	1	:*	0	~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	0	fish	:
-pane	0	0	1	:*	1	nvim tmux.fish ~/.d/f/conf.d	:/home/filipelemos/.dotfiles/fish/conf.d	1	nvim	:/home/filipelemos/.local/share/asdf/installs/neovim/stable/bin/nvim tmux.fish
-window	0	0	:nvim	1	:*	b53f,177x42,0,0{88x42,0,0,1,88x42,89,0,2}	:
-state	0	

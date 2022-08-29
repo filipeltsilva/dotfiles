@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	~	:/home/filipelemos	1	fish	:
-window	workstation	0	:fish	1	:*	b7bd,177x42,0,0,0	:
-state	workstation	

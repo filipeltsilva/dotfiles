@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	yay kitty ~/.dotfiles	:/home/filipelemos/.dotfiles	1	yay	:yay kitty
-window	workstation	0	:yay	1	:*	d13e,176x39,0,0,1	:
-state	workstation	

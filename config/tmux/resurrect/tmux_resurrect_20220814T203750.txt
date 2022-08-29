@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	yay -Syu ~/.d/k/config	:/home/filipelemos/.dotfiles/kitty/config	1	yay	:yay -Syu
-window	workstation	0	:yay	1	:*	d13e,176x39,0,0,1	:
-state	workstation	

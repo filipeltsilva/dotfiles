@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	~/.d/k/config	:/home/filipelemos/.dotfiles/kitty/config	1	fish	:
-window	workstation	0	:fish	1	:*	b7be,177x42,0,0,1	:
-state	workstation	

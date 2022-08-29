@@ -1,4 +1,0 @@
-pane	workstation	0	1	:*	0	nvim aliases.fish  ~/.d/f/conf.d	:/home/filipelemos/.dotfiles/fish/conf.d	1	nvim	:nvim aliases.fish
-pane	workstation	0	1	:*	1	nvim aliases.zsh  ~/.d/a/z/config	:/home/filipelemos/.dotfiles/archive/zsh/config	0	nvim	:nvim aliases.zsh
-window	workstation	0	:nvim	1	:*	a3b9,176x39,0,0{88x39,0,0,1,87x39,89,0,2}	:
-state	workstation	

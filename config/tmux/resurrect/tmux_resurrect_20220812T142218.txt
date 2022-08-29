@@ -1,3 +1,0 @@
-pane	0	0	1	:*	0	~/.d/t/config	:/home/filipelemos/.dotfiles/tmux/config	1	fish	:fish
-window	0	0	:fish	1	:*	b7bd,177x42,0,0,0	:
-state	0	

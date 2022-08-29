@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	~/.d/n/l/config	:/home/filipelemos/.dotfiles/nvim/lua/config	1	fish	:
-window	workstation	0	:fish	1	:*	d13e,176x39,0,0,1	:
-state	workstation	

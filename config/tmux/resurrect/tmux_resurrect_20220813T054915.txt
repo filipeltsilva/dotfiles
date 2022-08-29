@@ -1,3 +1,0 @@
-pane	workstation	0	1	:*	0	~/.dotfiles	:/home/filipelemos/.dotfiles	1	fish	:
-window	workstation	0	:fish	1	:*	b7be,177x42,0,0,1	:
-state	workstation	

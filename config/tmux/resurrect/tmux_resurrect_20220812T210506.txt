@@ -1,3 +1,0 @@
-pane	0	0	1	:*	0	~	:/home/filipelemos	1	fish	:
-window	0	0	:fish	1	:*	b7be,177x42,0,0,1	:
-state	0	

@@ -1,8 +1,0 @@
-pane	batata	0	1	:*	0	~	:/home/filipelemos	1	fish	:
-pane	workstation	0	1	:*	0	~	:/home/filipelemos	0	fish	:
-pane	workstation	0	1	:*	1	~	:/home/filipelemos	0	fish	:
-pane	workstation	0	1	:*	2	~	:/home/filipelemos	0	fish	:
-pane	workstation	0	1	:*	3	~	:/home/filipelemos	1	fish	:
-window	batata	0	:fish	1	:*	b7c3,177x42,0,0,6	:
-window	workstation	0	:fish	1	:*	1798,177x42,0,0{88x42,0,0,1,88x42,89,0[88x21,89,0,7,88x10,89,22,8,88x9,89,33,9]}	:
-state	workstation	
