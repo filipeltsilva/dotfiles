@@ -1,0 +1,7 @@
+pane	0	0	1	:*	0	~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	1	fish	:
+pane	1	0	1	:*	0	~	:/home/filipelemos	1	fish	:
+pane	2	0	1	:*	0	thewhiterabbit	:/home/filipelemos	1	fish	:bash /usr/bin/neofetch
+window	0	0	:fish	1	:*	bfbe,196x44,0,0,1	:
+window	1	0	:fish	1	:*	bfc0,196x44,0,0,3	:
+window	2	0	:fish	1	:*	b7c2,177x42,0,0,5	:
+state	2	

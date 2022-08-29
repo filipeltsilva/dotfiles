@@ -1,0 +1,3 @@
+pane	0	0	1	:*	0	man tmux ~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	1	man	:man tmux
+window	0	0	:man	1	:*	b7be,177x42,0,0,1	:
+state	0	

@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	yay -Syu ~/.dotfiles	:/home/filipelemos/.dotfiles	1	yay	:yay -Syu
+window	workstation	0	:yay	1	:*	b7be,177x42,0,0,1	:
+state	workstation	

@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	vim ~	:/home/filipelemos	1	vim	:vim
+window	workstation	0	:vim	1	:*	d13e,176x39,0,0,1	:
+state	workstation	

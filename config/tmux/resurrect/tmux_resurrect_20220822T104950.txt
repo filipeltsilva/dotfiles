@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	emacs -nw ~/.dotfiles	:/home/filipelemos/.dotfiles	1	emacs	:emacs -nw
+window	workstation	0	:emacs	1	:*	d13e,176x39,0,0,1	:
+state	workstation	

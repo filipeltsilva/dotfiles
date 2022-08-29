@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 export ASDF_PACKAGES=(
-  hugo
-  neovim
   nodejs
   ruby
 )
@@ -28,6 +26,7 @@ export FLATPAK_PACKAGES=(
 )
 
 export PACMAN_PACKAGES=(
+  alacritty
   chromium
   conky
   dbeaver
@@ -42,7 +41,6 @@ export PACMAN_PACKAGES=(
   gnuchess
   inkscape
   kde-applications
-  kitty
   krita
   libreoffice-still
   meld

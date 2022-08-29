@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	nv alacritty.yml  ~/.c/alacritty	:/home/filipelemos/.config/alacritty	1	nvim	:nvim alacritty.yml
+window	workstation	0	:nvim	1	:*	ab7e,144x30,0,0,1	:
+state	workstation	

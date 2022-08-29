@@ -1,0 +1,5 @@
+pane	0	0	1	:*	0	~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	0	fish	:
+pane	0	0	1	:*	1	~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	0	fish	:
+pane	0	0	1	:*	2	~/.d/zsh	:/home/filipelemos/.dotfiles/zsh	1	fish	:
+window	0	0	:fish	1	:*	d03a,177x42,0,0{88x42,0,0,1,88x42,89,0[88x21,89,0,3,88x20,89,22,4]}	:
+state	0	

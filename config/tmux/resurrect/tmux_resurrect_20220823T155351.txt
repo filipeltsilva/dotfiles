@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	emacs -Q init.el ~/.c/emacs	:/home/filipelemos/.config/emacs	1	emacs	:emacs -Q init.el
+window	workstation	0	:emacs	1	:*	d13e,176x39,0,0,1	:
+state	workstation	

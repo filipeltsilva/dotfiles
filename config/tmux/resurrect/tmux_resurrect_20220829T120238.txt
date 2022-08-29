@@ -1,0 +1,4 @@
+pane	workstation	0	1	:*	0	nv alacritty.yml ~/.c/alacritty	:/home/filipelemos/.config/alacritty	1	nvim	:nvim alacritty.yml
+pane	workstation	0	1	:*	1	~/.c/alacritty	:/home/filipelemos/.config/alacritty	0	fish	:
+window	workstation	0	:nvim	1	:*	5cca,158x39,0,0{79x39,0,0,1,78x39,80,0,3}	:
+state	workstation	

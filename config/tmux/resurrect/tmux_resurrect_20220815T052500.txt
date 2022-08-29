@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	git status ~/.dotfiles	:/home/filipelemos/.dotfiles	1	git	:git status
+window	workstation	0	:fish	1	:*	d13e,176x39,0,0,1	:
+state	workstation	

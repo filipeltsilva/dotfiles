@@ -1,0 +1,3 @@
+pane	workstation	0	1	:*	0	~/.c/alacritty	:/home/filipelemos/.config/alacritty	1	fish	:
+window	workstation	0	:fish	1	:*	ab7e,144x30,0,0,1	:
+state	workstation	
