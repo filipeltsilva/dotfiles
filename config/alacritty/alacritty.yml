@@ -6,18 +6,21 @@ window:
 
 font:
   normal:
-    family: Hack
+    family: Fira Code
     style: Light
   normal:
-    family: Hack
+    family: Fira Code
     style: bold
   italic:
-    family: Hack
+    family: Fira Code
     style: italic
   size: 9.0
 
 selection:
   save_to_clipboard: true
+
+shell:
+  program: /usr/bin/fish
 
 # Colors (One Dark)
 colors:

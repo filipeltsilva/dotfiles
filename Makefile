@@ -1,20 +1,22 @@
-DOTFILES = $(PWD)/config
+DOTFILES_PATH = $(PWD)/config
 
 XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
+NODEJS_PACKAGES = npm yarn
+
 all:
 
-batata:
-	ls -a $(DOTFILES)/tmux
+packer:
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(XDG_DATA_HOME)/nvim/site/pack/packer/start/packer.nvim
 
 symlink_dotfiles:
-	ln -sfnv $(DOTFILES)/alacritty $(XDG_CONFIG_HOME)/alacritty
-	ln -sfnv $(DOTFILES)/asdf $(XDG_CONFIG_HOME)/asdf
-	ln -sfnv $(DOTFILES)/fish $(XDG_CONFIG_HOME)/fish
-	ln -sfnv $(DOTFILES)/git $(XDG_CONFIG_HOME)/git
-	ln -sfnv $(DOTFILES)/npm $(XDG_CONFIG_HOME)/npm
-	ln -sfnv $(DOTFILES)/nvim $(XDG_CONFIG_HOME)/nvim
-	ln -sfnv $(DOTFILES)/tmux $(XDG_CONFIG_HOME)/tmux
+	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
+	ln -sfnv $(DOTFILES_PATH)/asdf $(XDG_CONFIG_HOME)/asdf
+	ln -sfnv $(DOTFILES_PATH)/fish $(XDG_CONFIG_HOME)/fish
+	ln -sfnv $(DOTFILES_PATH)/git $(XDG_CONFIG_HOME)/git
+	ln -sfnv $(DOTFILES_PATH)/npm $(XDG_CONFIG_HOME)/npm
+	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
+	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
 
