@@ -4,6 +4,11 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
+AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
+
+PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld
+PACMAN_PACKAGES += neofetch neovim python-pip shellcheck telegram-desktop tmux torbrowser-launch ttf-fira-code youtube-dl
+
 NODEJS_PACKAGES = npm yarn
 
 all:
@@ -16,7 +21,7 @@ pacman_setup: ## Pacman settings
 	sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10\nILoveCandy/' /etc/pacman.conf
 	sudo pacman-key --init
 	sudo pacman-key --populate archlinux manjaro
-	sudo pacman-mirrors --geoip && sudo pacman -Syu
+	sudo pacman-mirrors --geoip && sudo pacman -Syu --noconfirm
 
 pamac_setup: ## Pamac settings
 	sudo sed -i 's/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/' /etc/pamac.conf
