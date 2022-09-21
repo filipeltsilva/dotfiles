@@ -13,15 +13,25 @@ NODEJS_PACKAGES = npm yarn
 
 all:
 
-packer: ## Install Neovim's Packer package manager
+cedilla:
+	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
+	echo "QT_IM_MODULE=cedilla" | sudo tee -a /etc/environment
+
+gnome_setup:
+
+
+nvidia_setup: ## Detect and install NVidia Graphics driver
+	sudo mhwd -a pci nonfree 0300
+
+nvim_packer: ## Install Neovim's Packer package manager
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(XDG_DATA_HOME)/nvim/site/pack/packer/start/packer.nvim
 
 pacman_setup: ## Pacman settings
 	sudo sed -i 's/#Color/Color/' /etc/pacman.conf
-	sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10\nILoveCandy/' /etc/pacman.conf
+	sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 20\nILoveCandy/' /etc/pacman.conf
 	sudo pacman-key --init
 	sudo pacman-key --populate archlinux manjaro
-	sudo pacman-mirrors --geoip && sudo pacman -Syu --noconfirm
+	sudo pacman-mirrors --geoip && sudo pacman -Syyu --noconfirm
 
 pamac_setup: ## Pamac settings
 	sudo sed -i 's/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/' /etc/pamac.conf
@@ -32,6 +42,9 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
 
+starship:
+	curl -sS https://starship.rs/install.sh | sh
+
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
 	ln -sfnv $(DOTFILES_PATH)/asdf $(XDG_CONFIG_HOME)/asdf
@@ -40,4 +53,3 @@ symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/npm $(XDG_CONFIG_HOME)/npm
 	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
 	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
-
