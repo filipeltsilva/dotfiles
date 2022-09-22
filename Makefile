@@ -42,9 +42,6 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
 
-starship:
-	curl -sS https://starship.rs/install.sh | sh
-
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
 	ln -sfnv $(DOTFILES_PATH)/asdf $(XDG_CONFIG_HOME)/asdf
