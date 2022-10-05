@@ -1,7 +1,4 @@
-vim.o.syntax = 'on'
+vim.opt.background = "dark"
+vim.opt.termguicolors = true
 
-vim.o.background = 'dark'
-vim.o.t_co = 256
-vim.o.termguicolors = true
-
-vim.cmd 'colorscheme onedark'
+vim.cmd "colorscheme onedark"

@@ -1,3 +1,4 @@
+alias 3="tree"
 alias nv="nvim"
 alias pof="poweroff"
 alias q="exit"

@@ -4,9 +4,11 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
+ASDF_PACKAGES = nodejs starship
+
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
-PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld
+PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld tree
 PACMAN_PACKAGES += neofetch neovim python-pip shellcheck telegram-desktop tmux torbrowser-launch ttf-fira-code youtube-dl
 
 NODEJS_PACKAGES = npm yarn
@@ -22,9 +24,6 @@ gnome_setup:
 
 nvidia_setup: ## Detect and install NVidia Graphics driver
 	sudo mhwd -a pci nonfree 0300
-
-nvim_packer: ## Install Neovim's Packer package manager
-	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(XDG_DATA_HOME)/nvim/site/pack/packer/start/packer.nvim
 
 pacman_setup: ## Pacman settings
 	sudo sed -i 's/#Color/Color/' /etc/pacman.conf

@@ -1,8 +1,13 @@
--- Command Mode Keybindings
+local global = vim.g
+local map = vim.keymap
+local options = { noremap = true, silent = true}
 
--- Insert Mode Keybindings
+vim.g.mapleader = " "
 
--- Normal Mode Keybindings
-vim.api.nvim_set_keymap('n', '<C-l>', ':luafile %<CR>', { noremap = true, silent = true })
+map.set("", "<C-l>", ":luafile %<CR>", options)
 
--- Visual Mode Keybindings
+map.set("", "<C-s>", ":wa<CR>", options)
+
+-- Telescope Keybindings
+map.set("", "ff", ":Telescope find_files<CR>", options)
+map.set("", "lg", ":Telescope live_grep<CR>", options)

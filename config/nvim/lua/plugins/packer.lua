@@ -1,33 +1,98 @@
-local use = require('packer').use
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
-vim.cmd 'packadd packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
 
-require('packer').startup(function()
-  use'wbthomason/packer.nvim'
+  return false
+end
 
-  use 'navarasu/onedark.nvim'
+local packer_bootstrap = ensure_packer()
 
-  use 'nvim-lualine/lualine.nvim'
+--vim.cmd [[packadd packer.nvim]]
 
+-- Autocommand to reload when I change and save this file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost packer.lua source <afile> | PackerSync
+  augroup end
+]]
+
+-- Using a protective call to prevent error in the first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Run Packer in a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
+
+return packer.startup(function(use)
+  -- Managing Packer itself
+  use "wbthomason/packer.nvim"
+
+  -- Theme
+  use "navarasu/onedark.nvim"
+
+  -- Language Server (LSP)
+  use "neovim/nvim-lspconfig"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+
+  -- Code Completion
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "onsails/lspkind.nvim"
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+
+  -- Telescope (Fuzzy Finder)
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim"
+    }
   }
 
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  -- Treesitter (Syntax Highlighting)
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = function() require("nvim-treesitter.install").update({ with_sync = true }) end
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "windwp/nvim-ts-autotag"
 
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'onsails/lspkind.nvim'
+  -- File Browser
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+  }
 
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  -- Status Bar
+  use "nvim-lualine/lualine.nvim"
 
-  use 'airblade/vim-gitgutter'
-  use 'gpanders/editorconfig.nvim'
-  use 'max-0406/autoclose.nvim'
+  -- Another Plugins
+  use "airblade/vim-gitgutter"
+  use "gpanders/editorconfig.nvim"
+  use "max-0406/autoclose.nvim"
+
+  if packer_bootstrap then
+    require("packer").sync()
+  end
 end)

@@ -9,7 +9,12 @@ local language_servers = {
   'tsserver'
 }
 local lsp = require('lspconfig')
-local lsp_installer = require('nvim-lsp-installer')
+
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+  return
+end
+
 local on_attach = function(client, bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
