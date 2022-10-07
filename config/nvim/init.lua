@@ -6,6 +6,8 @@ require("config.keybindings")
 require("config.settings")
 
 require("plugins.cmp")
+require("plugins.comment")
+require("plugins.gitsigns")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.nvim_tree")
