@@ -1,3 +1,7 @@
+local status_mason_ok, mason = pcall(require, "mason")
+local status_mason_lspconfig_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+local status_lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+
 local language_servers = {
   "bashls",
   "cucumber_language_server",
@@ -8,12 +12,6 @@ local language_servers = {
   "sumneko_lua",
   "tsserver"
 }
-local lsp = require("lspconfig")
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-
-if not status_ok then
-  return
-end
 
 local on_attach = function(client, bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -27,13 +25,40 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
 end
 
-lsp_installer.setup({
+if not status_mason_ok then
+  return
+end
+
+mason.setup({
+  max_concurrent_installers = 5,
+  ui = {
+    border = "rounded",
+    check_outdated_packages_on_open = true,
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
+    }
+  }
+})
+
+if not status_mason_lspconfig_ok then
+  return
+end
+
+mason_lspconfig.setup({
   automatic_installation = true,
   ensure_installed = language_servers
 })
 
-for _, language in ipairs(language_servers) do
-  lsp[language].setup({
-    on_attach = on_attach
-  })
+if not status_lspconfig_ok then
+  return
 end
+mason_lspconfig.setup_handlers({
+  function(server_name)
+    lspconfig[server_name].setup({
+      on_attach = on_attach
+    })
+  end
+})
+

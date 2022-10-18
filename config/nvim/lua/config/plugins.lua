@@ -19,7 +19,7 @@ local packer_bootstrap = ensure_packer()
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -31,13 +31,13 @@ if not status_ok then
 end
 
 -- Run Packer in a popup window
-packer.init {
+packer.init({
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require("packer.util").float({ border = "rounded" })
     end,
   },
-}
+})
 
 return packer.startup(function(use)
   -- Managing Packer itself
@@ -47,9 +47,9 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim"
 
   -- Language Server (LSP)
-  use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig"
 
   -- Code Completion
   use "hrsh7th/nvim-cmp"
@@ -94,6 +94,7 @@ return packer.startup(function(use)
 
   -- Another Plugins
   use "gpanders/editorconfig.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
   use "m4xshen/autoclose.nvim"
   use "numToStr/Comment.nvim"
 

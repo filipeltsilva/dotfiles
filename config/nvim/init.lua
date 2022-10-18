@@ -1,4 +1,4 @@
-require("plugins.packer")
+require("config.plugins")
 
 -- Editor settings
 require("config.filetypes")
@@ -8,6 +8,7 @@ require("config.settings")
 require("plugins.cmp")
 require("plugins.comment")
 require("plugins.gitsigns")
+require("plugins.indentline")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.nvim_tree")
