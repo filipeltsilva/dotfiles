@@ -54,6 +54,7 @@ mason_lspconfig.setup({
 if not status_lspconfig_ok then
   return
 end
+
 mason_lspconfig.setup_handlers({
   function(server_name)
     lspconfig[server_name].setup({
@@ -61,4 +62,3 @@ mason_lspconfig.setup_handlers({
     })
   end
 })
-

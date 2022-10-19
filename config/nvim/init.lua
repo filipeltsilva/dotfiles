@@ -14,6 +14,7 @@ require("plugins.lualine")
 require("plugins.nvim_tree")
 require("plugins.onedark")
 require("plugins.telescope")
+require("plugins.toggleterm")
 require("plugins.treesitter")
 
 require("config.theme")

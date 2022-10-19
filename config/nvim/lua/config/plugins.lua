@@ -93,6 +93,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
 
   -- Another Plugins
+  use "akinsho/toggleterm.nvim"
   use "gpanders/editorconfig.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "m4xshen/autoclose.nvim"
