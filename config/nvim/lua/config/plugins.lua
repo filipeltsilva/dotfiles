@@ -1,9 +1,9 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
+    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -12,16 +12,6 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
-
---vim.cmd [[packadd packer.nvim]]
-
--- Autocommand to reload when I change and save this file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
 
 -- Using a protective call to prevent error in the first use
 local status_ok, packer = pcall(require, "packer")
@@ -83,7 +73,9 @@ return packer.startup(function(use)
   -- File Browser
   use {
     "kyazdani42/nvim-tree.lua",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    requires = {
+      "kyazdani42/nvim-web-devicons"
+    }
   }
 
   -- Git

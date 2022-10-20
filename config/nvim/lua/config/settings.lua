@@ -1,39 +1,44 @@
-local cmd = vim.cmd
-local set = vim.opt
+local options = {
+  encoding = "utf-8",
+  fileencoding = "utf-8",
 
-cmd 'filetype plugin indent on'
-cmd 'syntax on'
+  background = "dark",
+  termguicolors = true,
 
-cmd 'set nobackup'
+  number = true,
+  numberwidth = 4,
+  relativenumber = true,
 
-set.encoding = 'utf-8'
-set.fileencoding = 'utf-8'
+  autoindent = true,
+  expandtab = true,
+  shiftround = true,
+  shiftwidth = 2,
+  tabstop = 2,
 
-set.number = true
-set.numberwidth = 4
-set.relativenumber = true
+  hlsearch = true,
+  ignorecase = true,
+  incsearch = true,
 
-set.autoindent = true
-set.expandtab = true
-set.shiftround = true
-set.shiftwidth = 2
-set.tabstop = 2
+  autoread = true,
+  clipboard = "unnamed,unnamedplus",
+  cmdheight = 2,
+  completeopt = "menu,menuone,noselect",
+  confirm = true,
+  cursorline = true,
+  history = 5000,
+  splitright = true,
+  timeoutlen = 200,
+  updatetime = 100,
+  wildmenu = true,
+  wildmode = "longest:list,full",
+}
 
-set.hlsearch = true
-set.ignorecase = true
-set.incsearch = true
+for key, value in pairs(options) do
+  vim.opt[key] = value
+end
 
-set.cursorline = true
+vim.cmd [[filetype plugin indent on]]
+vim.cmd [[syntax on]]
 
-set.wildmenu = true
-set.wildmode = 'longest:list,full'
+vim.cmd [[set nobackup]]
 
-set.completeopt = 'menu,menuone,noselect'
-
-set.confirm = true
-
-set.autoread = true
-
-set.history = 5000
-
-set.clipboard = 'unnamedplus'
