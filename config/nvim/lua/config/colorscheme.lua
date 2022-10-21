@@ -5,7 +5,17 @@ if not status_ok then
 end
 
 onedark.setup({
-  style = "darker"
+  code_style = {
+    comments = "italic",
+    keywords = "bold",
+    strings = "italic",
+    variables = "bold"
+  },
+  lualine = {
+    transparent = true
+  },
+  style = "darker",
+  transparent = true
 })
 
 onedark.load()

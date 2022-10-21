@@ -12,11 +12,7 @@ toggleterm.setup {
     border = "rounded",
     width = 140,
     height = 35,
-    winblend = 3,
-    highlights = {
-      border = "Normal",
-      background = "Normal",
-    }
+    winblend = 3
   },
   hide_numbers = true,
   insert_mappings = true,
