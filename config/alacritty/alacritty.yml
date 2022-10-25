@@ -2,18 +2,16 @@ window:
   padding:
     x: 5
     y: 5
-  startup_mode: Maximized
+  startup_mode: Fullscreen
 
 font:
   normal:
     family: Fira Code
-    style: Light
-  normal:
+    style: medium
+  bold:
     family: Fira Code
-    style: bold
   italic:
     family: Fira Code
-    style: italic
   size: 9.0
 
 selection:
@@ -26,27 +24,27 @@ shell:
 colors:
   # Default colors
   primary:
-    background: '0x1e2127'
-    foreground: '0xabb2bf'
+    background: "0x1e2127"
+    foreground: "0xabb2bf"
 
   # Normal colors
   normal:
-    black:   '0x1e2127'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xabb2bf'
+    black:   "0x1e2127"
+    red:     "0xe06c75"
+    green:   "0x98c379"
+    yellow:  "0xd19a66"
+    blue:    "0x61afef"
+    magenta: "0xc678dd"
+    cyan:    "0x56b6c2"
+    white:   "0xabb2bf"
 
   # Bright colors
   bright:
-    black:   '0x5c6370'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xffffff'
+    black:   "0x5c6370"
+    red:     "0xe06c75"
+    green:   "0x98c379"
+    yellow:  "0xd19a66"
+    blue:    "0x61afef"
+    magenta: "0xc678dd"
+    cyan:    "0x56b6c2"
+    white:   "0xffffff"

@@ -36,60 +36,110 @@ return packer.startup(function(use)
   -- Theme
   use "navarasu/onedark.nvim"
 
-  -- Language Server (LSP)
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
-  use "neovim/nvim-lspconfig"
+  -- Language Server Protocol (LSP)
+  use {
+    "neovim/nvim-lspconfig",
 
-  -- Code Completion
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-nvim-lua"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "onsails/lspkind.nvim"
+    requires = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim"
+    },
 
-  -- Snippets
-  use "L3MON4D3/LuaSnip"
-  use "saadparwaiz1/cmp_luasnip"
+    config = function() require("plugins.lsp") end
+  }
+
+  -- Code Completion and Snippets
+  use {
+    "hrsh7th/nvim-cmp",
+
+    requires = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+
+      "onsails/lspkind.nvim",
+
+      "L3MON4D3/LuaSnip",
+      "rafamadriz/friendly-snippets"
+    },
+
+    config = function() require("plugins.cmp") end
+  }
 
   -- Telescope (Fuzzy Finder)
   use {
     "nvim-telescope/telescope.nvim",
+
     requires = {
       "nvim-lua/plenary.nvim"
-    }
+    },
+
+    config = function() require("plugins.telescope") end
   }
 
   -- Treesitter (Syntax Highlighting)
   use {
     "nvim-treesitter/nvim-treesitter",
+
+    requires = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+      "p00f/nvim-ts-rainbow",
+      "windwp/nvim-ts-autotag"
+    },
+
+    config = function() require("plugins.treesitter") end,
+
     run = function() require("nvim-treesitter.install").update({ with_sync = true }) end
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "p00f/nvim-ts-rainbow"
-  use "windwp/nvim-ts-autotag"
 
   -- File Browser
   use {
     "kyazdani42/nvim-tree.lua",
+
     requires = {
       "kyazdani42/nvim-web-devicons"
-    }
+    },
+
+    config = function() require("plugins.nvim_tree") end
   }
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
+  use {
+    "lewis6991/gitsigns.nvim",
+
+    config = function() require("plugins.gitsigns") end
+  }
 
   -- Status Bar
-  use "nvim-lualine/lualine.nvim"
+  use {
+    "nvim-lualine/lualine.nvim",
+
+    config = function() require("plugins.lualine") end
+  }
 
   -- Another Plugins
-  use "akinsho/toggleterm.nvim"
+  use {
+    "akinsho/toggleterm.nvim",
+
+    config = function() require("plugins.toggleterm") end
+  }
+
+  use {
+    "numToStr/Comment.nvim",
+
+    config = function() require("plugins.comment") end
+  }
+
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+
+    config = function() require("plugins.indentline") end
+  }
+
   use "gpanders/editorconfig.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
   use "m4xshen/autoclose.nvim"
-  use "numToStr/Comment.nvim"
 
   if packer_bootstrap then
     require("packer").sync()

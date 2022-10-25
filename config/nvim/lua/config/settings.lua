@@ -13,6 +13,7 @@ local options = {
   expandtab = true,
   shiftround = true,
   shiftwidth = 2,
+  softtabstop = 2,
   tabstop = 2,
 
   hlsearch = true,
@@ -26,6 +27,7 @@ local options = {
   confirm = true,
   cursorline = true,
   history = 5000,
+  signcolumn = "yes",
   splitright = true,
   timeoutlen = 200,
   updatetime = 100,
