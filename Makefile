@@ -19,9 +19,6 @@ cedilla:
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 	echo "QT_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 
-gnome_setup:
-
-
 nvidia_setup: ## Detect and install NVidia Graphics driver
 	sudo mhwd -a pci nonfree 0300
 
@@ -31,6 +28,7 @@ pacman_setup: ## Pacman settings
 	sudo pacman-key --init
 	sudo pacman-key --populate archlinux manjaro
 	sudo pacman-mirrors --geoip && sudo pacman -Syyu --noconfirm
+	sudo pamac install $(PACMAN_PACKAGES)
 
 pamac_setup: ## Pamac settings
 	sudo sed -i 's/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/' /etc/pamac.conf
@@ -40,6 +38,7 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#EnableAUR/EnableAUR/' /etc/pamac.conf
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
+	sudo pamac build $(AUR_PACKAGES)
 
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty

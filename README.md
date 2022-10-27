@@ -1,17 +1,26 @@
 # My dotfiles
 
-This is my dotfiles repository, that includes my configuration files and the necessary scripts to install and setup them. For now it was run and tested only in a macOS systems, but in the future I pretend to port it to work in Linux systems too.
+These are my dotfiles, optimized to run in a fresh Manjaro Linux installation.
 
-## How to setup in macOS systems
+## Installation
 
-In macOS systems, first is necessary install the Xcode or then the Xcode Command Line Tools as a smaller alternative through the command below:
+In your $HOME directory, clone this repository and access it.
 
-```shell
-xcode-select --install
+```bash
+git clone --recurse-submodules https://github.com/filipeltsilva/dotfiles .dotfiles
+
+cd .dotfiles
 ```
 
-After install Xcode, copy and paste [this command](https://gist.github.com/filipeltsilva/39192759622a1ae1cd6381636e76ad8f) in a terminal to install Homebrew and Git.
+Then, run the make command with the flag you want to run.
 
-Then, clone this repository to the ~/.dotfiles folder, access the folder and run the install.sh file.
+```bash
+make the_flag_you_wanna_run
+```
 
-In Linux systems, the main requirement is install Git.
+## Flags
+
+- cedilla: prepare your environment to support cedilla in US Alternative International keybord layout
+- nvidia_setup: search and install the best NVidia driver to your machine
+- pacman_setup: Configure Pacman package manager and install the packages saved in $PACMAN_PACKAGES variable
+- pamac_setup: Configure Pamac utility and install the packages saved in $AUR_PACKAGES variable
