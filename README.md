@@ -20,7 +20,8 @@ make the_flag_you_wanna_run
 
 ## Flags
 
-- cedilla: prepare your environment to support cedilla in US Alternative International keybord layout
+- cedilla: Add cedilla support in US Alternative International keyboard layout
+- install_softwares: Install software listed in $PACMAN_PACKAGES and $AUR_PACKAGES, respectivelly. Runs pacman_setup and pamac_setup before it
 - nvidia_setup: search and install the best NVidia driver to your machine
-- pacman_setup: Configure Pacman package manager and install the packages saved in $PACMAN_PACKAGES variable
-- pamac_setup: Configure Pamac utility and install the packages saved in $AUR_PACKAGES variable
+- pacman_setup: Configure Pacman package manager
+- pamac_setup: Configure Pamac utility
