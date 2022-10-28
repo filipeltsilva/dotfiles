@@ -4,16 +4,18 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
-ASDF_PACKAGES = nodejs starship
+ASDF_PLUGINS = nodejs ruby
 
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
-PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld tree
-PACMAN_PACKAGES += neofetch neovim python-pip shellcheck telegram-desktop tmux torbrowser-launcher ttf-fira-code youtube-dl
-
-NODEJS_PACKAGES = npm yarn
+PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld
+PACMAN_PACKAGES += neofetch neovim python-pip shellcheck starship telegram-desktop tmux torbrowser-launcher tree ttf-fira-code
+PACMAN_PACKAGES += youtube-dl
 
 all:
+
+asdf_setup: ## Install asdf-vm plugins
+	asdf plugin add $(ASDF_PLUGINS)
 
 cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
