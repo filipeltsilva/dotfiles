@@ -9,7 +9,7 @@ ASDF_PACKAGES = nodejs starship
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
 PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld tree
-PACMAN_PACKAGES += neofetch neovim python-pip shellcheck telegram-desktop tmux torbrowser-launch ttf-fira-code youtube-dl
+PACMAN_PACKAGES += neofetch neovim python-pip shellcheck telegram-desktop tmux torbrowser-launcher ttf-fira-code youtube-dl
 
 NODEJS_PACKAGES = npm yarn
 
