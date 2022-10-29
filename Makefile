@@ -15,7 +15,7 @@ PACMAN_PACKAGES += youtube-dl
 all:
 
 asdf_setup: ## Install asdf-vm plugins
-	asdf plugin add $(ASDF_PLUGINS)
+	(cd $(DOTFILES_PATH)/asdf && asdf install)
 
 cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
@@ -55,5 +55,5 @@ symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
 	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
 
-tmux_setup:
+tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm

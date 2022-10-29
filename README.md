@@ -22,6 +22,7 @@ make the_flag_you_wanna_run
 
 ## Flags
 
+- asdf_setup: Install asdf-vm plugins and their related packages
 - cedilla: Add cedilla support in US Alternative International keyboard layout
 - install_softwares: Install software listed in $PACMAN_PACKAGES and $AUR_PACKAGES, respectivelly. This flag runs pacman_setup and pamac_setup first
 - nvidia_setup: search and install the best NVidia driver to your machine
