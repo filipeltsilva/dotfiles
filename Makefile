@@ -8,9 +8,8 @@ ASDF_PLUGINS = nodejs ruby
 
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
-PACMAN_PACKAGES = alacritty chromium conky discord fish gimp gimp-help-en inkscape krita meld
-PACMAN_PACKAGES += neofetch neovim python-pip shellcheck starship telegram-desktop tmux torbrowser-launcher tree ttf-fira-code
-PACMAN_PACKAGES += youtube-dl
+PACMAN_PACKAGES = alacritty chromium conky dbeaver discord fish gimp gimp-help-en git-lfs inkscape krita meld neofetch neovim python-pip
+PACMAN_PACKAGES += shellcheck starship steam telegram-desktop tmux torbrowser-launcher tree ttf-fira-code youtube-dl
 
 all:
 
@@ -21,8 +20,9 @@ cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 	echo "QT_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 
+install: cedilla install_softwares symlink_dotfiles tmux_setup ## Recommended flag to make the heavy service
+
 install_softwares: pacman_setup pamac_setup ## Install softwares after running Pacman and Pamac setups
-	sudo pamac checkupdates -a
 	sudo pamac upgrade -a
 	sudo pamac install $(PACMAN_PACKAGES)
 	sudo pamac build $(AUR_PACKAGES)
@@ -45,6 +45,8 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#EnableAUR/EnableAUR/' /etc/pamac.conf
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
+
+post_install: ## Flag to run another flags after machine reboot
 
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
