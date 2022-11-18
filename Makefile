@@ -46,7 +46,7 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
 
-post_install: ## Flag to run another flags after machine reboot
+post_install: asdf_setup updatedb ## Flag to run another flags after machine reboot
 
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
@@ -60,3 +60,6 @@ symlink_dotfiles: ## Create symbolic links
 
 tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm
+
+updatedb: ## Update the system files database to improve search speed
+	sudo updatedb

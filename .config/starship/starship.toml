@@ -9,7 +9,7 @@ $character\
 """
 
 [directory]
-style = "bold yellow"
+style = "bold purple"
 
 [fill]
 symbol = "."

@@ -43,8 +43,9 @@ After reboot your machine, access the `.dotfiles` folder again and run `make the
 * `nvidia_setup`: search and install the best NVidia driver to your machine
 * `pacman_setup`: Configure Pacman package manager
 * `pamac_setup`: Configure Pamac utility
-* `post_install`: Run the flag `asdf_setup`
+* `post_install`: Run the flags `asdf_setup` and `updatedb`
 * `tmux_setup`: Install Tmux Plugin Manager (TPM) to manage the Tmux plugins
+* `updatedb`: Update the system files database to improve search speed
 
 ## Recommended workflow
 
