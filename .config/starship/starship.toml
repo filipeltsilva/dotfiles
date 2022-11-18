@@ -1,0 +1,16 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_state\
+$fill\
+$line_break\
+$character\
+"""
+
+[directory]
+style = "bold yellow"
+
+[fill]
+symbol = "."
+style = "bold gray"
