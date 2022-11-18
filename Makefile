@@ -1,10 +1,8 @@
-DOTFILES_PATH = $(PWD)/config
+DOTFILES_PATH = $(PWD)/.config
 
 XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
-
-ASDF_PLUGINS = nodejs ruby
 
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
@@ -14,6 +12,8 @@ PACMAN_PACKAGES += shellcheck starship steam telegram-desktop tmux torbrowser-la
 all:
 
 asdf_setup: ## Install asdf-vm plugins
+	asdf plugin add nodejs
+	asdf plugin add ruby
 	(cd $(DOTFILES_PATH)/asdf && asdf install)
 
 cedilla: ## Enable cedilla in US Alternative International keyboard layout
@@ -56,6 +56,7 @@ symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/npm $(XDG_CONFIG_HOME)/npm
 	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
 	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
+	ln -sfnv $(DOTFILES_PATH)/starship/starship.toml $(XDG_CONFIG_HOME)/starship.toml
 
 tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm

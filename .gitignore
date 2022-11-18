@@ -1,6 +1,6 @@
 .DS_Store
 
-config/nvim/plugin
+.config/nvim/plugin
 
-config/tmux/plugins
-config/tmux/resurrect
+.config/tmux/plugins
+.config/tmux/resurrect
