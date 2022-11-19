@@ -564,7 +564,8 @@
        state="1" />
     <group
        id="preferences"
-       state="1" />
+       state="1"
+       page="27" />
     <group
        id="gradienteditor" />
     <group
@@ -922,7 +923,7 @@
        id="boot"
        theme="system"
        canvas="light"
-       enabled="1">
+       enabled="0">
       <group
          id="shown"
          ver1.2.1="1" />
@@ -935,18 +936,22 @@
        snap-bbox="1"
        snap-bbox-edge="1"
        snap-bbox-corner="1"
-       snap-bbox-edge-midpoint="0"
-       snap-bbox-center="0"
+       snap-bbox-edge-midpoint="1"
+       snap-bbox-center="1"
        simple-snap-bbox="1"
        snap-others="1"
-       snap-object-midpoint="0"
-       snap-rotation-center="0"
+       snap-object-midpoint="1"
+       snap-rotation-center="1"
        snap-text-baseline="1"
        snap-path-mask="1"
        snap-path-clip="1"
        snap-page-border="1"
        snap-grid="1"
-       snap-guide="1" />
+       snap-guide="1"
+       snap-path-intersection="1"
+       snap-line-perpendicular="1"
+       snap-line-tangential="1"
+       snap-alignment-self="1" />
   </group>
   <group
      id="extensions"
