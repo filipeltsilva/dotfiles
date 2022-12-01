@@ -8,9 +8,30 @@ $line_break\
 $character\
 """
 
+[character]
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold blue)"
+
 [directory]
-style = "bold purple"
+home_symbol = " "
+style = "bold blue"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Projects" = " "
+"Videos" = " "
 
 [fill]
 symbol = "."
-style = "bold gray"
+style = "bold 240"
+
+[git_branch]
+format = '[\[$branch $symbol\]]($style) '
+style = "bold cyan"
+symbol = ""
+
+[git_status]
+style = "bold purple"
