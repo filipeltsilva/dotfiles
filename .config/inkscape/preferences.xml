@@ -1085,7 +1085,7 @@
   <group
      id="theme"
      defaultPreferDarkTheme="0"
-     defaultIconTheme="Papirus-Dark"
+     defaultIconTheme="Papirus-Dark-Maia"
      defaultGtkTheme="Adw-dark"
      narrowSpinButton="1"
      preferDarkTheme="1"

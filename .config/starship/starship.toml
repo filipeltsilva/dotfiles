@@ -17,12 +17,12 @@ home_symbol = " "
 style = "bold blue"
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Projects" = " "
-"Videos" = " "
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+"Projects" = "  "
+"Videos" = "  "
 
 [fill]
 symbol = "."

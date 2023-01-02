@@ -9,11 +9,11 @@ comment.setup({
   sticky = true,
   ignore = nil,
   toggler = {
-    line = "lc",
-    block = "bc"
+    line = "<leader>lc",
+    block = "<leader>bc"
   },
   opleader = {
-    line = "ll",
-    block = "bb"
+    line = "<leader>ll",
+    block = "<leader>bb"
   }
 })

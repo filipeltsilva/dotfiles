@@ -5,8 +5,6 @@ if not status_ok then
 end
 
 nvim_tree.setup({
-  vim.api.nvim_set_keymap( "n",  "t",  ":NvimTreeToggle<CR>", { noremap = true, silent = true }),
-
   renderer = {
     icons = {
       webdev_colors = true

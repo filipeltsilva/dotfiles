@@ -16,7 +16,7 @@ toggleterm.setup {
   },
   hide_numbers = true,
   insert_mappings = true,
-  open_mapping = [[<C-\>]],
+  open_mapping = [[<leader>t]],
   persist_size = true,
   shade_terminals = false,
   start_in_insert = true,
