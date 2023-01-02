@@ -1,15 +1,17 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-local luasnip_status_ok, luasnip = pcall(require, "luasnip")
+local cmp_status, cmp = pcall(require, "cmp")
+local luasnip_status, luasnip = pcall(require, "luasnip")
 
-if not cmp_status_ok then
+if not cmp_status then
   return
 end
 
-if not luasnip_status_ok then
+if not luasnip_status then
   return
 end
 
 local lspkind = require("lspkind")
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 luasnip.config.set_config({
   enable_autosnippets = true,
@@ -67,5 +69,3 @@ cmp.setup({
     documentation = cmp.config.window.bordered()
   }
 })
-
-require("luasnip.loaders.from_vscode").lazy_load()

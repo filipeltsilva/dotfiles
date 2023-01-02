@@ -1,6 +1,6 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
+local indent_blankline_status, indent_blankline = pcall(require, "indent_blankline")
 
-if not status_ok then
+if not indent_blankline_status then
   return
 end
 
