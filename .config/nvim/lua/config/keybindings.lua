@@ -1,15 +1,17 @@
 vim.g.mapleader = " "
 
-local keymap = vim.keymap
 local options = { noremap = true, silent = true }
 
-keymap.set("", "<C-l>", ":luafile %<CR>", options)
+vim.keymap.set("", "<C-l>", ":luafile %<CR>", options)
 
-keymap.set("", "<C-s>", ":wa<CR>", options)
+vim.keymap.set("", "<C-s>", ":wa<CR>", options)
+
+vim.keymap.set("n", "<C-h>", "<C-w>h", options)
+vim.keymap.set("n", "<C-l>", "<C-w>l", options)
 
 -- NvimTree
-keymap.set("", "<leader>e", ":NvimTreeToggle<CR>", options)
+vim.keymap.set("", "<leader>e", ":NvimTreeToggle<CR>", options)
 
 -- Telescope
-keymap.set("", "<leader>ff", ":Telescope find_files<CR>", options)
-keymap.set("", "<leader>lg", ":Telescope live_grep<CR>", options)
+vim.keymap.set("", "<leader>ff", ":Telescope find_files<CR>", options)
+vim.keymap.set("", "<leader>fg", ":Telescope live_grep<CR>", options)

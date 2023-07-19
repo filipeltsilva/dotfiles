@@ -1,6 +1,6 @@
-local onedark_status, onedark = pcall(require, "onedark")
+local onedark_status_ok, onedark = pcall(require, "onedark")
 
-if not onedark_status then
+if not onedark_status_ok then
   return
 end
 

@@ -6,12 +6,13 @@ XDG_DATA_HOME = $(HOME)/.local/share
 
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
-PACMAN_PACKAGES = alacritty chromium conky dbeaver discord fish gimp gimp-help-en git-lfs inkscape krita meld neofetch neovim python-pip
-PACMAN_PACKAGES += shellcheck starship steam telegram-desktop tmux torbrowser-launcher trash tree ttf-fira-code youtube-dl
+PACMAN_PACKAGES = alacritty cmake chromium conky dbeaver discord fish gimp gimp-help-en git-lfs inkscape jdk17-openjdk jq krita meld
+PACMAN_PACKAGES += neofetch neovim podman python-pip scribus shellcheck starship steam telegram-desktop tmux torbrowser-launcher trash tree ttf-fira-code
 
 all:
 
 asdf_setup: ## Install asdf-vm plugins
+	asdf plugin add flutter
 	asdf plugin add nodejs
 	asdf plugin add ruby
 	(cd $(DOTFILES_PATH)/asdf && asdf install)

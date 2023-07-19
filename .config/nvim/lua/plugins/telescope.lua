@@ -1,11 +1,11 @@
-local telescope_status, telescope = pcall(require, "telescope")
-local telescope_actions_status, telescope_actions = pcall(require, "telescope.actions")
+local telescope_status_ok, telescope = pcall(require, "telescope")
+local telescope_actions_status_ok, telescope_actions = pcall(require, "telescope.actions")
 
-if not telescope_status then
+if not telescope_status_ok then
   return
 end
 
-if not telescope_actions_status then
+if not telescope_actions_status_ok then
   return
 end
 

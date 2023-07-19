@@ -1,4 +1,5 @@
 alias 3="tree"
+alias docker="podman"
 alias nv="nvim"
 alias pof="poweroff"
 alias q="exit"

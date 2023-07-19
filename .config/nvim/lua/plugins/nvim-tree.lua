@@ -1,6 +1,6 @@
-local nvim_tree_status, nvim_tree = pcall(require, "nvim-tree")
+local nvim_tree_status_ok, nvim_tree = pcall(require, "nvim-tree")
 
-if not nvim_tree_status then
+if not nvim_tree_status_ok then
   return
 end
 

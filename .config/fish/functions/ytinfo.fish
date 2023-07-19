@@ -1,3 +1,3 @@
 function ytinfo --description "Get YouTube videos info"
-  youtube-dl -F $argv[1] --default-search ytsearch
+  yt-dlp -F $argv[1]
 end

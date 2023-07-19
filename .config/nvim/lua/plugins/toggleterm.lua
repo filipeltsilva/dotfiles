@@ -1,6 +1,6 @@
-local toggleterm_status, toggleterm = pcall(require, "toggleterm")
+local toggleterm_status_ok, toggleterm = pcall(require, "toggleterm")
 
-if not toggleterm_status then
+if not toggleterm_status_ok then
   return
 end
 

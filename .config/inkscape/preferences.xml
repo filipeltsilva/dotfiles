@@ -118,8 +118,9 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="222.331446850393"
-         height="266.402193805364" />
+         width="453.543307086617"
+         height="302.362204724409"
+         ry="0" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -155,14 +156,14 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="135.270851916215"
-         ry="94.0211402712843" />
+         rx="11.3385826771653"
+         ry="11.3385826771654" />
       <eventcontext
          id="star"
-         magnitude="5"
+         magnitude="3"
          style="fill:yellow;"
          usecurrent="1"
-         proportion="0.500000052491212" />
+         proportion="0.500000090039003" />
       <eventcontext
          id="spiral"
          style="fill:none;stroke:black"
@@ -333,8 +334,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="0"
-       y="0"
+       x="106.734170730657"
+       y="127.487570372725"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -393,7 +394,8 @@
     <eventcontext
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
-       selcue="1" />
+       selcue="1"
+       curvature="0" />
     <eventcontext
        id="paintbucket"
        style="fill:#a0a0a0;stroke:none;"
@@ -521,7 +523,7 @@
   </group>
   <group
      id="colorselector"
-     page="0"
+     page="2"
      switcher="1" />
   <group
      id="embedded">
@@ -534,11 +536,13 @@
        palette="Inkscape default" />
   </group>
   <group
-     id="dialogs">
+     id="dialogs"
+     traceliveUpdate="1">
     <group
        id="toolbox" />
     <group
-       id="fillstroke" />
+       id="fillstroke"
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -547,7 +551,8 @@
        id="transformation"
        applyseparately="0" />
     <group
-       id="align" />
+       id="align"
+       objects-align-to="last" />
     <group
        id="xml"
        h="500"
@@ -565,7 +570,7 @@
     <group
        id="preferences"
        state="1"
-       page="27" />
+       page="48" />
     <group
        id="gradienteditor" />
     <group
@@ -574,37 +579,45 @@
        id="export"
        default=""
        append_extension="1"
-       path="">
+       path=""
+       defaultopts="1">
       <group
-         id="exportarea" />
+         id="exportarea"
+         value="drawing" />
       <group
          id="defaultxdpi" />
+      <group
+         id="batchexportarea"
+         value="page" />
     </group>
     <group
        id="save_as"
        default="org.inkscape.output.svg.inkscape"
-       append_extension="1"
+       append_extension="0"
        enable_preview="1"
-       path=""
-       use_current_dir="1" />
+       path="/home/filipelemos/sw_valedoaco"
+       use_current_dir="1"
+       enable_svgexport="1" />
     <group
        id="save_copy"
-       default=""
+       default="org.ekips.output.gimp_xcf"
        append_extension="1"
        enable_preview="1"
-       path="" />
+       path="/home/filipelemos" />
     <group
        id="open"
        enable_preview="1"
-       path="" />
+       path="/home/filipelemos/Downloads/" />
     <group
        id="import"
        enable_preview="1"
-       path=""
+       path="/home/filipelemos/sw_valedoaco/"
        ask="1"
        ask_svg="1"
-       link="link"
-       scale="optimizeSpeed" />
+       link="embed"
+       scale="auto"
+       import_mode_svg="include"
+       forcexdpi="0" />
     <group
        id="debug"
        redirect="0" />
@@ -612,7 +625,8 @@
        id="clonetiler"
        dotrace="0" />
     <group
-       id="gridtiler" />
+       id="gridtiler"
+       SpacingType="20" />
     <group
        id="extension-error"
        show-on-startup="0" />
@@ -644,6 +658,11 @@
        id="colorpickerwindow" />
     <group
        id="undo-history" />
+    <group
+       id="objects" />
+    <group
+       id="livepatheffect"
+       dialogmode="0" />
   </group>
   <group
      id="printing">
@@ -655,7 +674,8 @@
   </group>
   <group
      id="options"
-     rotationlock="1">
+     rotationlock="1"
+     onimport="0">
     <group
        id="renderingcache"
        size="512" />
@@ -697,19 +717,19 @@
        value="4" />
     <group
        id="displayprofile"
-       enable="0"
+       enable="1"
        from_display="0"
-       intent="0"
-       uri="" />
+       intent="1"
+       uri="/usr/share/color/icc/krita/sRGB-elle-V2-srgbtrc.icc" />
     <group
        id="softproof"
-       enable="0"
-       intent="0"
+       enable="1"
+       intent="1"
        gamutcolor="#808080"
        gamutwarn="0"
-       bpc="0"
+       bpc="1"
        preserveblack="0"
-       uri="" />
+       uri="/usr/share/color/icc/colord/FOGRA39L_coated.icc" />
     <group
        id="savewindowgeometry"
        value="1" />
@@ -829,7 +849,8 @@
     <group
        id="maskobject"
        topmost="1"
-       remove="1" />
+       remove="1"
+       grouping="0" />
     <group
        id="blurquality"
        value="0" />
@@ -918,7 +939,8 @@
        partialdynamic="0" />
     <group
        id="font"
-       unitType="2" />
+       unitType="2"
+       custom_fontdirs="/home/filipelemos/Documents/Fonts" />
     <group
        id="boot"
        theme="system"
@@ -957,13 +979,27 @@
      id="extensions"
      org.inkscape.output.png.inkscape.png_bitdepth="99"
      org.inkscape.output.png.inkscape.png_compression="6"
-     org.inkscape.output.png.inkscape.png_antialias="2" />
+     org.inkscape.output.png.inkscape.png_antialias="2"
+     org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.4"
+     org.inkscape.output.pdf.cairorenderer.textToPath="paths"
+     org.ekips.output.gimp_xcf.background="0"
+     org.ekips.output.gimp_xcf.tab="Options"
+     org.inkscape.effect.filter.Blur.__live_effect__="0"
+     org.inkscape.effect.filter.Blur.hblur="4.6"
+     org.inkscape.effect.filter.Blur.vblur="4"
+     org.inkscape.qr_code.typenumber="0"
+     org.inkscape.qr_code.correctionlevel="1"
+     org.inkscape.qr_code.qrmode="0"
+     org.inkscape.qr_code.encoding="latin_1"
+     org.inkscape.input.svg.scale="auto"
+     org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
+     org.inkscape.input.gdkpixbuf.jpeg.scale="optimizeQuality" />
   <group
      id="desktop"
-     style="fill:#00ff00">
+     style="fill:#27a8e0;font-size:74.66666667px;-inkscape-font-specification:'Roboto Bold';font-family:Roboto;stroke-width:26.45669291;font-weight:bold">
     <group
-       width="640"
-       height="480"
+       width="1600"
+       height="831"
        x="0"
        y="0"
        maximized="1"
@@ -1100,4 +1136,7 @@
        symbolicWarningColor="2155905279"
        symbolicErrorColor="2155905279" />
   </group>
+  <group
+     id="gradient-edit"
+     stoplist="1" />
 </inkscape>

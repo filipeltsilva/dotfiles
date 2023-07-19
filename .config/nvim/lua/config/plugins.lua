@@ -14,9 +14,9 @@ end
 local packer_bootstrap = ensure_packer()
 
 -- Using a protective call to prevent error in the first use
-local status_ok, packer = pcall(require, "packer")
+local packer_status, packer = pcall(require, "packer")
 
-if not status_ok then
+if not packer_status then
   return
 end
 
@@ -36,36 +36,28 @@ return packer.startup(function(use)
   -- Theme
   use "navarasu/onedark.nvim"
 
-  -- Language Server Protocol (LSP)
   use {
-    "neovim/nvim-lspconfig",
-
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v2.x",
     requires = {
+      -- LSP Support
+      "neovim/nvim-lspconfig",
       "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim"
-    },
+      "williamboman/mason-lspconfig.nvim",
 
-    config = function() require("plugins.lsp") end
-  }
-
-  -- Code Completion and Snippets
-  use {
-    "hrsh7th/nvim-cmp",
-
-    requires = {
+      -- Autocompletion
+      "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
 
-      "onsails/lspkind.nvim",
-
+      -- Snippets
       "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets"
-    },
-
-    config = function() require("plugins.cmp") end
+      "rafamadriz/friendly-snippets",
+    }
   }
 
   -- Telescope (Fuzzy Finder)
@@ -75,9 +67,7 @@ return packer.startup(function(use)
     requires = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-    },
-
-    config = function() require("plugins.telescope") end
+    }
   }
 
   -- Treesitter (Syntax Highlighting)
@@ -90,8 +80,6 @@ return packer.startup(function(use)
       "windwp/nvim-ts-autotag"
     },
 
-    config = function() require("plugins.treesitter") end,
-
     run = function() require("nvim-treesitter.install").update({ with_sync = true }) end
   }
 
@@ -101,46 +89,22 @@ return packer.startup(function(use)
 
     requires = {
       "kyazdani42/nvim-web-devicons"
-    },
-
-    config = function() require("plugins.nvim-tree") end
+    }
   }
 
   -- Git
-  use {
-    "lewis6991/gitsigns.nvim",
-
-    config = function() require("plugins.gitsigns") end
-  }
+  use "lewis6991/gitsigns.nvim"
 
   -- Status Bar
-  use {
-    "nvim-lualine/lualine.nvim",
-
-    config = function() require("plugins.lualine") end
-  }
+  use "nvim-lualine/lualine.nvim"
 
   -- Another Plugins
-  use {
-    "akinsho/toggleterm.nvim",
-
-    config = function() require("plugins.toggleterm") end
-  }
-
-  use {
-    "numToStr/Comment.nvim",
-
-    config = function() require("plugins.comment") end
-  }
-
-  use {
-    "lukas-reineke/indent-blankline.nvim",
-
-    config = function() require("plugins.indentline") end
-  }
-
+  use "akinsho/toggleterm.nvim"
   use "gpanders/editorconfig.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
   use "m4xshen/autoclose.nvim"
+  use "numToStr/Comment.nvim"
+  use "onsails/lspkind.nvim"
 
   if packer_bootstrap then
     require("packer").sync()

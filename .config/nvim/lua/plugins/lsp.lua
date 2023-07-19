@@ -1,75 +1,44 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local language_servers = {
+local servers_list = {
   "bashls",
   "cucumber_language_server",
   "emmet_ls",
   "eslint",
   "html",
+  "lua_ls",
   "solargraph",
-  "sumneko_lua",
   "tsserver"
 }
 
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-local mason_status, mason = pcall(require, "mason")
-local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
+local lsp_zero_status_ok, lsp_zero = pcall(require, "lsp-zero")
 
-local on_attach = function(client, bufnr)
-  local keymap = vim.keymap
-  local options = { noremap = true, silent = true, buffer = bufnr }
-
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", options)
-  keymap.set("n", "<leader>dc", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
-  keymap.set("n", "<leader>df", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
-  keymap.set("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", options)
-  keymap.set("n", "<leader>h", "<cmd>lua vim.lsp.buf.references()<CR>", options)
-  keymap.set("n", "<leader>i", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
-  keymap.set("n", "<leader>im", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
-  keymap.set("n", "<leader>n", "<cmd>lua vim.lsp.buf.rename()<CR>", options)
-end
-
-if not mason_status then
+if not lsp_zero_status_ok then
   return
 end
 
-mason.setup({
-  max_concurrent_installers = 5,
-  ui = {
-    border = "rounded",
-    check_outdated_packages_on_open = true,
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
-  }
+lsp_zero.preset("lsp-only")
+
+lsp_zero.ensure_installed(servers_list)
+
+lsp_zero.on_attach(function(bufnr, client)
+  lsp_zero.default_keymaps({ buffer = bufnr })
+
+  vim.keymap.set("n", "la", function() vim.lsp.buf.code_action() end)
+  vim.keymap.set("n", "lc", function() vim.lsp.buf.declaration() end)
+  vim.keymap.set("n", "lf", function() vim.lsp.buf.definition() end)
+  vim.keymap.set("n", "lh", function() vim.lsp.buf.references() end)
+  vim.keymap.set("n", "li", function() vim.lsp.buf.hover() end)
+  vim.keymap.set("n", "lm", function() vim.lsp.buf.implementation() end)
+  vim.keymap.set("n", "lr", function() vim.lsp.buf.rename() end)
+end)
+
+lsp_zero.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
 })
 
-if not mason_lspconfig_status then
-  return
-end
-
-mason_lspconfig.setup({
-  automatic_installation = true,
-  ensure_installed = language_servers
-})
-
-if not lspconfig_status then
-  return
-end
-
-mason_lspconfig.setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      capabilities = capabilities,
-      on_attach = on_attach
-    })
-  end
-})
-
-lspconfig["sumneko_lua"].setup({
+lsp_zero.configure("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
@@ -78,3 +47,5 @@ lspconfig["sumneko_lua"].setup({
     }
   }
 })
+
+lsp_zero.setup()
