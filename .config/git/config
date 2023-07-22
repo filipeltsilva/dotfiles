@@ -31,3 +31,10 @@
 [mergetool "meld"]
 	path = /usr/bin/meld
   cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[alias]
+	co = checkout
+	br = branch
+	pl = pull
+	p = push
+	df = diff
+	st = status
