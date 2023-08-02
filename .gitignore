@@ -1,6 +1,8 @@
 .DS_Store
 
 .config/nvim/plugin
+.config/nvim/lazy-lock.json
 
 .config/tmux/plugins
 .config/tmux/resurrect
+
