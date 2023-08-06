@@ -1,21 +1,17 @@
-local telescope_status_ok, telescope = pcall(require, "telescope")
-local telescope_actions_status_ok, telescope_actions = pcall(require, "telescope.actions")
-
-if not telescope_status_ok then
-  return
-end
-
-if not telescope_actions_status_ok then
-  return
-end
-
-telescope.setup({
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-k>"] = telescope_actions.move_selection_previous,
-        ["<C-j>"] = telescope_actions.move_selection_next
+return {
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  opts = {
+    defaults = {
+      mappings = {
+        i = {
+          ["<C-k>"] = function() return require("telescope.actions").move_selection_previous end,
+          ["<C-j>"] = function() return require("telescope.actions").move_selection_next end
+        }
       }
     }
   }
-})
+}

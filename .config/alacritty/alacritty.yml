@@ -21,31 +21,32 @@ selection:
 shell:
   program: /usr/bin/fish
 
-# Colors (One Dark)
+# Colors (Tokyo Night)
+# Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
 colors:
   # Default colors
   primary:
-    background: "0x1e2127"
-    foreground: "0xabb2bf"
+    background: '0x1a1b26'
+    foreground: '0xa9b1d6'
 
   # Normal colors
   normal:
-    black:   "0x1e2127"
-    red:     "0xe06c75"
-    green:   "0x98c379"
-    yellow:  "0xd19a66"
-    blue:    "0x61afef"
-    magenta: "0xc678dd"
-    cyan:    "0x56b6c2"
-    white:   "0xabb2bf"
+    black:   '0x32344a'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xad8ee6'
+    cyan:    '0x449dab'
+    white:   '0x787c99'
 
   # Bright colors
   bright:
-    black:   "0x5c6370"
-    red:     "0xe06c75"
-    green:   "0x98c379"
-    yellow:  "0xd19a66"
-    blue:    "0x61afef"
-    magenta: "0xc678dd"
-    cyan:    "0x56b6c2"
-    white:   "0xffffff"
+    black:   '0x444b6a'
+    red:     '0xff7a93'
+    green:   '0xb9f27c'
+    yellow:  '0xff9e64'
+    blue:    '0x7da6ff'
+    magenta: '0xbb9af7'
+    cyan:    '0x0db9d7'
+    white:   '0xacb0d0'

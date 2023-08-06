@@ -1,28 +1,34 @@
-local treesitter_status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
-
-if not treesitter_status_ok then
-  return
-end
-
-treesitter.setup({
-  auto_install = true,
-  ensure_installed = "all",
-  sync_install = false,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = true
+return {
+ "nvim-treesitter/nvim-treesitter",
+  build = { function ()
+    pcall(require("nvim-treesitter.install").update { with_sync = true })
+  end
   },
-  indent = {
-    enable = true
+  dependencies = {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    "p00f/nvim-ts-rainbow",
+    "windwp/nvim-ts-autotag"
   },
-  autotag = {
-    enable = true
-  },
-  context_commentstring = {
-    enable = true
-  },
-  rainbow = {
-    enable = true,
-    max_file_lines = nil
+  opts = {
+    auto_install = true,
+    ensure_installed = "all",
+    sync_install = false,
+    highlight = {
+      enable = true,
+      additional_vim_regex_highlighting = true
+    },
+    indent = {
+      enable = true
+    },
+    autotag = {
+      enable = true
+    },
+    context_commentstring = {
+      enable = true
+    },
+    rainbow = {
+      enable = true,
+      max_file_lines = nil
+    }
   }
-})
+}

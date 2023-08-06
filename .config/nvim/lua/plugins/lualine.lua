@@ -1,11 +1,8 @@
-local lualine_status_ok, lualine = pcall(require, "lualine")
-
-if not lualine_status_ok then
-  return
-end
-
-lualine.setup({
-  options = {
-    theme = "onedark"
+return {
+  "nvim-lualine/lualine.nvim",
+  opts = {
+    options = {
+      theme = "tokyonight"
+    }
   }
-})
+}

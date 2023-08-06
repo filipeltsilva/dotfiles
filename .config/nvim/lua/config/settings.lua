@@ -38,3 +38,4 @@ vim.cmd [[filetype plugin indent on]]
 vim.cmd [[syntax on]]
 
 vim.cmd [[set nobackup]]
+vim.cmd [[colorscheme tokyonight-moon]]

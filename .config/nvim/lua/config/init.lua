@@ -1,5 +1,4 @@
 require("config.autocommands")
-require("config.colorscheme")
 require("config.keybindings")
-require("config.plugins_list")
+require("config.plugins")
 require("config.settings")
