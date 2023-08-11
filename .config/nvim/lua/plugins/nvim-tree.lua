@@ -3,11 +3,16 @@ return {
   dependencies = {
     "kyazdani42/nvim-web-devicons"
   },
-  opts = {
-    renderer = {
-      icons = {
-        webdev_colors = true
+  keys = {
+    { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "File Explorer" }
+  },
+  opts = function()
+    require("nvim-tree").setup({
+      renderer = {
+        icons = {
+          webdev_colors = true
+        }
       }
-    }
-  }
+    })
+  end
 }

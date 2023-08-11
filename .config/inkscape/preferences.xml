@@ -118,9 +118,9 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="208.467349555548"
-         height="194.25823542077"
-         ry="0" />
+         width="590.694089874509"
+         height="334.261224701648"
+         ry="52.7843973955769" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -164,8 +164,8 @@
          magnitude="6"
          style="fill:yellow;"
          usecurrent="1"
-         proportion="0.500000069612239"
-         isflatsided="0" />
+         proportion="0.500000040158304"
+         isflatsided="1" />
       <eventcontext
          id="spiral"
          style="fill:none;stroke:black"
@@ -560,7 +560,7 @@
        rotateCounterClockwise="1" />
     <group
        id="align"
-       objects-align-to="last" />
+       objects-align-to="page" />
     <group
        id="xml"
        h="500"
@@ -951,7 +951,8 @@
     <group
        id="font"
        unitType="2"
-       custom_fontdirs="/home/filipelemos/Documents/Fonts" />
+       custom_fontdirs="/home/filipelemos/Documents/Fonts"
+       scaleLineHeightFromFontSIze="1" />
     <group
        id="boot"
        theme="custom"
@@ -1017,7 +1018,7 @@
      org.inkscape.input.gdkpixbuf.jpeg.scale="optimizeQuality" />
   <group
      id="desktop"
-     style="fill:#00ffcc;font-size:74.66666667px;-inkscape-font-specification:'Roboto Bold';font-family:Roboto;stroke-width:3.77952756;font-weight:bold">
+     style="fill:#a02c2c;font-size:106.66658783px;-inkscape-font-specification:'Oswald, @wght=300';font-family:Oswald;stroke-width:3.77952756;font-variation-settings:'wght' 300;stroke:#000000">
     <group
        width="1600"
        height="831"

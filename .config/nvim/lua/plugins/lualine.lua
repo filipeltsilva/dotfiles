@@ -1,8 +1,10 @@
 return {
   "nvim-lualine/lualine.nvim",
-  opts = {
+  opts = function()
+    require("lualine").setup({
     options = {
       theme = "tokyonight"
     }
-  }
+  })
+  end
 }

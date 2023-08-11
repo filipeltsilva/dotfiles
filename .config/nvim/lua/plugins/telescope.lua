@@ -4,14 +4,22 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  opts = {
-    defaults = {
-      mappings = {
-        i = {
-          ["<C-k>"] = function() return require("telescope.actions").move_selection_previous end,
-          ["<C-j>"] = function() return require("telescope.actions").move_selection_next end
+  keys = {
+    { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
+    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" }
+  },
+  opts = function()
+    local telescope_actions = require("telescope.actions")
+
+    require("telescope").setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-k>"] = telescope_actions.move_selection_previous,
+            ["<C-j>"] = telescope_actions.move_selection_next
+          }
         }
       }
-    }
-  }
+    })
+  end
 }
