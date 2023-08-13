@@ -7,6 +7,7 @@ return {
     "williamboman/mason-lspconfig.nvim"
   },
   opts = function()
+    local lsp_zero = require("lsp-zero")
     local servers_list = {
       "bashls",
       "cucumber_language_server",
@@ -17,8 +18,6 @@ return {
       "solargraph",
       "tsserver"
     }
-
-    local lsp_zero = require("lsp-zero")
 
     lsp_zero.preset("lsp-only")
 

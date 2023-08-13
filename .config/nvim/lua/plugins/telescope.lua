@@ -9,9 +9,10 @@ return {
     { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" }
   },
   opts = function()
+    local telescope = require("telescope")
     local telescope_actions = require("telescope.actions")
 
-    require("telescope").setup({
+    telescope.setup({
       defaults = {
         mappings = {
           i = {
