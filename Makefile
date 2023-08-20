@@ -12,10 +12,9 @@ PACMAN_PACKAGES += neofetch neovim podman python-pip scribus shellcheck starship
 all:
 
 asdf_setup: ## Install asdf-vm plugins
-	asdf plugin add flutter
-	asdf plugin add nodejs
-	asdf plugin add ruby
-	(cd $(DOTFILES_PATH)/asdf && asdf install)
+	asdf plugin add asdf-plugin-manager https://github.com/asdf-community/asdf-plugin-manager.git
+	asdf plugin update asdf-plugin-manager v1.0.0
+	(cd $(DOTFILES_PATH)/asdf && asdf-plugin-manager add-all)
 
 cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
