@@ -46,10 +46,10 @@ return {
         })
       },
       mapping = cmp.mapping.preset.insert({
-        ["<Down>"] = cmp.mapping.select_next_item(),
-        ["<Up>"] = cmp.mapping.select_prev_item(),
+        ["<C-j>"] = cmp.mapping.select_next_item(),
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
 
-        ["<Right>"] = cmp.mapping.confirm()
+        ["<C-l>"] = cmp.mapping.confirm()
       }),
       snippet = {
         expand = function(args)

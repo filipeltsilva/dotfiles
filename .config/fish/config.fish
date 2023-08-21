@@ -12,7 +12,6 @@ set -gx ASDF_DIR /opt/asdf-vm
 set -gx ASDF_GEM_DEFAULT_PACKAGES_FILE $XDG_CONFIG_HOME/asdf/.default-gems
 set -gx ASDF_NPM_DEFAULT_PACKAGES_FILE $XDG_CONFIG_HOME/asdf/.default-npm-packages
 set -gx ASDF_PLUGIN_MANAGER_VERSIONS_FILENAME $XDG_CONFIG_HOME/.plugin-versions
-set -gx ASDF_PYTHON_DEFAULT_PACKAGES_FILE $XDG_CONFIG_HOME/asdf/.default-python-packages
 
 set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 

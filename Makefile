@@ -6,7 +6,7 @@ XDG_DATA_HOME = $(HOME)/.local/share
 
 AUR_PACKAGES = adobe-icc asdf-vm eci-icc ttf-ms-fonts xp-pen-tablet
 
-PACMAN_PACKAGES = alacritty cmake chromium conky dbeaver discord fish gimp gimp-help-en git-lfs inkscape jdk17-openjdk jq krita meld
+PACMAN_PACKAGES = alacritty cmake chromium conky dbeaver discord fish gimp gimp-help-en git-lfs inkscape jdk17-openjdk krita meld
 PACMAN_PACKAGES += neofetch neovim podman python-pip scribus shellcheck starship steam telegram-desktop tmux torbrowser-launcher trash tree ttf-fira-code
 
 all:

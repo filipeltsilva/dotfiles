@@ -5,8 +5,10 @@ return {
     "nvim-lua/plenary.nvim",
   },
   keys = {
+    { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
     { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
-    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" }
+    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" }
   },
   opts = function()
     local telescope = require("telescope")
