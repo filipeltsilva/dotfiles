@@ -28,7 +28,7 @@ return {
 
       vim.keymap.set("n", "la", function() vim.lsp.buf.code_action() end)
       vim.keymap.set("n", "lc", function() vim.lsp.buf.declaration() end)
-      vim.keymap.set("n", "lf", function() vim.lsp.buf.definition() end)
+      vim.keymap.set("n", "ld", function() vim.lsp.buf.definition() end)
       vim.keymap.set("n", "lh", function() vim.lsp.buf.references() end)
       vim.keymap.set("n", "li", function() vim.lsp.buf.hover() end)
       vim.keymap.set("n", "lm", function() vim.lsp.buf.implementation() end)
