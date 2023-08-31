@@ -7,7 +7,7 @@ return {
       transparent = true,
       styles = {
         comments = { italic = true },
-        keywords = { bold = true },
+        keywords = { bold = true }
       }
     })
   end

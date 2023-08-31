@@ -118,9 +118,9 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="135.096858467642"
-         height="655.206096979576"
-         ry="52.7843973955769" />
+         width="147.875745878445"
+         height="196.498321773499"
+         ry="0" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -153,11 +153,11 @@
       <eventcontext
          id="arc"
          style="fill:red;"
-         end="359.999753216788"
+         end="0"
          start="0"
          usecurrent="1"
-         rx="192.967226524052"
-         ry="161.897674320251"
+         rx="171.920651413324"
+         ry="174.123323695866"
          arc_type="0" />
       <eventcontext
          id="star"
@@ -1047,18 +1047,22 @@
      org.ekips.output.gimp_xcf.background="0"
      org.ekips.output.gimp_xcf.tab="Options"
      org.inkscape.effect.filter.Blur.__live_effect__="0"
-     org.inkscape.effect.filter.Blur.hblur="4.6"
-     org.inkscape.effect.filter.Blur.vblur="4"
+     org.inkscape.effect.filter.Blur.hblur="6.19999999999999"
+     org.inkscape.effect.filter.Blur.vblur="6.19999999999999"
      org.inkscape.qr_code.typenumber="0"
      org.inkscape.qr_code.correctionlevel="1"
      org.inkscape.qr_code.qrmode="0"
      org.inkscape.qr_code.encoding="latin_1"
      org.inkscape.input.svg.scale="auto"
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
-     org.inkscape.input.gdkpixbuf.jpeg.scale="optimizeQuality" />
+     org.inkscape.input.gdkpixbuf.jpeg.scale="optimizeQuality"
+     org.inkscape.effect.filter.Blur.content="1"
+     org.inkscape.effect.filter.ColorDropShadow.type="inner"
+     org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
+     org.inkscape.effect.filter.ColorDropShadow.tab="coltab" />
   <group
      id="desktop"
-     style="fill:#0088aa;font-size:106.66658783px;-inkscape-font-specification:'Oswald, @wght=300';font-family:Oswald;stroke-width:3.77952756;font-variation-settings:'wght' 300">
+     style="fill:#22280b;font-size:106.66658783px;-inkscape-font-specification:'Oswald, @wght=300';font-family:Oswald;stroke-width:3.77952756;font-variation-settings:'wght' 300">
     <group
        width="1600"
        height="831"
