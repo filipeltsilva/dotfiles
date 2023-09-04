@@ -11,16 +11,11 @@ PACMAN_PACKAGES += neofetch neovim podman python-pip scribus shellcheck starship
 
 all:
 
-asdf_setup: ## Install asdf-vm plugins
-	asdf plugin add asdf-plugin-manager https://github.com/asdf-community/asdf-plugin-manager.git
-	asdf plugin update asdf-plugin-manager v1.0.0
-	(cd $(DOTFILES_PATH)/asdf && asdf-plugin-manager add-all)
-
 cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 	echo "QT_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 
-install: cedilla install_softwares symlink_dotfiles tmux_setup ## Recommended flag to make the heavy service
+install: cedilla install_softwares rtx_install symlink_dotfiles tmux_setup ## Recommended flag to make the heavy service
 
 install_softwares: pacman_setup pamac_setup ## Install softwares after running Pacman and Pamac setups
 	sudo pamac upgrade -a
@@ -46,18 +41,24 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
 
-post_install: asdf_setup updatedb ## Flag to run another flags after machine reboot
+post_install: rtx_setup updatedb ## Flag to run another flags after machine reboot
+
+rtx_install: ## Install rtx programming languages manager
+	curl https://rtx.pub/install.sh | sh
+
+rtx_setup: ## Install rtx plugins
+	rtx install
 
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
-	ln -sfnv $(DOTFILES_PATH)/asdf $(XDG_CONFIG_HOME)/asdf
 	ln -sfnv $(DOTFILES_PATH)/fish $(XDG_CONFIG_HOME)/fish
 	ln -sfnv $(DOTFILES_PATH)/git $(XDG_CONFIG_HOME)/git
 	ln -sfnv $(DOTFILES_PATH)/inkscape $(XDG_CONFIG_HOME)/inkscape
 	ln -sfnv $(DOTFILES_PATH)/npm $(XDG_CONFIG_HOME)/npm
 	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
-	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
+	ln -sfnv $(DOTFILES_PATH)/rtx $(XDG_CONFIG_HOME)/rtx
 	ln -sfnv $(DOTFILES_PATH)/starship/starship.toml $(XDG_CONFIG_HOME)/starship.toml
+	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
 
 tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm

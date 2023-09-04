@@ -22,7 +22,7 @@ cd .dotfiles
 
 ### Installation
 
-After access the `.dottfiles/` folder in your `$HOME`, execute the `make` command with the flag you want to run.
+After access the `.dotfiles/` folder in your `$HOME`, execute the `make` command with the flag you want to run.
 
 ```bash
 make the_flag_you_wanna_run
@@ -36,20 +36,21 @@ After reboot your machine, access the `.dotfiles` folder again and run `make the
 
 ## Flags
 
-* `asdf_setup`: Install asdf-vm plugins and their related packages
 * `cedilla`: Add cedilla support in US Alternative International keyboard layout
-* `install`: Run the flags `cedilla`, `install_softwares`, `symlink_dotfiles` and `tmux_setup`
+* `install`: Run the flags `cedilla`, `install_softwares`, `rtx_install`, `symlink_dotfiles` and `tmux_setup`
 * `install_softwares`: Install software listed in `$PACMAN_PACKAGES` and `$AUR_PACKAGES`, respectivelly. This flag runs `pacman_setup` and `pamac_setup` first
 * `nvidia_setup`: search and install the best NVidia driver to your machine
 * `pacman_setup`: Configure Pacman package manager
 * `pamac_setup`: Configure Pamac utility
-* `post_install`: Run the flags `asdf_setup` and `updatedb`
+* `post_install`: Run the flags `rtx_setup` and `updatedb`
 * `tmux_setup`: Install Tmux Plugin Manager (TPM) to manage the Tmux plugins
+* `rtx_install`: Install rtx programming languages manager
+* `rtx_setup`: Install rtx plugins
 * `updatedb`: Update the system files database to improve search speed
 
 ## Recommended workflow
 
 * Install `base-devel` and clone this repository, like described in Pre-installation routine
-* Run the `make install` flag
+* Access the `.dotfiles` folder and run the `make install` flag
 * Reboot the machine
 * Access the `.dotfiles` folder again and run `make post_install` flag
