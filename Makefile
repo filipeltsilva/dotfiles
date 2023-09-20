@@ -59,6 +59,7 @@ symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/rtx $(XDG_CONFIG_HOME)/rtx
 	ln -sfnv $(DOTFILES_PATH)/starship/starship.toml $(XDG_CONFIG_HOME)/starship.toml
 	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
+	ln -sfnv $(DOTFILES_PATH)/tmuxinator $(XDG_CONFIG_HOME)/tmuxinator
 
 tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm
