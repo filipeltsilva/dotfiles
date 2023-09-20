@@ -43,9 +43,9 @@ After reboot your machine, access the `.dotfiles` folder again and run `make the
 * `pacman_setup`: Configure Pacman package manager
 * `pamac_setup`: Configure Pamac utility
 * `post_install`: Run the flags `rtx_setup` and `updatedb`
-* `tmux_setup`: Install Tmux Plugin Manager (TPM) to manage the Tmux plugins
 * `rtx_install`: Install rtx programming languages manager
 * `rtx_setup`: Install rtx plugins
+* `tmux_setup`: Install Tmux Plugin Manager (TPM) to manage the Tmux plugins
 * `updatedb`: Update the system files database to improve search speed
 
 ## Recommended workflow
