@@ -1,4 +1,5 @@
 local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazy_path) then
   vim.fn.system({
     "git",
@@ -13,11 +14,14 @@ vim.opt.rtp:prepend(lazy_path)
 
 local opts = {
   checker = {
-    enabled = true
+    enabled = true,
+  },
+  install = {
+    colorscheme = { "default", "tokyonight" },
   },
   ui = {
-    border = "rounded"
-  }
+    border = "rounded",
+  },
 }
 
 require("lazy").setup("plugins", opts)

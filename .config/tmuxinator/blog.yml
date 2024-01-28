@@ -1,0 +1,11 @@
+name: rails_blog
+root: ~/Projects/ruby/blog
+
+windows:
+  - tty:
+    layout: even-horizontal
+    panes:
+      - cd .
+      - rails server
+  - editor: nvim
+  - tests:

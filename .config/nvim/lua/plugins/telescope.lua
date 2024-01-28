@@ -8,9 +8,9 @@ return {
     { "<leader>tb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
     { "<leader>tf", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
     { "<leader>tg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
-    { "<leader>th", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" }
+    { "<leader>th", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" },
   },
-  opts = function()
+  config = function()
     local telescope = require("telescope")
     local telescope_actions = require("telescope.actions")
 
@@ -19,10 +19,10 @@ return {
         mappings = {
           i = {
             ["<C-k>"] = telescope_actions.move_selection_previous,
-            ["<C-j>"] = telescope_actions.move_selection_next
-          }
-        }
-      }
+            ["<C-j>"] = telescope_actions.move_selection_next,
+          },
+        },
+      },
     })
-  end
+  end,
 }

@@ -1,0 +1,11 @@
+name: rails_labs
+root: ~/Projects/ruby/rails_labs
+
+windows:
+  - tty:
+    layout: main-vertical
+    panes:
+      - cd .
+      - rails server
+  - editor: nvim
+  - tests:

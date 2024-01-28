@@ -1,39 +1,32 @@
 return {
- "nvim-treesitter/nvim-treesitter",
+  "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   dependencies = {
     "HiPhish/nvim-ts-rainbow2",
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    "windwp/nvim-ts-autotag"
+    "windwp/nvim-ts-autotag",
   },
-  opts = function()
-    local configs = require("nvim-treesitter.configs")
-    local ts_rainbow = require("ts-rainbow")
-
-    configs.setup({
+  config = function()
+    require("nvim-treesitter.configs").setup({
       auto_install = true,
-      ensure_installed = "all",
+      ensure_installed = { "lua" },
       sync_install = false,
       autotag = {
         enable = true,
         enable_close = true,
         enable_close_on_slash = true,
-        enable_rename = true
-      },
-      context_commentstring = {
-        enable = true
+        enable_rename = true,
       },
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = true
+        additional_vim_regex_highlighting = true,
       },
       indent = {
-        enable = true
+        enable = true,
       },
       rainbow = {
         enable = true,
-        strategy = ts_rainbow.strategy.global
-      }
+        strategy = require("ts-rainbow").strategy.global,
+      },
     })
-  end
+  end,
 }

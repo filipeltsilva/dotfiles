@@ -1,0 +1,8 @@
+import = ["~/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight_moon.toml"]
+
+[font]
+normal = { family = "JetBrains Mono", style = "Regular" }
+size = 11
+
+[shell]
+program = "/usr/bin/fish"

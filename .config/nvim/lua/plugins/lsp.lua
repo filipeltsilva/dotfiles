@@ -1,57 +1,106 @@
 return {
-  "VonHeikemen/lsp-zero.nvim",
-  branch = "v2.x",
-  dependencies = {
-    "neovim/nvim-lspconfig",
+  {
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim"
+    config = function()
+      require("mason").setup({
+        max_concurrent_installers = 8,
+        ui = {
+          border = "rounded",
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
+          },
+        },
+      })
+    end,
   },
-  opts = function()
-    local lsp_zero = require("lsp-zero")
-    local servers_list = {
-      "bashls",
-      "cucumber_language_server",
-      "emmet_ls",
-      "eslint",
-      "html",
-      "lua_ls",
-      "solargraph",
-      "tsserver"
-    }
+  {
+    "williamboman/mason-lspconfig",
+    config = true,
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    config = function()
+      require("mason-tool-installer").setup({
+        auto_update = true,
+        ensure_installed = {
+          -- LSP Servers
+          "bash-language-server",
+          "clangd",
+          "cucumber-language-server",
+          "emmet-language-server",
+          "eslint-lsp",
+          "html-lsp",
+          "lua-language-server",
+          "rubocop",
+          "typescript-language-server",
 
-    lsp_zero.preset("lsp-only")
+          -- DAP Servers
 
-    lsp_zero.ensure_installed(servers_list)
+          -- Formatters
+          "prettierd",
+          "stylua",
 
-    lsp_zero.on_attach(function(bufnr, client)
-      lsp_zero.default_keymaps({ buffer = bufnr })
+          -- Linters
+          "eslint_d",
+          "shellcheck",
+        },
+        run_on_start = true,
+      })
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+    },
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local cmp_nvim_lsp = require("cmp_nvim_lsp")
+      local lspconfig = require("lspconfig")
+      local mason_lspconfig = require("mason-lspconfig")
 
-      vim.keymap.set("n", "la", function() vim.lsp.buf.code_action() end)
-      vim.keymap.set("n", "lc", function() vim.lsp.buf.declaration() end)
-      vim.keymap.set("n", "ld", function() vim.lsp.buf.definition() end)
-      vim.keymap.set("n", "lh", function() vim.lsp.buf.references() end)
-      vim.keymap.set("n", "li", function() vim.lsp.buf.hover() end)
-      vim.keymap.set("n", "lm", function() vim.lsp.buf.implementation() end)
-      vim.keymap.set("n", "lr", function() vim.lsp.buf.rename() end)
-    end)
+      local capabilities = cmp_nvim_lsp.default_capabilities()
+      local options = { noremap = true, silent = true }
+      local on_attach = function(bufnr, client)
+        options.buffer = bufnr
 
-    lsp_zero.set_sign_icons({
-      error = '✘',
-      warn = '▲',
-      hint = '⚑',
-      info = '»'
-    })
+        -- See `:help vim.lsp.*` for documentation on any of the below functions
+        vim.keymap.set(bufnr, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>dc", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>df", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>h", "<cmd>lua vim.lsp.buf.references()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>i", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>im", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
+        vim.keymap.set(bufnr, "n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", options)
+      end
 
-    lsp_zero.configure("lua_ls", {
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" }
-          }
-        }
-      }
-    })
+      local signals = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+      for type, icon in pairs(signals) do
+        local highlight = "DiagnosticSign" .. type
+        vim.fn.sign_define(highlight, { text = icon, texthl = highlight, numhl = "" })
+      end
 
-    lsp_zero.setup()
-  end
+      mason_lspconfig.setup_handlers({
+        function(server_name)
+          lspconfig[server_name].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+          })
+
+          lspconfig["lua_ls"].setup({
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
+                },
+              },
+            },
+          })
+        end,
+      })
+    end,
+  },
 }

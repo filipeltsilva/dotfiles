@@ -118,8 +118,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="964.672159510337"
-         height="919.471406711367"
+         width="555.037716843015"
+         height="352.194372462475"
          ry="0" />
       <eventcontext
          id="3dbox"
@@ -1053,7 +1053,7 @@
      org.inkscape.qr_code.typenumber="0"
      org.inkscape.qr_code.correctionlevel="1"
      org.inkscape.qr_code.qrmode="0"
-     org.inkscape.qr_code.encoding="latin_1"
+     org.inkscape.qr_code.encoding="utf_8"
      org.inkscape.input.svg.scale="auto"
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
      org.inkscape.input.gdkpixbuf.jpeg.scale="optimizeQuality"
@@ -1065,10 +1065,30 @@
      org.inkscape.effect.filter.Colorize.blend2="screen"
      org.inkscape.effect.filter.Colorize.__live_effect__="0"
      org.inkscape.effect.filter.Colorize.nlight="2.68614233993902"
-     org.inkscape.effect.filter.Colorize.hlight="1.33979611280488" />
+     org.inkscape.effect.filter.Colorize.hlight="1.33979611280488"
+     org.inkscape.template.paper.max="297.0"
+     org.inkscape.template.paper.min="210.0"
+     org.inkscape.template.paper.unit="mm"
+     org.inkscape.render.calendar.start-day="sun"
+     org.inkscape.render.calendar.weekend="sat+sun"
+     org.inkscape.render.calendar.encoding="arabic"
+     org.inkscape.render.calendar.year="2024"
+     org.inkscape.render.calendar.show-week-number="0"
+     org.inkscape.render.calendar.tab="localization"
+     org.inkscape.render.calendar.__live_effect__="0"
+     org.inkscape.render.calendar.fill-empty-day-boxes="0"
+     org.inkscape.qr_code.text="https://wa.me/5533988837090"
+     org.inkscape.qr_code.invert="1"
+     org.inkscape.render.foldable_box.unit="cm"
+     org.ekips.filter.gears.unit="px"
+     org.inkscape.render.foldable_box.__live_effect__="0"
+     org.inkscape.render.foldable_box.depth="5"
+     org.inkscape.render.foldable_box.proportion="1"
+     org.inkscape.template.business_card.size="90mmx55mm"
+     org.inkscape.template.paper.orientation="port" />
   <group
      id="desktop"
-     style="fill:#f9f9f9;font-size:106.66658783px;-inkscape-font-specification:'Oswald, @wght=300';font-family:Oswald;stroke-width:3.77952756;font-variation-settings:'wght' 300;opacity:0.7">
+     style="fill:#00aad4;font-size:42.6667099px;-inkscape-font-specification:'Oswald, @wght=700';font-family:Oswald;stroke-width:7.55905512;stroke-linecap:round;stroke:#000000;font-variation-settings:'wght' 700">
     <group
        width="1600"
        height="831"
