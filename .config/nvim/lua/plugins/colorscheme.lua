@@ -8,10 +8,10 @@ return {
       styles = {
         keywords = {
           bold = true,
-          italic = false
-        }
+          italic = false,
+        },
       },
-      transparent = true
+      transparent = true,
     })
 
     vim.cmd("colorscheme tokyonight")

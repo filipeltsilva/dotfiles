@@ -2,5 +2,4 @@ bundler
 neovim
 rake
 rubocop
-solargraph
 tmuxinator
