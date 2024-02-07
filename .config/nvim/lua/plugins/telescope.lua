@@ -1,6 +1,10 @@
 return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
   keys = {
     { "<leader>tb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
     { "<leader>tf", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
