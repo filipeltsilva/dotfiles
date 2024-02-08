@@ -32,6 +32,12 @@ return {
         "vimdoc",
         "yaml",
       },
+      autotag = {
+        enable = true,
+        enable_close = true,
+        enable_close_on_slash = true,
+        enable_rename = true,
+      },
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = true,
@@ -40,12 +46,24 @@ return {
         enable = true,
         keymaps = {
           init_selection = "<C-space>",
-          node_decremental = "<bs>",
+          node_decremental = "<M-space>",
           node_incremental = "<C-space>",
-          scope_incremental = false,
+          scope_incremental = "<C-s>",
         },
       },
       indent = { enable = true },
+      textobjects = {
+        select = {
+          enable = true,
+          keymaps = {
+            ["oa"] = "@assignment.outer",
+            ["ia"] = "@assignment.inner",
+            ["la"] = "@assignment.lhs",
+            ["ra"] = "@assignment.rhs",
+            lookahead = true,
+          },
+        },
+      },
     })
   end,
 }

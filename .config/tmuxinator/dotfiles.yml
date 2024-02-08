@@ -4,4 +4,3 @@ root: ~/.dotfiles
 windows:
   - tty:
   - editor: nvim
-  - git: lazygit
