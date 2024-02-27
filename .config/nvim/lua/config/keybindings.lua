@@ -10,3 +10,5 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", options)
 vim.keymap.set("n", "<C-l>", "<C-w>l", options)
 
 vim.keymap.set("n", "<leader>q", ":bd<CR>", options)
+
+vim.keymap.set("n", "<leader>l", ":Lazy<CR>", options)

@@ -15,12 +15,18 @@ cedilla: ## Enable cedilla in US Alternative International keyboard layout
 	echo "GTK_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 	echo "QT_IM_MODULE=cedilla" | sudo tee -a /etc/environment
 
-install: cedilla install_softwares rtx_install symlink_dotfiles tmux_setup ## Recommended flag to make the heavy service
+install: cedilla install_softwares mise_install symlink_dotfiles tmux_setup ## Recommended flag to make the heavy service
 
 install_softwares: pacman_setup pamac_setup ## Install softwares after running Pacman and Pamac setups
 	sudo pamac upgrade -a
 	sudo pamac install $(PACMAN_PACKAGES)
 	sudo pamac build $(AUR_PACKAGES)
+
+mise_install: ## Install mise programming languages and tools manager
+	curl https://mise.run | sh
+
+mise_setup: ## Install mise plugins
+	mise install
 
 nvidia_setup: ## Detect and install NVidia Graphics driver
 	sudo mhwd -a pci nonfree 0300
@@ -41,13 +47,7 @@ pamac_setup: ## Pamac settings
 	sudo sed -i 's/#CheckAURUpdates/CheckAURUpdates/' /etc/pamac.conf
 	sudo sed -i 's/MaxParallelDownloads = 4/MaxParallelDownloads = 10\n\nEnableFlatpak\n\nCheckFlatpakUpdates/' /etc/pamac.conf
 
-post_install: rtx_setup updatedb ## Flag to run another flags after machine reboot
-
-rtx_install: ## Install rtx programming languages manager
-	curl https://rtx.pub/install.sh | sh
-
-rtx_setup: ## Install rtx plugins
-	rtx install
+post_install: mise_setup 
 
 symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/alacritty $(XDG_CONFIG_HOME)/alacritty
@@ -56,13 +56,10 @@ symlink_dotfiles: ## Create symbolic links
 	ln -sfnv $(DOTFILES_PATH)/inkscape $(XDG_CONFIG_HOME)/inkscape
 	ln -sfnv $(DOTFILES_PATH)/npm $(XDG_CONFIG_HOME)/npm
 	ln -sfnv $(DOTFILES_PATH)/nvim $(XDG_CONFIG_HOME)/nvim
-	ln -sfnv $(DOTFILES_PATH)/rtx $(XDG_CONFIG_HOME)/rtx
+	ln -sfnv $(DOTFILES_PATH)/mise $(XDG_CONFIG_HOME)/mise
 	ln -sfnv $(DOTFILES_PATH)/starship/starship.toml $(XDG_CONFIG_HOME)/starship.toml
 	ln -sfnv $(DOTFILES_PATH)/tmux $(XDG_CONFIG_HOME)/tmux
 	ln -sfnv $(DOTFILES_PATH)/tmuxinator $(XDG_CONFIG_HOME)/tmuxinator
 
 tmux_setup: ## Install Tmux Plugin Manager (TPM)
 	git clone https://github.com/tmux-plugins/tpm $(DOTFILES_PATH)/tmux/plugins/tpm
-
-updatedb: ## Update the system files database to improve search speed
-	sudo updatedb

@@ -6,16 +6,15 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    { "<leader>tb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
-    { "<leader>tf", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
-    { "<leader>tg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
-    { "<leader>th", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" },
+    { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+    { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Fuzzy Finder" },
+    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" },
   },
   config = function()
-    local telescope = require("telescope")
     local telescope_actions = require("telescope.actions")
 
-    telescope.setup({
+    require("telescope").setup({
       defaults = {
         mappings = {
           i = {

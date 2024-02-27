@@ -4,7 +4,14 @@ neovim = "latest"
 node = "lts"
 ruby = "latest"
 shellcheck = "latest"
+usage = "0.1.9"
 
 [settings]
+always_keep_download = false
+always_keep_install = false
+asdf_compat = true
 experimental = true
+jobs = 5
+legacy_version_file = true
 plugin_autoupdate_last_check_duration = "1 week"
+yes = true

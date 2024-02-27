@@ -1,7 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufNewFile", "BufReadPre" },
-  cmd = { "LspInfo", "LspInstall", "LspUninstall", "Mason" },
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -9,8 +8,12 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
 
     "hrsh7th/cmp-nvim-lsp",
+
+    "folke/neodev.nvim",
   },
   config = function()
+    require("neodev").setup()
+
     require("mason").setup({
       max_concurrent_installers = 8,
       ui = {
@@ -33,9 +36,12 @@ return {
         "emmet-language-server",
         "eslint-lsp",
         "html-lsp",
+        "json-lsp",
         "lua-language-server",
         "rubocop",
+        "tailwindcss-language-server",
         "typescript-language-server",
+        "yaml-language-server",
 
         -- DAP Servers
 
@@ -57,17 +63,18 @@ return {
       options.buffer = bufnr
 
       -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.keymap.set(bufnr, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>dc", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>df", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>h", "<cmd>lua vim.lsp.buf.references()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>i", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>im", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
-      vim.keymap.set(bufnr, "n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", options)
+      vim.keymap.set("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", options)
+      vim.keymap.set("n", "<space>dc", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
+      vim.keymap.set("n", "<space>df", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
+      vim.keymap.set("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", options)
+      vim.keymap.set("n", "<space>h", "<cmd>lua vim.lsp.buf.references()<CR>", options)
+      vim.keymap.set("n", "<space>i", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
+      vim.keymap.set("n", "<space>im", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
+      vim.keymap.set("n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", options)
     end
 
     local signals = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+
     for type, icon in pairs(signals) do
       local highlight = "DiagnosticSign" .. type
       vim.fn.sign_define(highlight, { text = icon, texthl = highlight, numhl = "" })
@@ -79,17 +86,16 @@ return {
           capabilities = capabilities,
           on_attach = on_attach,
         })
-
-        lspconfig["lua_ls"].setup({
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim" },
-              },
+      end,
+      lspconfig["lua_ls"].setup({
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
             },
           },
-        })
-      end,
+        },
+      }),
     })
   end,
 }

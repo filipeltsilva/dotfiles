@@ -26,6 +26,7 @@ return {
         "regex",
         "ruby",
         "sql",
+        "tmux",
         "toml",
         "typescript",
         "vim",

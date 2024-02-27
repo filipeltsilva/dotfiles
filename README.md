@@ -37,16 +37,15 @@ After reboot your machine, access the `.dotfiles` folder again and run `make the
 ## Flags
 
 * `cedilla`: Add cedilla support in US Alternative International keyboard layout
-* `install`: Run the flags `cedilla`, `install_softwares`, `rtx_install`, `symlink_dotfiles` and `tmux_setup`
+* `install`: Run the flags `cedilla`, `install_softwares`, `mise_install`, `symlink_dotfiles` and `tmux_setup`
 * `install_softwares`: Install software listed in `$PACMAN_PACKAGES` and `$AUR_PACKAGES`, respectivelly. This flag runs `pacman_setup` and `pamac_setup` first
+* `mise_install`: Install mise programming languages and tools manager
+* `mise_setup`: Install mise plugins
 * `nvidia_setup`: search and install the best NVidia driver to your machine
 * `pacman_setup`: Configure Pacman package manager
 * `pamac_setup`: Configure Pamac utility
-* `post_install`: Run the flags `rtx_setup` and `updatedb`
-* `rtx_install`: Install rtx programming languages manager
-* `rtx_setup`: Install rtx plugins
+* `post_install`: Run the flags `mise_setup` and `updatedb`
 * `tmux_setup`: Install Tmux Plugin Manager (TPM) to manage the Tmux plugins
-* `updatedb`: Update the system files database to improve search speed
 
 ## Recommended workflow
 
