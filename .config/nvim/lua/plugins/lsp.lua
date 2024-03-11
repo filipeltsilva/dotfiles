@@ -1,101 +1,106 @@
 return {
-  "neovim/nvim-lspconfig",
-  event = { "BufNewFile", "BufReadPre" },
-  dependencies = {
+  {
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-
-    "hrsh7th/cmp-nvim-lsp",
-
-    "folke/neodev.nvim",
-  },
-  config = function()
-    require("neodev").setup()
-
-    require("mason").setup({
-      max_concurrent_installers = 8,
-      ui = {
-        border = "rounded",
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
-        },
-      },
-    })
-
-    require("mason-tool-installer").setup({
-      auto_update = true,
-      ensure_installed = {
-        -- LSP Servers
-        "bash-language-server",
-        "clangd",
-        "cucumber-language-server",
-        "emmet-language-server",
-        "eslint-lsp",
-        "html-lsp",
-        "json-lsp",
-        "lua-language-server",
-        "rubocop",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "yaml-language-server",
-
-        -- DAP Servers
-
-        -- Formatters
-        "prettierd",
-        "stylua",
-
-        -- Linters
-        "eslint_d",
-        "shellcheck",
-      },
-    })
-
-    local lspconfig = require("lspconfig")
-
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    local options = { noremap = true, silent = true }
-    local on_attach = function(bufnr, client)
-      options.buffer = bufnr
-
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.keymap.set("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", options)
-      vim.keymap.set("n", "<space>dc", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
-      vim.keymap.set("n", "<space>df", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
-      vim.keymap.set("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", options)
-      vim.keymap.set("n", "<space>h", "<cmd>lua vim.lsp.buf.references()<CR>", options)
-      vim.keymap.set("n", "<space>i", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
-      vim.keymap.set("n", "<space>im", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
-      vim.keymap.set("n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", options)
-    end
-
-    local signals = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-
-    for type, icon in pairs(signals) do
-      local highlight = "DiagnosticSign" .. type
-      vim.fn.sign_define(highlight, { text = icon, texthl = highlight, numhl = "" })
-    end
-
-    require("mason-lspconfig").setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-          on_attach = on_attach,
-        })
-      end,
-      lspconfig["lua_ls"].setup({
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { "vim" },
-            },
+    config = function()
+      require("mason").setup({
+        max_concurrent_installers = 8,
+        ui = {
+          border = "rounded",
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
           },
         },
-      }),
-    })
-  end,
+      })
+    end,
+  },
+
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    config = function()
+      require("mason-tool-installer").setup({
+        auto_update = true,
+        debounce_hours = 4,
+        ensure_installed = {
+          -- DAP Servers
+
+          -- Formatters
+          "prettierd",
+          "stylua",
+
+          -- Linters
+          "eslint_d",
+          "shellcheck",
+        },
+        start_delay = 3000,
+      })
+    end,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "folke/neodev.nvim",
+      "hrsh7th/cmp-nvim-lsp",
+
+      {
+        "williamboman/mason-lspconfig.nvim",
+        opts = {
+          automatic_installation = true,
+          ensure_installed = {
+            -- Only LSP Servers
+            "bashls",
+            "clangd",
+            "cssls",
+            "cucumber_language_server",
+            "dockerls",
+            "emmet_language_server",
+            "eslint",
+            "html",
+            "jsonls",
+            "lua_ls",
+            "rubocop",
+            "tailwindcss",
+            "taplo",
+            "tsserver",
+            "yamlls",
+          },
+        },
+      },
+    },
+    config = function()
+      local lspconfig = require("lspconfig")
+      local my_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      require("neodev").setup()
+
+      require("mason-lspconfig").setup_handlers({
+        function(server)
+          lspconfig[server].setup({
+            capabilities = my_capabilities,
+          })
+        end,
+        lspconfig["lua_ls"].setup({
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { "vim" },
+              },
+              runtime = {
+                version = "LuaJIT",
+              },
+              telemetry = {
+                enabled = false,
+              },
+              workspace = {
+                library = vim.env.VIMRUNTIME,
+              },
+            },
+          },
+          force_setup = true,
+        }),
+      })
+    end,
+  },
 }

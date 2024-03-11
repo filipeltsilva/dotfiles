@@ -12,7 +12,10 @@ if not vim.loop.fs_stat(lazy_path) then
 end
 vim.opt.rtp:prepend(lazy_path)
 
-local opts = {
+local lazy_options = {
+  change_detection = {
+    notify = false,
+  },
   checker = {
     enabled = true,
   },
@@ -24,4 +27,4 @@ local opts = {
   },
 }
 
-require("lazy").setup("plugins", opts)
+require("lazy").setup("plugins", lazy_options)

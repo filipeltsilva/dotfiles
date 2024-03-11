@@ -14,6 +14,8 @@ return {
         javascriptreact = { "prettierd" },
         typescript = { "prettierd" },
         typescriptreact = { "prettierd" },
+
+        ruby = { "rubocop" },
       },
     })
   end,

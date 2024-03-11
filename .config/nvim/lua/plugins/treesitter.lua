@@ -1,11 +1,11 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufNewFile", "BufReadPre" },
+  event = { "BufEnter", "BufNewFile" },
+  build = ":TSUpdate",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
     "windwp/nvim-ts-autotag",
   },
-  build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
       auto_install = true,
@@ -33,6 +33,11 @@ return {
         "vimdoc",
         "yaml",
       },
+      ignore_install = {},
+      sync_install = false,
+
+      --Modules
+
       autotag = {
         enable = true,
         enable_close = true,
