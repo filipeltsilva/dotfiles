@@ -1,6 +1,5 @@
 return {
   "akinsho/toggleterm.nvim",
-  lazy = false,
   opts = {
     auto_scroll = true,
     close_on_exit = true,

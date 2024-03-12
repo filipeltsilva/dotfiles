@@ -3,6 +3,7 @@ return {
   event = { "InsertEnter", "CmdlineEnter" },
   dependencies = {
     "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-nvim-lua",
@@ -28,12 +29,14 @@ return {
           preset = "codicons",
         }),
       },
-      mapping = cmp.mapping.preset.insert({
-        ["<C-h>"] = cmp.mapping.abort(),
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
-        ["<C-l>"] = cmp.mapping.confirm(),
-      }),
+      mapping = {
+        ["<C-h>"] = cmp.mapping(cmp.mapping.abort(), { "i", "c" }),
+        ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+        ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+        ["<C-l>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+        ["<C-n>"] = cmp.mapping.scroll_docs(4),
+        ["<C-p>"] = cmp.mapping.scroll_docs(-4),
+      },
       snippet = {
         expand = function(args)
           require("luasnip").lsp_expand(args.body)
@@ -43,13 +46,29 @@ return {
         { name = "luasnip" },
         { name = "nvim_lsp" },
         { name = "nvim_lsp_signature_help" },
-        { name = "buffer", keyword_length = 5 },
         { name = "nvim_lua" },
         { name = "path", keyword_length = 5 },
+        { name = "buffer", keyword_length = 5 },
       }),
       window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
+      },
+    })
+
+    cmp.setup.cmdline(":", {
+      sources = {
+        { name = "cmdline" },
+        { name = "path" },
+        { name = "buffer" },
+      },
+    })
+
+    cmp.setup.cmdline("/", {
+      sources = {
+        { name = "cmdline" },
+        { name = "path" },
+        { name = "buffer" },
       },
     })
   end,
