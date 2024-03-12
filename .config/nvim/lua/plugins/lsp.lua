@@ -26,6 +26,8 @@ return {
           -- DAP Servers
 
           -- Formatters
+          "black",
+          "isort",
           "prettierd",
           "stylua",
 
@@ -60,6 +62,7 @@ return {
             "html",
             "jsonls",
             "lua_ls",
+            "pyright",
             "rubocop",
             "tailwindcss",
             "taplo",
@@ -71,17 +74,18 @@ return {
     },
     config = function()
       local lspconfig = require("lspconfig")
-      local my_capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local my_lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       require("neodev").setup()
 
       require("mason-lspconfig").setup_handlers({
         function(server)
           lspconfig[server].setup({
-            capabilities = my_capabilities,
+            capabilities = my_lsp_capabilities,
           })
         end,
         lspconfig["lua_ls"].setup({
+          capabilities = my_lsp_capabilities,
           settings = {
             Lua = {
               diagnostics = {

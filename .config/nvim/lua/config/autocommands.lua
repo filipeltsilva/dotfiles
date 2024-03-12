@@ -10,3 +10,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<space>n", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true })
   end,
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})

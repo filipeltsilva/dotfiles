@@ -20,7 +20,7 @@ local lazy_options = {
     enabled = true,
   },
   install = {
-    colorscheme = { "default", "tokyonight" },
+    colorscheme = { "tokyonight", "default" },
   },
   ui = {
     border = "rounded",
