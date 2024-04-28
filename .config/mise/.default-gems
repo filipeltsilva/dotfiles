@@ -2,4 +2,6 @@ bundler
 neovim
 rake
 rubocop
+ruby-lsp
+solargraph
 tmuxinator

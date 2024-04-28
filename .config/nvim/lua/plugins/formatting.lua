@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
+  event = { "BufNewFile", "BufReadPre" },
   cmd = { "ConformInfo" },
   config = function()
     require("conform").setup({
@@ -15,8 +15,6 @@ return {
         javascriptreact = { "prettierd" },
         typescript = { "prettierd" },
         typescriptreact = { "prettierd" },
-
-        ruby = { "rubocop" },
 
         python = { "isort", "black" },
       },

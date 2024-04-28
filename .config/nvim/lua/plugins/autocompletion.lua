@@ -4,6 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-emoji",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-nvim-lua",
@@ -49,6 +50,7 @@ return {
         { name = "nvim_lua" },
         { name = "path", keyword_length = 5 },
         { name = "buffer", keyword_length = 5 },
+        { name = "emoji" },
       }),
       window = {
         completion = cmp.config.window.bordered(),

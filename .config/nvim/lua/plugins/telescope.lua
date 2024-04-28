@@ -3,8 +3,12 @@ return {
   branch = "0.1.x",
   event = { "VeryLazy" },
   dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",
+    "BurntSushi/ripgrep",
+    "sharkdp/fd",
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+    },
   },
   keys = {
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
@@ -13,9 +17,10 @@ return {
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Neovim Help Docs" },
   },
   config = function()
+    local telescope = require("telescope")
     local telescope_actions = require("telescope.actions")
 
-    require("telescope").setup({
+    telescope.setup({
       defaults = {
         mappings = {
           i = {
@@ -25,5 +30,7 @@ return {
         },
       },
     })
+
+    telescope.load_extension("fzf")
   end,
 }

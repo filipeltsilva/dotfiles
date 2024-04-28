@@ -1,6 +1,8 @@
 return {
   "nvim-lualine/lualine.nvim",
-  opts = {
-    theme = "tokyonight",
-  },
+  config = function()
+    require("lualine").setup({
+      theme = "tokyonight",
+    })
+  end,
 }

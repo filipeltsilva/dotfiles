@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazy_path) then
 end
 vim.opt.rtp:prepend(lazy_path)
 
-local lazy_options = {
+require("lazy").setup("plugins", {
   change_detection = {
     notify = false,
   },
@@ -25,6 +25,4 @@ local lazy_options = {
   ui = {
     border = "rounded",
   },
-}
-
-require("lazy").setup("plugins", lazy_options)
+})

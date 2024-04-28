@@ -3,7 +3,6 @@ return {
   event = { "BufEnter", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
     "windwp/nvim-ts-autotag",
   },
   config = function()
@@ -58,18 +57,6 @@ return {
         },
       },
       indent = { enable = true },
-      textobjects = {
-        select = {
-          enable = true,
-          keymaps = {
-            ["oa"] = "@assignment.outer",
-            ["ia"] = "@assignment.inner",
-            ["la"] = "@assignment.lhs",
-            ["ra"] = "@assignment.rhs",
-            lookahead = true,
-          },
-        },
-      },
     })
   end,
 }
