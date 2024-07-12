@@ -2,9 +2,10 @@
 go = "latest"
 neovim = "latest"
 node = "lts"
+python = "system"
 ruby = "latest"
 shellcheck = "latest"
-usage = "0.1.9"
+usage = "latest"
 
 [settings]
 always_keep_download = false

@@ -1,6 +1,14 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_aohorodnyk_2F_fish_2D_autovenv_files:\x7e/\x2econfig/fisher/conf\x2ed/autoenv\x2efish
+SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fisher/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fisher/conf\x2ed/autopair\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fisher/functions/fisher\x2efish\x1e\x7e/\x2econfig/fisher/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1eaohorodnyk/fish\x2dautovenv
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR autovenv_announce:no
+SETUVAR autovenv_dir:\x2evenv
+SETUVAR autovenv_enable:yes
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:F8F8F2
