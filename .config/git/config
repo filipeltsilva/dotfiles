@@ -38,3 +38,5 @@
 	p = push
 	df = diff
 	st = status
+[pull]
+	rebase = false

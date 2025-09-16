@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_aohorodnyk_2F_fish_2D_autovenv_files:\x7e/\x2econfig/fisher/conf\x2ed/autoenv\x2efish
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fisher/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fisher/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fisher/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fisher/functions/fisher\x2efish\x1e\x7e/\x2econfig/fisher/completions/fisher\x2efish
@@ -29,7 +29,7 @@ SETUVAR fish_color_option:\x1d
 SETUVAR fish_color_param:FF79C6
 SETUVAR fish_color_quote:F1FA8C
 SETUVAR fish_color_redirection:8BE9FD
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
